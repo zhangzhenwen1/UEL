@@ -173,7 +173,7 @@ c     -------------- g_beta at nodal point --------------------------
 c --- deal with minus seperation ---
       if (DOT_PRODUCT(Seperation_nodal,g3)<0.) then
       write (7,*) 'WARN: This is minus: ', DOT_PRODUCT(Seperation_nodal,g3)
-c            kn_n0=kn0
+            kn_n0=kn0
       end if
 c     ---I(u,g)
 c     ---I1 (1,6) scaler

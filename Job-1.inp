@@ -102,19 +102,20 @@
 *User Output Variables
      12,
 *Material, name=czm
-*Damage Initiation, criterion=QUADS
-55.,50.,50.
-*Damage Evolution, type=DISPLACEMENT, degradation=MULTIPLICATIVE
- 0.035,
-*Elastic, type=TRACTION
-4000.,4000.,4000.
+*Damage Initiation, criterion=QUADE
+50.,50.,50.
+*Damage Evolution, type=ENERGY, softening=EXPONENTIAL
+40.,
+*Elastic
+4000., 0.3
 ** ----------------------------------------------------------------
 ** 
 ** STEP: Step-1
 ** 
 *Step, name=Step-1, nlgeom=YES, inc=1000
 *Static
-0.01, 1., 1e-05, 0.01
+0.01, 1., 1e-05, 1.
+*Solution Technique, type=QUASI-NEWTON
 ** 
 ** BOUNDARY CONDITIONS
 ** 
@@ -129,6 +130,26 @@ Set-30, 3, 3
 Set-30, 4, 4
 Set-30, 5, 5
 Set-30, 6, 6
+** 
+** OUTPUT REQUESTS
+** 
+*Restart, write, frequency=0
+** 
+** FIELD OUTPUT: F-Output-1
+** 
+*Output, field, variable=PRESELECT
+** 
+** HISTORY OUTPUT: H-Output-1
+** 
+*Output, history, variable=PRESELECT
+*End Step
+** ----------------------------------------------------------------
+** 
+** STEP: Step-2
+** 
+*Step, name=Step-2, nlgeom=YES
+*Static
+2., 2., 2e-05, 2.
 ** 
 ** OUTPUT REQUESTS
 ** 
