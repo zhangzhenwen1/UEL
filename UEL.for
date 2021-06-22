@@ -142,24 +142,16 @@ c---------- caculate the czm model geometry -------------
       Coord_mid=0.5*(Coord_t_low+Coord_t_up)! x_m
 c
       Seperation_total_nodal=Coord_t_up-Coord_t_low! [u]
-      write (7,*) '*** Seperation at node is'
-      write (7,*) Seperation_total_nodal
+c      write (7,*) '*** Seperation at node is'
+c      write (7,*) Seperation_total_nodal
 c =============  ================
       do i=1,LAYERNODE
 c ------       kn0 and kt0     -------
       kn0=0.5*Qn0*Qn0/cn
       kt0=0.5*Qt0*Qt0/ct
 c --- damage parameter passin from last increasment ---
-      if (SVARS(i)>0) then
-            kn_n0=SVARS(i)
-      else if (SVARS(i) .EQ. 0) then
-            kn_n0=kn0
-      end if
-      if (SVARS(6+i)>0) then
-            kt_n0=SVARS(6+i)
-      else if (SVARS(6+i) .EQ. 0) then
-            kt_n0=kt0
-      end if
+      kn_n0=SVARS(i)
+      kt_n0=SVARS(6+i)
       write (7,*) '3. (k0) kn0 and kt0 of',i,' is'
       write (7,*) kn0,kt0
 c      write (7,*) '*** k of',i,'at last step is'
@@ -180,7 +172,7 @@ c     -------------- g_beta at nodal point --------------------------
             call Base_gc(g1,g2,g3,gc1,gc2,gc3)
 c --- deal with minus seperation ---
       if (DOT_PRODUCT(Seperation_nodal,g3)<0.) then
-      write (7,*) 'WARN: This is minus', DOT_PRODUCT(Seperation_nodal,g3)
+      write (7,*) 'WARN: This is minus: ', DOT_PRODUCT(Seperation_nodal,g3)
 c            kn_n0=kn0
       end if
 c     ---I(u,g)
@@ -202,7 +194,13 @@ c ------      ∂ψ0/∂I     -------
       PD_sai0t_I3=0.5*ct
 c     damage parameters (3,6) scaler
             dnn=1-EXP((kn0-kn_n0)*Qn0/Gn)
+            if (dnn<0) then
+                  dnn=0.
+            end if
             dtt=1-EXP((kt0-kt_n0)*Qt0/Gt)
+            if (dtt<0) then
+                  dtt=0.
+            end if
             dnt=dtt
             dtn=dnn
 c     ψ=(1-d)ψ0 scaler
