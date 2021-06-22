@@ -20,3 +20,8 @@ KK.dat
 *.sim
 
 *.sta
+
+*.dmp
+*.ipm
+*.lck
+*.rec

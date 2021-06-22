@@ -146,25 +146,29 @@ c
       write (7,*) Seperation_total_nodal
 c =============  ================
       do i=1,LAYERNODE
-c --- damage parameter passin from last increasment ---
-      kn_n0=SVARS(i)
-      kt_n0=SVARS(6+i)
 c ------       kn0 and kt0     -------
       kn0=0.5*Qn0*Qn0/cn
       kt0=0.5*Qt0*Qt0/ct
+c --- damage parameter passin from last increasment ---
+      if (SVARS(i)>0) then
+            kn_n0=SVARS(i)
+      else if (SVARS(i) .EQ. 0) then
+            kn_n0=kn0
+      end if
+      if (SVARS(6+i)>0) then
+            kt_n0=SVARS(6+i)
+      else if (SVARS(6+i) .EQ. 0) then
+            kt_n0=kt0
+      end if
       write (7,*) '3. (k0) kn0 and kt0 of',i,' is'
       write (7,*) kn0,kt0
 c      write (7,*) '*** k of',i,'at last step is'
       write (7,*) 'kn0', kn_n0
       write (7,*) 'kt0', kt_n0
-c --- deal with minus seperation ---
+c
       Seperation_nodal=Seperation_total_nodal(:,i)
-      write (7,*) 'Seperation of',i,' is'
-      write (7,*) Seperation_nodal
-      if (Seperation_nodal(3)<0.0) then
-            write (7,*) 'WARN: This is minus'
-            kn_n0=kn0
-      end if
+c      write (7,*) 'Seperation of',i,' is'
+c      write (7,*) Seperation_nodal
 c     ---------- Jacobian(local_coordinate,global_coord,output,detJ) ------
             call Jacobian(Nodal_Local_coord(:,i),Coord_mid,J_mid,detJ(:,i))
 c            write (7,*) '*** Jacobian midsurface at point',i,'is'
@@ -174,6 +178,11 @@ c     -------------- g_beta at nodal point --------------------------
             g2=J_mid(:,2)
             call Base_g3(g1,g2,g3)
             call Base_gc(g1,g2,g3,gc1,gc2,gc3)
+c --- deal with minus seperation ---
+      if (DOT_PRODUCT(Seperation_nodal,g3)<0.) then
+      write (7,*) 'WARN: This is minus', DOT_PRODUCT(Seperation_nodal,g3)
+c            kn_n0=kn0
+      end if
 c     ---I(u,g)
 c     ---I1 (1,6) scaler
             I1=DOT_PRODUCT(Seperation_nodal,Seperation_nodal)
@@ -184,13 +193,6 @@ C     ---I3 (1,6) scaler
 c     ψ0(I1,I2,I3)~(u,g) (3,6) scaler
             Sai0n=0.5*cn*(I1-I2-I3)
             Sai0t=0.5*ct*(I2+I3)
-c     -------
-c      SVARS(13)=DOT_PRODUCT(Seperation_nodal,g3)
-c      write (7,*) 'NOTE: [u].g3 is', SVARS(13)
-c      if (SVARS(13)<0.) then
-c            kn0=kn_n0
-c            cn=10e+9
-c      end if
 c ------      ∂ψ0/∂I     -------
       PD_sai0n_I1=0.5*cn
       PD_sai0n_I2=-0.5*cn
@@ -894,8 +896,6 @@ c
       return
       END
 c=====================================================
-c============ PPR ====================================
-      INCLUDE 'subroutine.for'
 
 
 
