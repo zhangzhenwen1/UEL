@@ -15,7 +15,7 @@ cccccc The variations are defined in a seperate file as follow
       INCLUDE 'VAR_define.for'
 cccccc TODO: to delete non-using VARs and move VARS to VAR FILE
       Real(Kind=8) :: Du_up(3,LAYERNODE),Du_low(3,LAYERNODE),!increasment of node displacement on surface
-     1 du_nodal(3,LAYERNODE),du_mid(3,LAYERNODE),!increasement of open displacement & mid-plane displacement
+     1 Du_nodal(3,LAYERNODE*2),Du_seperation(3,LAYERNODE),!increasement of open displacement & mid-plane displacement
      2 U_up(3,LAYERNODE),U_low(3,LAYERNODE),!total node displacement
      3 U_nodal(3,LAYERNODE),U_mid(3,LAYERNODE),U_total_nodal(3,LAYERNODE*2)!total open & mid-plane displacement
      4 ,U_total_nodal_up(3,LAYERNODE),U_total_nodal_low(3,LAYERNODE)
@@ -55,9 +55,6 @@ ccccccccccccccccccccccccccc
             function Dot_3_1(A,B)
                   real(Kind=8) :: A(3,3),B(3),Dot_3_1(3)
             end function
-c            function Coord_Trans(global_input,local_coordinate)
-c                  real(Kind=8) :: shape_p(3,6),global_input(3,6)
-c            end function
             function Shape_poly(local_coordinate)
                   real(Kind=8) :: local_coordinate(2,1), Shape_poly(3,6)
             end function
@@ -76,22 +73,24 @@ c ================================================
       write (7,*) '======================================================='
       write (7,*) '=====                  UEL START                  ====='
       write (7,*) '======================================================='
-      write (7,*) '                 Information Pass In'
-      write (7,*) '1. Original coordinates:'
-      write (7,*) COORDS
-      write (7,*) '2. Properties, total number is',NPROPS
-      write (7,*) PROPS(1:NPROPS)
-      write (7,*) '3. SVARS, total number is',NSVARS
+      write (7,*) '          Information Pass In '
+      write (7,*) '          @ STEP ', KSTEP
+      write (7,*) '          @ ELEMENT ', JELEM
+C      write (7,*) '1. Original coordinates:'
+C      write (7,*) COORDS
+C      write (7,*) '2. Properties, total number is',NPROPS
+C      write (7,*) PROPS(1:NPROPS)
+C      write (7,*) '3. SVARS, total number is',NSVARS
 c      write (7,*) SVARS(1:NSVARS)
-      write (7,*) '4. Total number of distributed loads and/or fluxes:',MDLOAD
-      write (7,*) '5. (JDLTYP)Distributed load types:'
-      write (7,*) JDLTYP(MDLOAD,1),MDLOAD
-      write (7,*) '6. (ADLMAG)Total load magnitude of the K1th distributed load at the end of the current increment' 
-      write (7,*) ADLMAG(MDLOAD,1)
-      write (7,*) '7. (DDLMAG)Increments in the magnitudes of the distributed loads that are currently active on this element'
-      write (7,*) DDLMAG(MDLOAD,1)
-      write (7,*) '8. (MLVARX)Dimensioning parameter of RHS:'
-      write (7,*)  MLVARX
+C      write (7,*) '4. Total number of distributed loads and/or fluxes:',MDLOAD
+C      write (7,*) '5. (JDLTYP)Distributed load types:'
+C      write (7,*) JDLTYP(MDLOAD,1),MDLOAD
+C      write (7,*) '6. (ADLMAG)Total load magnitude of the K1th distributed load at the end of the current increment' 
+C      write (7,*) ADLMAG(MDLOAD,1)
+C      write (7,*) '7. (DDLMAG)Increments in the magnitudes of the distributed loads that are currently active on this element'
+C      write (7,*) DDLMAG(MDLOAD,1)
+C      write (7,*) '8. (MLVARX)Dimensioning parameter of RHS:'
+C      write (7,*)  MLVARX
       write (7,*) '                 Information about calculating'
       write (7,*) '1. (U)Total values of the variables'
       write (7,*) U
@@ -127,23 +126,32 @@ c  local coordinates in calculating K, ranged in (r,s) sequence
             Nodal_Local_coord(:,4)=(/0.5,0.0/)
             Nodal_Local_coord(:,5)=(/0.5,0.5/)
             Nodal_Local_coord(:,6)=(/0.0,0.5/)
-            U_total_nodal=RESHAPE(U,(/3,12/))
 c
+      U_total_nodal=RESHAPE(U,(/3,12/))
       U_total_nodal_up=U_total_nodal(:,1:LAYERNODE)
       U_total_nodal_low=U_total_nodal(:,LAYERNODE+1:LAYERNODE*2)
-      Coord_t_low=COORDS(:,1:LAYERNODE)+U_total_nodal_low
-      Coord_t_up=COORDS(:,LAYERNODE+1:LAYERNODE*2)+U_total_nodal_up
-      write (7,*) '3. U OF UP'
-      write (7,*) U_total_nodal_up
-      write (7,*) '4. U OF low'
-      write (7,*) U_total_nodal_low
+      Coord_t_up=COORDS(:,1:LAYERNODE)+U_total_nodal_up
+      Coord_t_low=COORDS(:,LAYERNODE+1:LAYERNODE*2)+U_total_nodal_low
+c      write (7,*) '3. U OF UP'
+c      write (7,*) U_total_nodal_up
+c      write (7,*) '4. U OF low'
+c      write (7,*) U_total_nodal_low
+      Du_nodal=RESHAPE(DU(:,1),(/3,12/))
+      Du_up=Du_nodal(:,1:LAYERNODE)
+      Du_low=Du_nodal(:,LAYERNODE+1:LAYERNODE*2)
+      Du_seperation=Du_up-Du_low
+      write (7,*) '3. Du_seperation'
+      write (7,*) Du_seperation
+c      write (7,*) '3. DU OF UP'
+c      write (7,*) Du_up
+c      write (7,*) '4. DU OF low'
+c      write (7,*) Du_up
 c-----------------------------------------
 c---------- caculate the czm model geometry -------------
       Coord_mid=0.5*(Coord_t_low+Coord_t_up)! x_m
-c
       Seperation_total_nodal=Coord_t_up-Coord_t_low! [u]
-c      write (7,*) '*** Seperation at node is'
-c      write (7,*) Seperation_total_nodal
+      write (7,*) '*** Seperation at node is'
+      write (7,*) Seperation_total_nodal
 c =============  ================
       do i=1,LAYERNODE
 c ------       kn0 and kt0     -------
@@ -172,7 +180,13 @@ c     -------------- g_beta at nodal point --------------------------
             call Base_gc(g1,g2,g3,gc1,gc2,gc3)
 c --- deal with minus seperation ---
       if (DOT_PRODUCT(Seperation_nodal,g3)<0.) then
-      write (7,*) 'WARN: This is minus: ', DOT_PRODUCT(Seperation_nodal,g3)
+      write (7,*) 'WARN: OVERLAP : ', DOT_PRODUCT(Seperation_nodal,g3)
+      write (7,*) '@ STEP ', KSTEP ,'INC ', KINC
+            kn_n0=kn0
+      end if
+      if (DOT_PRODUCT(Du_seperation(:,i),g3)<0.) then
+      write (7,*) 'WARN: minus : ', DOT_PRODUCT(Du_seperation(:,i),g3)
+      write (7,*) '@ STEP ', KSTEP ,'INC ', KINC
             kn_n0=kn0
       end if
 c     ---I(u,g)
