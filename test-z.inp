@@ -99,7 +99,7 @@
 **      Qn0=PROPS(5)
 **      Qt0=PROPS(6)
 *UEL PROPERTY, ELSET=ONE
-4000.,4000.,40.,8.,50.,50.
+4E3.,4000.,40.,80.,50.,50.
 1, 1, 1
 ** Section: Section-1
 *Solid Section, elset=Set-1, material=Material-1
@@ -133,7 +133,7 @@
 ** 
 *Material, name=Material-1
 *Elastic
- 2e+06, 0.3
+ 2e+04, 0.3
 ** ----------------------------------------------------------------
 ** 
 ** STEP: Step-1
@@ -151,7 +151,7 @@ Set-23, 1,6
 Set-25, 1,1
 ** Name: BC-2 Type: Displacement/Rotation
 *Boundary
-Set-24, 3,3, -0.01
+Set-24, 3,3, 0.01
 ** 
 ** OUTPUT REQUESTS
 ** 
@@ -182,7 +182,7 @@ Set-23, 1,6
 Set-25, 1,1
 ** Name: BC-2 Type: Displacement/Rotation
 *Boundary
-Set-24, 3,3, 0.01
+Set-24, 3,3, 0.04
 ** 
 ** OUTPUT REQUESTS
 ** 
