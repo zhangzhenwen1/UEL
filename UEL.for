@@ -158,7 +158,8 @@ c ------       kn0 and kt0     -------
       kn0=0.5*Qn0*Qn0/cn
       kt0=0.5*Qt0*Qt0/ct
 c --- damage parameter passin from last increasment ---
-      kn_n0=SVARS(i)
+c      kn_n0=SVARS(i)
+      kn_n0=kn0
       kt_n0=SVARS(6+i)
       write (7,*) '3. (k0) kn0 and kt0 of',i,' is'
       write (7,*) kn0,kt0

@@ -5,65 +5,7 @@
 **
 ** PARTS
 **
-*Part, name=Part-5
-*Node
-      1,           0.,           0.,           0.
-      2,           0.,           0.,          10.
-      3,           0.,           5.,           0.
-      4,           0.,           5.,          10.
-      5,           0.,          10.,           0.
-      6,           0.,          10.,          10.
-      7,           0.,        11.25,           0.
-      8,           0.,        11.25,          10.
-      9,           0.,        16.25,           0.
-     10,           0.,        16.25,          10.
-     11,           0.,        21.25,           0.
-     12,           0.,        21.25,          10.
-     13,          10.,           0.,           0.
-     14,          10.,           0.,          10.
-     15,          10.,           5.,           0.
-     16,          10.,           5.,          10.
-     17,          10.,          10.,           0.
-     18,          10.,          10.,          10.
-     19,          10.,        11.25,           0.
-     20,          10.,        11.25,          10.
-     21,          10.,        16.25,           0.
-     22,          10.,        16.25,          10.
-     23,          10.,        21.25,           0.
-     24,          10.,        21.25,          10.
-*Element, type=C3D6
-1, 13,  2, 14, 15,  4, 16
-2,  1,  2, 13,  3,  4, 15
-3, 15,  4, 16, 17,  6, 18
-4,  3,  4, 15,  5,  6, 17
- 7, 19,  8, 20, 21, 10, 22
- 8,  7,  8, 19,  9, 10, 21
- 9, 21, 10, 22, 23, 12, 24
-10,  9, 10, 21, 11, 12, 23
-*Element, type=COH3D6
-5, 17,  6, 18, 19,  8, 20
-6,  5,  6, 17,  7,  8, 19
-*Nset, nset=Set-1, generate
-  1,  24,   1
-*Elset, elset=Set-1, generate
-  1,  10,   1
-*Nset, nset=Set-2
-  5,  6,  7,  8, 17, 18, 19, 20
-*Elset, elset=Set-2
- 5, 6
-*Nset, nset=Set-3
-  5,  6,  7,  8, 17, 18, 19, 20
-*Elset, elset=Set-3
- 5, 6
-** Region: (Section-1:Set-1)
-*Elset, elset=_I1, internal
-  1,  2,  3,  4,  7,  8,  9, 10
-** Section: Section-1
-*Solid Section, elset=_I1, material=Material-1
-,
-** Section: Section-czm
-*Cohesive Section, elset=Set-3, material=czm, response=TRACTION SEPARATION
-, 
+*Part, name=Part-6
 *End Part
 **  
 **
@@ -71,28 +13,106 @@
 **
 *Assembly, name=Assembly
 **  
-*Instance, name=Part-5-1, part=Part-5
+*Instance, name=Part-6-1, part=Part-6
+*Node
+      1,          10.,           0.,          10.
+      2,           0.,           0.,          10.
+      3,           0.,           0.,           0.
+      4,          10.,           0.,           0.
+      5,          10.,           5.,          10.
+      6,           0.,           5.,          10.
+      7,           0.,           5.,           0.
+      8,          10.,           5.,           0.
+      9,          10.,          10.,          10.
+     10,           0.,          10.,          10.
+     11,           0.,          10.,           0.
+     12,          10.,          10.,           0.
+     13,          10.,          15.,          10.
+     14,           0.,          15.,          10.
+     15,           0.,          15.,           0.
+     16,          10.,          15.,           0.
+     17,          10.,          20.,          10.
+     18,           0.,          20.,          10.
+     19,           0.,          20.,           0.
+     20,          10.,          20.,           0.
+     21,          10.,           5.,           5.
+     22,           5.,           5.,           5.
+     23,           5.,           5.,          10.
+     24,           5.,           0.,          10.
+     25,           5.,           0.,           5.
+     26,          10.,           0.,           5.
+     27,           0.,          2.5,          10.
+     28,          10.,          2.5,          10.
+     29,          10.,          2.5,           0.
+     30,           5.,           5.,           0.
+     31,           0.,           5.,           5.
+     32,           0.,           0.,           5.
+     33,           5.,           0.,           0.
+     34,           0.,          2.5,           0.
+     35,          10.,          10.,           5.
+     36,           5.,          10.,           5.
+     37,           5.,          10.,          10.
+     38,           0.,          7.5,          10.
+     39,          10.,          7.5,          10.
+     40,          10.,          7.5,           0.
+     41,           5.,          10.,           0.
+     42,           0.,          10.,           5.
+     43,           0.,          7.5,           0.
+     44,          10.,          15.,           5.
+     45,           5.,          15.,           5.
+     46,           5.,          15.,          10.
+     47,           0.,         12.5,          10.
+     48,          10.,         12.5,          10.
+     49,          10.,         12.5,           0.
+     50,           5.,          15.,           0.
+     51,           0.,          15.,           5.
+     52,           0.,         12.5,           0.
+     53,          10.,          20.,           5.
+     54,           5.,          20.,           5.
+     55,           5.,          20.,          10.
+     56,           0.,         17.5,          10.
+     57,          10.,         17.5,          10.
+     58,          10.,         17.5,           0.
+     59,           5.,          20.,           0.
+     60,           0.,          20.,           5.
+     61,           0.,         17.5,           0.
+*Element, type=C3D15
+1,  5,  6,  8,  1,  2,  4, 23, 22, 21, 24, 25, 26, 28, 27, 29
+2,  8,  6,  7,  4,  2,  3, 22, 31, 30, 25, 32, 33, 29, 27, 34
+3,  9, 10, 12,  5,  6,  8, 37, 36, 35, 23, 22, 21, 39, 38, 40
+4, 12, 10, 11,  8,  6,  7, 36, 42, 41, 22, 31, 30, 40, 38, 43
+5, 13, 14, 16,  9, 10, 12, 46, 45, 44, 37, 36, 35, 48, 47, 49
+6, 16, 14, 15, 12, 10, 11, 45, 51, 50, 36, 42, 41, 49, 47, 52
+7, 17, 18, 20, 13, 14, 16, 55, 54, 53, 46, 45, 44, 57, 56, 58
+8, 20, 18, 19, 16, 14, 15, 54, 60, 59, 45, 51, 50, 58, 56, 61
+*Nset, nset=Set-1, generate
+  1,  61,   1
+*Elset, elset=Set-1, generate
+ 1,  8,  1
+** Section: Section-1
+*Solid Section, elset=Set-1, material=Material-1
+,
 *End Instance
 **  
-*Nset, nset=Set-1, instance=Part-5-1
-  1,  2, 13, 14
-*Elset, elset=Set-1, instance=Part-5-1
+*Nset, nset=Set-33, instance=Part-6-1
+  1,  2,  3,  4, 24, 25, 26, 32, 33
+*Elset, elset=Set-33, instance=Part-6-1
  1, 2
-*Nset, nset=Set-2, instance=Part-5-1
- 11, 12, 23, 24
-*Elset, elset=Set-2, instance=Part-5-1
-  9, 10
-*Nset, nset=Set-29, instance=Part-5-1
- 11, 12, 23, 24
-*Nset, nset=Set-30, instance=Part-5-1
-  1,  2, 13, 14
+*Nset, nset=Set-34, instance=Part-6-1
+ 17, 18, 19, 20, 53, 54, 55, 59, 60
+*Elset, elset=Set-34, instance=Part-6-1
+ 7, 8
+*Nset, nset=Set-35, instance=Part-6-1, generate
+  1,  61,   1
+*Elset, elset=Set-35, instance=Part-6-1, generate
+ 1,  8,  1
 *End Assembly
 ** 
 ** MATERIALS
 ** 
 *Material, name=Material-1
 *Elastic
- 2e+08, 0.3
+4000., 0.3
 *Material, name=Material-2
 *Elastic
 4000., 0.3
@@ -108,6 +128,20 @@
 40.,
 *Elastic
 4000., 0.3
+** 
+** BOUNDARY CONDITIONS
+** 
+** Name: BC-1 Type: Displacement/Rotation
+*Boundary
+Set-33, 1, 1
+Set-33, 2, 2
+Set-33, 3, 3
+Set-33, 4, 4
+Set-33, 5, 5
+Set-33, 6, 6
+** Name: BC-2 Type: Displacement/Rotation
+*Boundary
+Set-34, 2, 2
 ** ----------------------------------------------------------------
 ** 
 ** STEP: Step-1
@@ -119,37 +153,9 @@
 ** 
 ** BOUNDARY CONDITIONS
 ** 
-** Name: BC-1 Type: Displacement/Rotation
-*Boundary
-Set-29, 2, 2, 0.15
 ** Name: BC-2 Type: Displacement/Rotation
 *Boundary
-Set-30, 1, 1
-Set-30, 2, 2
-Set-30, 3, 3
-Set-30, 4, 4
-Set-30, 5, 5
-Set-30, 6, 6
-** 
-** OUTPUT REQUESTS
-** 
-*Restart, write, frequency=0
-** 
-** FIELD OUTPUT: F-Output-1
-** 
-*Output, field, variable=PRESELECT
-** 
-** HISTORY OUTPUT: H-Output-1
-** 
-*Output, history, variable=PRESELECT
-*End Step
-** ----------------------------------------------------------------
-** 
-** STEP: Step-2
-** 
-*Step, name=Step-2, nlgeom=YES
-*Static
-2., 2., 2e-05, 2.
+Set-34, 2, 2, -0.04
 ** 
 ** OUTPUT REQUESTS
 ** 
