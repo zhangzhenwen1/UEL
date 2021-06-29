@@ -1,8 +1,6 @@
 
 abaqus.*
 
-KK.dat
-
 *.dat
 
 *.com
@@ -21,7 +19,20 @@ KK.dat
 
 *.sta
 
+*.k
+
 *.dmp
+
 *.ipm
+
 *.lck
+
 *.rec
+
+*.cae
+
+*.echo
+
+*.inp
+
+*.cfile
