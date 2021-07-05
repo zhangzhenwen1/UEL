@@ -156,7 +156,7 @@
 1017,  9009,  9007,  9004,  9019,  9034,  9022,  10009,  7,  10004,  19,  34,  10022
 1018,  10009,  10008,  10004,  10011,  10035,  10022,  9,  8,  4,  11,  35,  22
 *UEL PROPERTY, ELSET=ONE
-4000.,4000.,40.,80.,50.,50.
+4000.,4000.,60.,80.,50.,50.
 1, 1, 1
 ** Section: Section-1
 *Solid Section, elset=Set-1, material=Material-1
@@ -172,30 +172,30 @@
 *Instance, name=Part-1-1, part=Part-1
 *End Instance
 *Nset, nset=Set-1, instance=Part-1-1
-  1, 2, 5,8,12,13,14,30,31
+  6001, 6002,6008,6030,6031,12,1002, 1005,1008,1012,1013,1014
 *Nset, nset=Set-2, instance=Part-1-1
- 3,4,6,7,16,20,21,23,34
+ 9007,9004,9003,9034,23,21,2006,2003,2021,2007,2021,2020,2016
 *End Assembly
 ** 
 ** MATERIALS
 ** 
 *Material, name=Material-1
 *Elastic
- 2e+04, 0.3
+ 2e+06, 0.3
 ** ----------------------------------------------------------------
 ** 
 ** STEP: Step-1
 ** 
 *Step, name=Step-1, nlgeom=YES, inc=1000
 *Static
-0.0001, 1., 1e-07, 1.
+0.0001, 1., 1e-07, 0.01
 *Solution Technique, type=QUASI-NEWTON
 ** 
 ** BOUNDARY CONDITIONS
 ** 
 ** Name: BC-1 Type: Displacement/Rotation
 *Boundary
-Set-1, 3, 3, 0.01
+Set-1, 3, 3, 0.1
 ** Name: BC-2 Type: Displacement/Rotation
 *Boundary
 set-1,1,1
