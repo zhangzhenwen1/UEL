@@ -1,0 +1,103 @@
+$# LS-PrePost command file created by LS-PrePost(R) V4.8.16 - 07Jun2021 -64bit-Window
+$# Created on Jun-25-2021 (10:12:56)
+open keyword "C:\repo\UEL\Job-q1.k"
+Message 1
+Message 0
+-M 1
+grid
+grid
+mesh
+mesh
+grid
+hide
+shad
+elemedit createnode accept
+dupnode freedge on
+dupnode freedge off
+elemedit modifynode accept
+genselect clear
+ident select 1
+genselect target node
+ident showid off
+ident showid on
+genselect node add node 960/0 
+ident echo on
+genselect node add solid 393/F0/0 
+genselect node add solid 377/F0/0 
+genselect node add solid 377/F0/0 
+genselect node add solid 377/F0/0 
+genselect node add solid 235/F0/0 
+-M 2
++M 1
+genselect node add solid 57/F2/0 
+genselect node add solid 58/F2/0 
+genselect node add solid 159/F2/0 
+genselect node add solid 7/F2/0 
++M 2
+shrink
+rx 10
+rx 10
+rx 10
+rz 10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+-M 1
+occview hide
+shrink
+ident select 0
+ident select 0
+genselect target edge
+genselect target segment
+genselect target part
+elgenerate solid cohesive select 3
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+rz -10
+clearpick
+genselect target shell
+genselect target shell
+elemcheck clear
+genselect clear
+genselect target shell
+genselect clear
+elemcheck clear
+genselect target shell
+elemcheck clear
+elemcheck clear
