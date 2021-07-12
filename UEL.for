@@ -70,17 +70,18 @@ c ==== every step the K matrix is being overwrited
 c ==== expecting: every matrix should be stored in this file
       open(110, file = 'c:\repo\UEL\KK.dat', status = 'OLD')
 c ================================================
-      write (7,*) '======================================================='
-      write (7,*) '=====                  UEL START                  ====='
-      write (7,*) '======================================================='
-      write (7,*) '          Information Pass In '
-      write (7,*) '          @ STEP ', KSTEP
-      write (7,*) '          @ ELEMENT ', JELEM
+      write (7,*) '======================================'
+      write (7,*) '=====           UEL START        ====='
+      write (7,*) '=====       Information Pass In  ====='
+      write (7,*) '=====    ELEMENT    :', JELEM
+      write (7,*) '=====    STEP       :', KSTEP 
+      write (7,*) '=====    INCRESEMENT:', KINC
+      write (7,*) '======================================'
 C      write (7,*) '1. Original coordinates:'
 C      write (7,*) COORDS
 C      write (7,*) '2. Properties, total number is',NPROPS
 C      write (7,*) PROPS(1:NPROPS)
-C      write (7,*) '3. SVARS, total number is',NSVARS
+c      write (7,*) '3. SVARS, total number is',NSVARS
 c      write (7,*) SVARS(1:NSVARS)
 C      write (7,*) '4. Total number of distributed loads and/or fluxes:',MDLOAD
 C      write (7,*) '5. (JDLTYP)Distributed load types:'
@@ -91,11 +92,11 @@ C      write (7,*) '7. (DDLMAG)Increments in the magnitudes of the distributed l
 C      write (7,*) DDLMAG(MDLOAD,1)
 C      write (7,*) '8. (MLVARX)Dimensioning parameter of RHS:'
 C      write (7,*)  MLVARX
-      write (7,*) '                 Information about calculating'
-      write (7,*) '1. (U)Total values of the variables'
-      write (7,*) U
-      write (7,*) '2. (DU)Incremental values of the variables for the current'
-      write (7,*) DU(:,1)
+c      write (7,*) '                 Information about calculating'
+c      write (7,*) '1. (U)Total values of the variables'
+c      write (7,*) U
+c      write (7,*) '2. (DU)Incremental values of the variables for the current'
+c      write (7,*) DU(:,1)
 c ========== define the unit matrix ==========
       Matrix_1(:,1)=(/1.0,0.0,0.0/);Matrix_1(:,2)=(/0.0,1.0,0.0/);Matrix_1(:,3)=(/0.0,0.0,1.0/);
 c ========== initialize parameters  ==========
@@ -111,7 +112,6 @@ c=========== define element shape  =======================
 c====== WHEN triangle LAYERNODE=6 ======================
 c====== WHEN quadrilateral LAYERNODE=8 ======================
 c      LAYERNODE=PROPS(7)
-c
 c      write (7,*) 'SVARS passin is'
 c      write (7,*) SVARS(25),SVARS(26),SVARS(27),SVARS(28),SVARS(29),SVARS(30)
 c========= define the local coordinates WHEN the element is triangle ==========
@@ -140,8 +140,8 @@ c      write (7,*) U_total_nodal_low
       Du_up=Du_nodal(:,1:LAYERNODE)
       Du_low=Du_nodal(:,LAYERNODE+1:LAYERNODE*2)
       Du_seperation=Du_up-Du_low
-      write (7,*) '3. Du_seperation'
-      write (7,*) Du_seperation
+c      write (7,*) '3. Du_seperation'
+c      write (7,*) Du_seperation
 c      write (7,*) '3. DU OF UP'
 c      write (7,*) Du_up
 c      write (7,*) '4. DU OF low'
@@ -150,25 +150,23 @@ c-----------------------------------------
 c---------- caculate the czm model geometry -------------
       Coord_mid=0.5*(Coord_t_low+Coord_t_up)! x_m
       Seperation_total_nodal=Coord_t_up-Coord_t_low! [u]
-      write (7,*) '*** Seperation at node is'
-      write (7,*) Seperation_total_nodal
+c      write (7,*) '*** Seperation at node is'
+c      write (7,*) Seperation_total_nodal
 c =============  ================
       do i=1,LAYERNODE
+            write(7,*) '===   NODE NUMBER',i
 c ------       kn0 and kt0     -------
       kn0=0.5*Qn0*Qn0/cn
       kt0=0.5*Qt0*Qt0/ct
 c --- damage parameter passin from last increasment ---
       kn_n0=SVARS(i)
       kt_n0=SVARS(6+i)
-      write (7,*) '3. (k0) kn0 and kt0 of',i,' is'
-      write (7,*) kn0,kt0
+c      write (7,*) '3. (k0) kn0 and kt0 of',i,' is'
+c      write (7,*) kn0,kt0
 c      write (7,*) '*** k of',i,'at last step is'
-      write (7,*) 'kn0', kn_n0
-      write (7,*) 'kt0', kt_n0
-c
+c      write (7,*) 'kn_n0', kn_n0
+c      write (7,*) 'kt_n0', kt_n0
       Seperation_nodal=Seperation_total_nodal(:,i)
-c      write (7,*) 'Seperation of',i,' is'
-c      write (7,*) Seperation_nodal
 c     ---------- Jacobian(local_coordinate,global_coord,output,detJ) ------
             call Jacobian(Nodal_Local_coord(:,i),Coord_mid,J_mid,detJ(:,i))
 c            write (7,*) '*** Jacobian midsurface at point',i,'is'
@@ -178,17 +176,6 @@ c     -------------- g_beta at nodal point --------------------------
             g2=J_mid(:,2)
             call Base_g3(g1,g2,g3)
             call Base_gc(g1,g2,g3,gc1,gc2,gc3)
-c --- deal with minus seperation ---
-      if (DOT_PRODUCT(Seperation_nodal,g3)<0.) then
-      write (7,*) 'WARN: OVERLAP : ', DOT_PRODUCT(Seperation_nodal,g3)
-      write (7,*) '@ STEP ', KSTEP ,'INC ', KINC
-            kn_n0=kn0
-      end if
-      if (DOT_PRODUCT(Du_seperation(:,i),g3)<0.) then
-      write (7,*) 'WARN: minus : ', DOT_PRODUCT(Du_seperation(:,i),g3)
-      write (7,*) '@ STEP ', KSTEP ,'INC ', KINC
-            kn_n0=kn0
-      end if
 c     ---I(u,g)
 c     ---I1 (1,6) scaler
             I1=DOT_PRODUCT(Seperation_nodal,Seperation_nodal)
@@ -198,6 +185,7 @@ C     ---I3 (1,6) scaler
             call Product_I(g2,gc2,Seperation_nodal,I3)
 c     ψ0(I1,I2,I3)~(u,g) (3,6) scaler
             Sai0n=0.5*cn*(I1-I2-I3)
+c            write (7,*) '*** Sai0n of',i, 'is',Sai0n
             Sai0t=0.5*ct*(I2+I3)
 c ------      ∂ψ0/∂I     -------
       PD_sai0n_I1=0.5*cn
@@ -221,7 +209,17 @@ c     ψ=(1-d)ψ0 scaler
             Sain=(1-dnn)*(1-dnt)*Sai0n
             Sait=(1-dtn)*(1-dtt)*Sai0t
 c     update kn scaler
-            SVARS(i)=MAX(kn_n0,Sai0n,kn0)
+            if (DOT_PRODUCT(Du_seperation(:,i),g3)<0.) then
+                  write (7,*) 'WARN !: MINUS DISPLACEMENT: ', DOT_PRODUCT(Du_seperation(:,i),g3)
+c                  !SVARS(i)=MAX(kn_n0,Sai0n,kn0)
+c                  if (DOT_PRODUCT(Seperation_nodal,g3)<0.) then
+c                        write (7,*) 'WARN !! : OVERLAP! Seperation_nodal is MINUS: ', DOT_PRODUCT(Seperation_nodal,g3)
+c                              dnn=0.
+c                              dtn=dnn
+c                        end if
+            else
+                  SVARS(i)=MAX(kn_n0,Sai0n,kn0)
+c            END if
             SVARS(6+i)=MAX(kt_n0,Sai0t,kt0)
 c     [u].gc scaler
          Param_ugc1=DOT_PRODUCT(Seperation_nodal,gc1)
@@ -308,95 +306,91 @@ c     ∂ψ0/∂g
       PD_sai0n_g2=PD_sai0n_I1*PD_I1_g2+PD_sai0n_I2*PD_I2_g2+PD_sai0n_I3*PD_I3_g2
       PD_sai0t_g1=PD_sai0t_I1*PD_I1_g1+PD_sai0t_I2*PD_I2_g1+PD_sai0t_I3*PD_I3_g1
       PD_sai0t_g2=PD_sai0t_I1*PD_I1_g2+PD_sai0t_I2*PD_I2_g2+PD_sai0t_I3*PD_I3_g2
-
-      write (7,*) '*** Determinate of Jacobian at point',i,'is'
-      write (7,*) detJ
-      write (7,*) '*** g1 is'
-      write (7,*) g1
-      write (7,*) '*** g2 is'
-      write (7,*) g2
-      write (7,*) '*** g3 is'
-      write (7,*) g3
-      
-      write (7,*) '*** gc1 is'
-      write (7,*) gc1
-      write (7,*) '*** gc2 is'
-      write (7,*) gc2
-      write (7,*) '*** gc3 is'
-      write (7,*) gc3
-      write(7,*) '*** I'
-      write(7,*) '      I1'
-      write(7,*) I1
-      write(7,*) '      I2'
-      write(7,*) I2
-      write(7,*) '      I3'
-      write(7,*) I3
-      write(7,*) '*** ψ0'
-      write(7,*) 'ψn0',Sai0n
-      write(7,*) 'ψt0',Sai0t
-      write(7,*) '*** ψ'
-      write(7,*) 'ψn',Sain
-      write(7,*) 'ψt',Sait
-      write (7,*) '*** k of',i,'at end is'
-            write (7,*) 'kn', SVARS(i)
-            write (7,*) 'kt', SVARS(6+i)
+c      write (7,*) '*** Determinate of Jacobian at point',i,'is'
+c      write (7,*) detJ
+c      write (7,*) '*** g1 is'
+c      write (7,*) g1
+c      write (7,*) '*** g2 is'
+c      write (7,*) g2
+c      write (7,*) '*** g3 is'
+c      write (7,*) g3     
+c      write (7,*) '*** gc1 is'
+c      write (7,*) gc1
+c      write (7,*) '*** gc2 is'
+c      write (7,*) gc2
+c      write (7,*) '*** gc3 is'
+c      write (7,*) gc3
+c      write(7,*) '*** I'
+c      write(7,*) '      I1'
+c      write(7,*) I1
+c      write(7,*) '      I2'
+c      write(7,*) I2
+c      write(7,*) '      I3'
+c      write(7,*) I3
+c      write(7,*) '*** ψ0'
+c      write(7,*) 'ψn0',Sai0n
+c      write(7,*) 'ψt0',Sai0t
+c      write(7,*) '*** ψ'
+c      write(7,*) 'ψn',Sain
+c      write(7,*) 'ψt',Sait
+c      write (7,*) '*** k of',i,'at end is'
+c            write (7,*) 'kn', SVARS(i)
+c            write (7,*) 'kt', SVARS(6+i)
       write(7,*) '*** damage parameters'
       write(7,*) '      dnn',dnn
       write(7,*) '      dnt',dnt
-      write(7,*) '      dtn',dtn
-      write(7,*) '      dtt',dtt
-      write(7,*)'***  ∂I1/∂u'
-      write(7,*) PD_I1_u
-      write(7,*)'***  ∂I2/∂u'
-      write(7,*) PD_I2_u
-      write(7,*) '*** ∂I2/∂g1'
-      write(7,*) PD_I2_g1
-      write(7,*) '*** ∂I2/∂g2'
-      write(7,*) PD_I2_g2
-      write(7,*)'***  ∂I3/∂u'
-      write(7,*) PD_I3_u
-      write(7,*) '*** ∂I3/∂g1'
-      write(7,*) PD_I3_g1
-      write(7,*) '*** ∂I3/∂g2'
-      write(7,*) PD_I3_g2
-      write(7,*) '*** ∂I2/∂u/∂u'
-      write(7,*) PD_I2_u_u
-      write(7,*) '*** ∂I2/∂u/∂g1'
-      write(7,*) PD_I2_u_g1
-      write(7,*) '*** ∂I2/∂u/∂g2'
-      write(7,*) PD_I2_u_g2
-      write(7,*) '*** ∂I2/∂g1/∂g1'
-      write(7,*) PD_I2_g1_g1
-      write(7,*) '*** ∂I2/∂g2/∂g2'
-      write(7,*) PD_I2_g2_g2
-      write(7,*) '*** ∂I2/∂g1/∂g2'
-      write(7,*) PD_I2_g1_g2
-      write(7,*) '*** ∂I3/∂u/∂u'
-      write(7,*) PD_I3_u_u
-      write(7,*) '*** ∂I3/∂u/∂g1'
-      write(7,*) PD_I3_u_g1
-      write(7,*) '*** ∂I3/∂u/∂g2'
-      write(7,*) PD_I3_u_g2
-      write(7,*) '*** ∂I3/∂g1/∂g1'
-      write(7,*) PD_I3_g1_g1
-      write(7,*) '*** ∂I3/∂g2/∂g2'
-      write(7,*) PD_I3_g2_g2
-      write(7,*) '*** ∂I3/∂g1/∂g2'
-      write(7,*) PD_I3_g1_g2
-      
-      
-      write(7,*) '*** PD_sai0n_u'
-      write(7,*) PD_sai0n_u
-      write(7,*) '*** PD_sai0t_u'
-      write(7,*) PD_sai0t_u
-      write(7,*) '*** PD_sai0n_g1      '
-      write(7,*) PD_sai0n_g1
-      write(7,*) '*** PD_sai0n_g2      '
-      write(7,*) PD_sai0n_g2
-      write(7,*) '*** PD_sai0t_g1      '
-      write(7,*) PD_sai0t_g1
-      write(7,*) '*** PD_sai0t_g2      '
-      write(7,*) PD_sai0t_g2
+c      write(7,*) '      dtn',dtn
+c      write(7,*) '      dtt',dtt
+c      write(7,*)'***  ∂I1/∂u'
+c      write(7,*) PD_I1_u
+c      write(7,*)'***  ∂I2/∂u'
+c      write(7,*) PD_I2_u
+c      write(7,*) '*** ∂I2/∂g1'
+c      write(7,*) PD_I2_g1
+c      write(7,*) '*** ∂I2/∂g2'
+c      write(7,*) PD_I2_g2
+c      write(7,*)'***  ∂I3/∂u'
+c      write(7,*) PD_I3_u
+c      write(7,*) '*** ∂I3/∂g1'
+c      write(7,*) PD_I3_g1
+c      write(7,*) '*** ∂I3/∂g2'
+c      write(7,*) PD_I3_g2
+c      write(7,*) '*** ∂I2/∂u/∂u'
+c      write(7,*) PD_I2_u_u
+c      write(7,*) '*** ∂I2/∂u/∂g1'
+c      write(7,*) PD_I2_u_g1
+c      write(7,*) '*** ∂I2/∂u/∂g2'
+c      write(7,*) PD_I2_u_g2
+c      write(7,*) '*** ∂I2/∂g1/∂g1'
+c      write(7,*) PD_I2_g1_g1
+c      write(7,*) '*** ∂I2/∂g2/∂g2'
+c      write(7,*) PD_I2_g2_g2
+c      write(7,*) '*** ∂I2/∂g1/∂g2'
+c      write(7,*) PD_I2_g1_g2
+c      write(7,*) '*** ∂I3/∂u/∂u'
+c      write(7,*) PD_I3_u_u
+c      write(7,*) '*** ∂I3/∂u/∂g1'
+c      write(7,*) PD_I3_u_g1
+c      write(7,*) '*** ∂I3/∂u/∂g2'
+c      write(7,*) PD_I3_u_g2
+c      write(7,*) '*** ∂I3/∂g1/∂g1'
+c      write(7,*) PD_I3_g1_g1
+c      write(7,*) '*** ∂I3/∂g2/∂g2'
+c      write(7,*) PD_I3_g2_g2
+c      write(7,*) '*** ∂I3/∂g1/∂g2'
+c      write(7,*) PD_I3_g1_g2      
+c      write(7,*) '*** PD_sai0n_u'
+c      write(7,*) PD_sai0n_u
+c      write(7,*) '*** PD_sai0t_u'
+c      write(7,*) PD_sai0t_u
+c      write(7,*) '*** PD_sai0n_g1      '
+c      write(7,*) PD_sai0n_g1
+c      write(7,*) '*** PD_sai0n_g2      '
+c      write(7,*) PD_sai0n_g2
+c      write(7,*) '*** PD_sai0t_g1      '
+c      write(7,*) PD_sai0t_g1
+c      write(7,*) '*** PD_sai0t_g2      '
+c      write(7,*) PD_sai0t_g2
 c      write (7,*) 'k update is'
 c      write (7,*) SVARS(25),SVARS(26),SVARS(27),SVARS(28),SVARS(29),SVARS(30)
 c      write (7,*) '*** I1,I2,I3 at Gauss point is'
@@ -404,7 +398,7 @@ c      write (7,*) I1
 c      write (7,*) I2
 c      write (7,*) I3
 c================= K calculating =======================================
-      write(7,*) '*** start calculate ∂(∂ψ0/∂u)∂u ∂(∂ψ0/∂u)∂g_β ∂(∂ψ0/∂g_β)∂g_β'
+c      write(7,*) '*** start calculate ∂(∂ψ0/∂u)∂u ∂(∂ψ0/∂u)∂g_β ∂(∂ψ0/∂g_β)∂g_β'
 c      ∂(∂ψ0/∂u)∂u (3,3)
       PD_sai0n_u_u=PD_sai0n_I1*PD_I1_u_u+PD_sai0n_I2*PD_I2_u_u+PD_sai0n_I3*PD_I3_u_u
       PD_sai0t_u_u=PD_sai0t_I1*PD_I1_u_u+PD_sai0t_I2*PD_I2_u_u+PD_sai0t_I3*PD_I3_u_u
@@ -432,16 +426,16 @@ c      ∂(∂ψ0/∂g2)∂u
 c      ∂(∂ψ0/∂g2)∂g1
       PD_sai0n_g1_g2=TRANSPOSE(PD_sai0n_g2_g1)
       PD_sai0t_g1_g2=TRANSPOSE(PD_sai0n_g2_g1)
-      write(7,*) '∂(∂ψ0/∂u)∂u PD_sai0n_u_u'
-      write(7,*) PD_sai0n_u_u
-      write(7,*) '∂(∂ψ0/∂u)∂u PD_sai0t_u_u'
-      write(7,*) PD_sai0t_u_u
-      write(7,*) '∂(∂ψ0/∂u)∂g1 PD_sai0n_u_g1'
-      write(7,*) PD_sai0n_u_g1
-      write(7,*) '∂(∂ψ0/∂u)∂g2 PD_sai0n_u_g2'
-      write(7,*) PD_sai0n_u_g2
-      write(7,*) '∂(∂ψ0/∂g1)∂g2 PD_sai0n_g1_g2'
-      write(7,*) PD_sai0n_g1_g2
+c      write(7,*) '∂(∂ψ0/∂u)∂u PD_sai0n_u_u'
+c      write(7,*) PD_sai0n_u_u
+c      write(7,*) '∂(∂ψ0/∂u)∂u PD_sai0t_u_u'
+c      write(7,*) PD_sai0t_u_u
+c      write(7,*) '∂(∂ψ0/∂u)∂g1 PD_sai0n_u_g1'
+c      write(7,*) PD_sai0n_u_g1
+c      write(7,*) '∂(∂ψ0/∂u)∂g2 PD_sai0n_u_g2'
+c      write(7,*) PD_sai0n_u_g2
+c      write(7,*) '∂(∂ψ0/∂g1)∂g2 PD_sai0n_g1_g2'
+c      write(7,*) PD_sai0n_g1_g2
 c====================================
 c     ============ N(ξ) & ∂N/∂ξ  (3,6)===========================================
       N=Shape_poly(Nodal_Local_coord(:,i))
@@ -461,18 +455,18 @@ c ============  Δ[u] & Δg (3)================
       delta_U(m)=N(1,j)
       delta_g1(m)=PD_N_r(1,j)*0.5
       delta_g2(m)=PD_N_s(1,j)*0.5
-      write(7,*) '      delta_u'
-      write(7,*) delta_U
-      write(7,*) '      delta_g1'
-      write(7,*) delta_g1
-      write(7,*) '      delta_g2'
-      write(7,*) delta_g2
-      write(7,*) '∂(∂ψ0/∂u)∂u PD_sai0n_u_u'
-      write(7,*) PD_sai0n_u_u
-      write(7,*) '∂(∂ψ0/∂u)∂u PD_sai0t_u_u'
-      write(7,*) PD_sai0t_u_u
+c      write(7,*) '      delta_u'
+c      write(7,*) delta_U
+c      write(7,*) '      delta_g1'
+c      write(7,*) delta_g1
+c      write(7,*) '      delta_g2'
+c      write(7,*) delta_g2
+c      write(7,*) '∂(∂ψ0/∂u)∂u PD_sai0n_u_u'
+c      write(7,*) PD_sai0n_u_u
+c      write(7,*) '∂(∂ψ0/∂u)∂u PD_sai0t_u_u'
+c      write(7,*) PD_sai0t_u_u
 c===============   Δ∂ψ0/∂u (3,6) ====================================
-      write(7,*) '*** start calculate Δ∂ψ0/∂u '
+c      write(7,*) '*** start calculate Δ∂ψ0/∂u '
       delta_PD_sai0n_u_up=Dot_3_1(PD_sai0n_u_u,delta_U)+Dot_3_1(PD_sai0n_u_g1,delta_g1)
      &+Dot_3_1(PD_sai0n_u_g2,delta_g2)
       delta_PD_sai0t_u_up=Dot_3_1(PD_sai0t_u_u,delta_U)+Dot_3_1(PD_sai0t_u_g1,delta_g1)
@@ -481,7 +475,6 @@ c===============   Δ∂ψ0/∂u (3,6) ====================================
      &+Dot_3_1(PD_sai0n_u_g2,delta_g2)
       delta_PD_sai0t_u_low=-Dot_3_1(PD_sai0t_u_u,delta_U)+Dot_3_1(PD_sai0t_u_g1,delta_g1)
      &+Dot_3_1(PD_sai0t_u_g2,delta_g2)
-C
       delta_PD_sai0n_g1_up=Dot_3_1(PD_sai0n_g1_g2,delta_g2)+Dot_3_1(PD_sai0n_g1_u,delta_U)
       delta_PD_sai0t_g1_up=Dot_3_1(PD_sai0t_g1_g2,delta_g2)+Dot_3_1(PD_sai0t_g1_u,delta_U)
       delta_PD_sai0n_g2_up=Dot_3_1(PD_sai0n_g2_g1,delta_g1)+Dot_3_1(PD_sai0n_g2_u,delta_U)
@@ -490,20 +483,20 @@ C
       delta_PD_sai0t_g1_low=Dot_3_1(PD_sai0t_g1_g2,delta_g2)-Dot_3_1(PD_sai0t_g1_u,delta_U)
       delta_PD_sai0n_g2_low=Dot_3_1(PD_sai0n_g2_g1,delta_g1)-Dot_3_1(PD_sai0n_g2_u,delta_U)
       delta_PD_sai0t_g2_low=Dot_3_1(PD_sai0t_g2_g1,delta_g1)-Dot_3_1(PD_sai0t_g2_u,delta_U)
-      write(7,*) '*** delta_PD_sai0n_u'
-      write(7,*) delta_PD_sai0n_u_up
-      write(7,*) '*** delta_PD_sai0n_g1'
-      write(7,*) delta_PD_sai0n_g1_up
-      write(7,*) '*** delta_PD_sai0n_g2'
-      write(7,*) delta_PD_sai0n_g2_up
-      write(7,*) '*** delta_PD_sai0y_u'
-      write(7,*) delta_PD_sai0t_u_up
-      write(7,*) '*** delta_PD_sai0t_g1'
-      write(7,*) delta_PD_sai0t_g1_up
-      write(7,*) '*** delta_PD_sai0t_g2'
-      write(7,*) delta_PD_sai0t_g2_up
+c      write(7,*) '*** delta_PD_sai0n_u'
+c      write(7,*) delta_PD_sai0n_u_up
+c      write(7,*) '*** delta_PD_sai0n_g1'
+c      write(7,*) delta_PD_sai0n_g1_up
+c      write(7,*) '*** delta_PD_sai0n_g2'
+c      write(7,*) delta_PD_sai0n_g2_up
+c      write(7,*) '*** delta_PD_sai0y_u'
+c      write(7,*) delta_PD_sai0t_u_up
+c      write(7,*) '*** delta_PD_sai0t_g1'
+c      write(7,*) delta_PD_sai0t_g1_up
+c      write(7,*) '*** delta_PD_sai0t_g2'
+c      write(7,*) delta_PD_sai0t_g2_up
 c================= Δd    =====================================
-      write(7,*) '*** start calculate Δd '
+c      write(7,*) '*** start calculate Δd '
 c      ∂ψ0n scaler
       delta_sai0n_up=DOT_PRODUCT(PD_sai0n_u,delta_U)+DOT_PRODUCT(PD_sai0n_g1,delta_g1)
      &+DOT_PRODUCT(PD_sai0t_g1,delta_g1)
@@ -514,11 +507,11 @@ c      ∂ψ0t scaler
      &+DOT_PRODUCT(PD_sai0t_g2,delta_g2)
       delta_sai0t_low=-DOT_PRODUCT(PD_sai0t_u,delta_U)+DOT_PRODUCT(PD_sai0n_g2,delta_g2)
      &+DOT_PRODUCT(PD_sai0t_g2,delta_g2)
-      write(7,*) '*** Δψ0'
-      write(7,*) '      Δψ0n'
-      write(7,*) delta_sai0n_up
-      write(7,*) '      Δψ0t'
-      write(7,*) delta_sai0t_up
+c      write(7,*) '*** Δψ0'
+c      write(7,*) '      Δψ0n'
+c      write(7,*) delta_sai0n_up
+c      write(7,*) '      Δψ0t'
+c      write(7,*) delta_sai0t_up
 c
       delta_dnn_up=(1-dnn)*Qn0/Gn*delta_sai0n_up !scaler
       delta_dnt_up=(1-dnt)*Qt0/Gt*delta_sai0t_up !scaler
@@ -528,15 +521,15 @@ c
       delta_dnt_low=(1-dnt)*Qt0/Gt*delta_sai0t_low !scaler
       delta_dtn_low=(1-dtn)*Qn0/Gn*delta_sai0n_low !scaler
       delta_dtt_low=(1-dtt)*Qt0/Gt*delta_sai0t_low !scaler
-      write(7,*) '*** Δd'
-      write(7,*) '      Δdnn'
-      write(7,*) delta_dnn_up
-      write(7,*) '      Δdnt'
-      write(7,*) delta_dnt_up
-      write(7,*) '      Δdtn'
-      write(7,*) delta_dtn_up
-      write(7,*) '      Δdtt'
-      write(7,*) delta_dtt_up
+c      write(7,*) '*** Δd'
+c      write(7,*) '      Δdnn'
+c      write(7,*) delta_dnn_up
+c      write(7,*) '      Δdnt'
+c      write(7,*) delta_dnt_up
+c      write(7,*) '      Δdtn'
+c      write(7,*) delta_dtn_up
+c      write(7,*) '      Δdtt'
+c      write(7,*) delta_dtt_up
 c     K--
       K=(1-dnn)*(1-dnt)*(-N(1,i)*delta_PD_sai0n_u_low+0.5*PD_N_r(1,i)*delta_PD_sai0n_g1_low+0.5*PD_N_s(1,i)*delta_PD_sai0n_g2_low)
      &-delta_dnn_low*(1-dnt)*(-N(1,i)*PD_sai0n_u+0.5*PD_N_r(1,i)*PD_sai0n_g1+0.5*PD_N_s(1,i)*PD_sai0n_g2)
@@ -598,9 +591,9 @@ c ===========================================================================
       write(110,*) '*** KK'
       write(110,"(36f6.1)") AMATRX
 c ===============================================
-      write(7,*) '************************'
-      write(7,*) '***** RHS ASSEMBLE *****'
-      write(7,*) '************************'
+c      write(7,*) '************************'
+c      write(7,*) '***** RHS ASSEMBLE *****'
+c      write(7,*) '************************'
       call Integration(weight,R_u_low_nodal,R_u_low,Gauss_point,detJ)
       call Integration(weight,R_u_up_nodal,R_u_up,Gauss_point,detJ)
       call Integration_g1(weight,R_g1_nodal,R_g1,Gauss_point,detJ)
@@ -621,10 +614,10 @@ c      write(7,*) R_g2
       end do
 c      write(7,*) '*** RHS'
 c      write(7,*) RHS(:,1)
-      write(7,*) '*** R_up'
-      write(7,*) R_up
-      write(7,*) '*** R_low'
-      write(7,*) R_low
+c      write(7,*) '*** R_up'
+c      write(7,*) R_up
+c      write(7,*) '*** R_low'
+c      write(7,*) R_low
       write(7,*) '*************************'
       write(7,*) '***** END     CYCLE *****'
       write(7,*) '*************************'
