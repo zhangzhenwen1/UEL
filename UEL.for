@@ -154,7 +154,6 @@ c      write (7,*) '*** Seperation at node is'
 c      write (7,*) Seperation_total_nodal
 c =============  ================
       do i=1,LAYERNODE
-            write(7,*) '===   NODE NUMBER',i
 c ------       kn0 and kt0     -------
       kn0=0.5*Qn0*Qn0/cn
       kt0=0.5*Qt0*Qt0/ct
@@ -212,14 +211,14 @@ c     update kn scaler
             if (DOT_PRODUCT(Du_seperation(:,i),g3)<0.) then
                   write (7,*) 'WARN !: MINUS DISPLACEMENT: ', DOT_PRODUCT(Du_seperation(:,i),g3)
 c                  !SVARS(i)=MAX(kn_n0,Sai0n,kn0)
-c                  if (DOT_PRODUCT(Seperation_nodal,g3)<0.) then
-c                        write (7,*) 'WARN !! : OVERLAP! Seperation_nodal is MINUS: ', DOT_PRODUCT(Seperation_nodal,g3)
-c                              dnn=0.
-c                              dtn=dnn
-c                        end if
+                  if (DOT_PRODUCT(Seperation_nodal,g3)<0.) then
+                        write (7,*) 'WARN !! : OVERLAP! Seperation_nodal is MINUS: ', DOT_PRODUCT(Seperation_nodal,g3)
+                              dnn=0.
+                              dtn=dnn
+                        end if
             else
                   SVARS(i)=MAX(kn_n0,Sai0n,kn0)
-c            END if
+            END if
             SVARS(6+i)=MAX(kt_n0,Sai0t,kt0)
 c     [u].gc scaler
          Param_ugc1=DOT_PRODUCT(Seperation_nodal,gc1)
@@ -587,7 +586,7 @@ c      write(7,*) R_g1_nodal
 c      write(7,*) '*** R_g2_nodal'
 c      write(7,*) R_g2_nodal
 c ===========================================================================
-      end do
+      end do !i
       write(110,*) '*** KK'
       write(110,"(36f6.1)") AMATRX
 c ===============================================
