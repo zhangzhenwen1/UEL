@@ -1,0 +1,80 @@
+*Heading
+Created by J. Bergstrom at PolymerFEM LLC
+*Part, name=block
+*Node
+ 1,  0.0,  0.0,  1.0
+ 2,  1.0,  0.0,  1.0
+ 3,  1.0,  0.0,  0.0
+ 4,  0.0,  0.0,  0.0
+11,  0.0, 0.49,  1.0
+12,  1.0, 0.49,  1.0
+13,  1.0, 0.49,  0.0
+14,  0.0, 0.49,  0.0
+21,  0.0, 0.50,  1.0
+22,  1.0, 0.50,  1.0
+23,  1.0, 0.50,  0.0
+24,  0.0, 0.50,  0.0
+31,  0.0,  1.0,  1.0
+32,  1.0,  1.0,  1.0
+33,  1.0,  1.0,  0.0
+34,  0.0,  1.0,  0.0
+*Element, type=C3D8R
+1, 1, 2, 3, 4, 11, 12, 13, 14
+2, 21, 22, 23, 24, 31, 32, 33, 34
+*Element, type=COH3D8
+3, 11, 12, 13, 14, 21, 22, 23, 24
+*Nset, nset=top
+31, 32, 33, 34
+*Nset, nset=bottom
+1, 2, 3, 4
+*Elset, elset=topBlock
+2
+*Elset, elset=botBlock
+1
+*Elset, elset=adhesive
+3
+*Solid Section, elset=botBlock, material=steel
+*Solid Section, elset=topBlock, material=steel
+*Cohesive Section, elset=adhesive, material=mat, response=traction separation
+*End Part
+*Assembly, name=Assembly
+*Instance, name=block, part=block
+*End Instance
+*End Assembly
+**********************************
+*Material, name=mat
+*Density
+1.0e-9
+*Elastic, type=traction
+4000.0,  700.0,  700.0
+*Damage Initiation, criterion=maxs
+90.0, 66.0, 66.0
+*Damage Evolution, type=displacement, softening=linear
+0.04
+**********************************
+*Material, name=steel
+*Density
+7.75e-09
+*Elastic
+205000e3, 0.3
+**********************************
+*Boundary
+block.bottom, 1, 1
+block.bottom, 2, 2
+block.bottom, 3, 3
+*Step, name=loadit, nlgeom=YES, inc=1000
+*Static
+0.001, 0.10, 1e-5, 0.001
+*Boundary
+block.top, 1, 1, 0.0
+block.top, 2, 2, 0.10
+block.top, 3, 3, 0.0
+*Restart, write, frequency=0
+*Output, field, variable=PRESELECT
+*Element output
+status
+*Output, history
+*Node Output, nset=block.top
+RF2, U2
+*Output, history, variable=PRESELECT
+*End Step

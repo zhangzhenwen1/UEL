@@ -5,7 +5,7 @@
 **
 ** PARTS
 **
-*Part, name=Part-4
+*Part, name=block
 *Node
       1,     0.  ,      0.,        -0. 
       2,     0.  ,     0.,        -2.5  
@@ -77,18 +77,18 @@
      72,    10.  ,     5.,        -20.  
      73,    10.  ,    10.,        -20.  
      74,    10.   ,    10,        -17.5 
-*Element, type=C3D15,elset=Set-1
-1, 47,  4, 50, 52,  8, 54, 30, 31, 49, 33, 34, 53, 48,  5, 51
-2,  1,  4, 47,  6,  8, 52,  3, 30, 29,  7, 33, 32,  2,  5, 48
+*Element, type=C3D15
+**1, 47,  4, 50, 52,  8, 54, 30, 31, 49, 33, 34, 53, 48,  5, 51
+**2,  1,  4, 47,  6,  8, 52,  3, 30, 29,  7, 33, 32,  2,  5, 48
 3, 52,  8, 54, 55, 12, 58, 33, 34, 53, 36, 37, 57, 56, 13, 59
 4,  6,  8, 52,  9, 12, 55,  7, 33, 32, 11, 36, 35, 10, 13, 56
- 7, 60, 18, 64, 67, 23, 69, 39, 40, 63, 42, 43, 68, 62, 20, 66
- 8, 14, 18, 60, 21, 23, 67, 17, 39, 38, 22, 42, 41, 16, 20, 62
- 9, 67, 23, 69, 70, 27, 73, 42, 43, 68, 45, 46, 72, 71, 28, 74
-10, 21, 23, 67, 24, 27, 70, 22, 42, 41, 26, 45, 44, 25, 28, 71
+7, 60, 18, 64, 67, 23, 69, 39, 40, 63, 42, 43, 68, 62, 20, 66
+8, 14, 18, 60, 21, 23, 67, 17, 39, 38, 22, 42, 41, 16, 20, 62
+** 9, 67, 23, 69, 70, 27, 73, 42, 43, 68, 45, 46, 72, 71, 28, 74
+**10, 21, 23, 67, 24, 27, 70, 22, 42, 41, 26, 45, 44, 25, 28, 71
 *USER ELEMENT, TYPE=U1, NODE=12, COORDINATES=3, PROPERTIES=6, VARIABLES=12
 1, 2, 3
-*Element, type=U1, ELSET=ONE
+*Element, type=U1, ELSET=UEL
 5, 64,60,18,63,39,40,58,55,12,57,36,37
 6,  14,18,60,17,39,38,9,12,55,11,36,35
 ** MATERIALS
@@ -98,42 +98,36 @@
 **      Gt=PROPS(4)
 **      Qn0=PROPS(5)
 **      Qt0=PROPS(6)
-*UEL PROPERTY, ELSET=ONE
-10.,10.,0.01,0.01,0.1,0.1
+*UEL PROPERTY, ELSET=UEL
+4000.,700.,250,1.,90,66
 1, 1, 1
-** Section: Section-1
-*Solid Section, elset=Set-1, material=Material-1
-,
+******
+*Nset, nset=top
+21, 22, 23, 41, 42, 43, 67, 68, 69
+*Nset, nset=bottom
+6,7,8,32,33,34,52,53,54
+*Elset, elset=topBlock
+7, 8
+*Elset, elset=botBlock
+3, 4
+*Elset, elset=adhesive
+5, 6
+*Solid Section, elset=botBlock, material=steel
+*Solid Section, elset=topBlock, material=steel
 *End Part
-**  
-**
-** ASSEMBLY
-**
 *Assembly, name=Assembly
-**  
-*Instance, name=Part-4-1, part=Part-4
+*Instance, name=block, part=block
 *End Instance
-**  
-*Nset, nset=Set-23, instance=Part-4-1
-  1,  3,  4, 29, 30, 31, 47, 49, 50
-*Nset, nset=Set-24, instance=Part-4-1
- 24, 26, 27, 44, 45, 46, 70, 72, 73
- *Nset, nset=Set-25, instance=Part-4-1
- 47,  4, 50, 52,  8, 54, 30, 31, 49, 33, 34, 53, 48,  5, 51,
- 1,  4, 47,  6,  8, 52,  3, 30, 29,  7, 33, 32,  2,  5, 48,
-52,  8, 54, 55, 12, 58, 33, 34, 53, 36, 37, 57, 56, 13, 59,
- 6,  8, 52,  9, 12, 55,  7, 33, 32, 11, 36, 35, 10, 13, 56,
- 60, 18, 64, 67, 23, 69, 39, 40, 63, 42, 43, 68, 62, 20, 66,
-  14, 18, 60, 21, 23, 67, 17, 39, 38, 22, 42, 41, 16, 20, 62,
-  67, 23, 69, 70, 27, 73, 42, 43, 68, 45, 46, 72, 71, 28, 74,
- 21, 23, 67, 24, 27, 70, 22, 42, 41, 26, 45, 44, 25, 28, 71
 *End Assembly
+*End Part
 ** 
 ** MATERIALS
-** 
-*Material, name=Material-1
+*Material, name=steel
+*Density
+7.75e-09
 *Elastic
- 100, 0.25
+205000e3, 0.3
+**********************************
 ** ----------------------------------------------------------------
 ** 
 *Step, name=loadit, nlgeom=YES, inc=1000
@@ -143,20 +137,21 @@
 ** 
 ** BOUNDARY CONDITIONS
 ** 
-** Name: BC-1 Type: Displacement/Rotation
 *Boundary
-Set-23, 1,6
-**Set-24, 3,3, 0
-** Name: BC-2 Type: Displacement/Rotation
+block.bottom, 1, 1
+block.bottom, 2, 2
+block.bottom, 3, 3
 *Boundary
-Set-24, 3,3, -0.1
+block.top, 1, 1, 0.0
+block.top, 2, 2, 0.0
+block.top, 3, 3, -0.10
 *******
 *Restart, write, frequency=0
 *Output, field, variable=PRESELECT
 *Element output
 status
 *Output, history
-*Node Output, nset=Set-23
+*Node Output, nset=block.top
 RF2, U2
 *Output, history, variable=PRESELECT
 *End Step

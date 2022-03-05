@@ -1,3 +1,4 @@
+!DEC$ ATTRIBUTES ALIAS:"uel"::UEL
 c
       SUBROUTINE UEL (RHS, AMATRX, SVARS, ENERGY, NDOFEL, NRHS, NSVARS,
      1 PROPS, NPROPS, COORDS, MCRD, NNODE, U, DU, V, A, JTYPE, TIME,
@@ -511,7 +512,6 @@ c      write(7,*) '      Δψ0n'
 c      write(7,*) delta_sai0n_up
 c      write(7,*) '      Δψ0t'
 c      write(7,*) delta_sai0t_up
-c
       delta_dnn_up=(1-dnn)*Qn0/Gn*delta_sai0n_up !scaler
       delta_dnt_up=(1-dnt)*Qt0/Gt*delta_sai0t_up !scaler
       delta_dtn_up=(1-dtn)*Qn0/Gn*delta_sai0n_up !scaler
@@ -537,8 +537,8 @@ c     K--
      &-delta_dtn_low*(1-dtt)*(-N(1,i)*PD_sai0t_u+0.5*PD_N_r(1,i)*PD_sai0t_g1+0.5*PD_N_s(1,i)*PD_sai0t_g2)
      &-(1-dtn)*delta_dtt_low*(-N(1,i)*PD_sai0t_u+0.5*PD_N_r(1,i)*PD_sai0t_g1+0.5*PD_N_s(1,i)*PD_sai0t_g2)
       AMATRX((j-1)*3+19:(j-1)*3+21,(i-1)*3+m+18)=K
-      write(7,*) '*** K--, i',i,'j',j
-      write(7,*) K
+c      write(7,*) '*** K--, i',i,'j',j
+c      write(7,*) K
 c     K+-
       K=(1-dnn)*(1-dnt)*(N(1,i)*delta_PD_sai0n_u_low+0.5*PD_N_r(1,i)*delta_PD_sai0n_g1_low+0.5*PD_N_s(1,i)*delta_PD_sai0n_g2_low)
      &-delta_dnn_low*(1-dnt)*(N(1,i)*PD_sai0n_u+0.5*PD_N_r(1,i)*PD_sai0n_g1+0.5*PD_N_s(1,i)*PD_sai0n_g2)
@@ -547,8 +547,8 @@ c     K+-
      &-delta_dtn_low*(1-dtt)*(N(1,i)*PD_sai0t_u+0.5*PD_N_r(1,i)*PD_sai0t_g1+0.5*PD_N_s(1,i)*PD_sai0t_g2)
      &-(1-dtn)*delta_dtt_low*(N(1,i)*PD_sai0t_u+0.5*PD_N_r(1,i)*PD_sai0t_g1+0.5*PD_N_s(1,i)*PD_sai0t_g2)
       AMATRX((j-1)*3+1:(j-1)*3+3,(i-1)*3+m+18)=K
-      write(7,*) '*** K+-, i',i,'j',j
-      write(7,*) K
+c      write(7,*) '*** K+-, i',i,'j',j
+c      write(7,*) K
 c     K-+
       K=(1-dnn)*(1-dnt)*(-N(1,i)*delta_PD_sai0n_u_up+0.5*PD_N_r(1,i)*delta_PD_sai0n_g1_up+0.5*PD_N_s(1,i)*delta_PD_sai0n_g2_up)
      &-delta_dnn_up*(1-dnt)*(-N(1,i)*PD_sai0n_u+0.5*PD_N_r(1,i)*PD_sai0n_g1+0.5*PD_N_s(1,i)*PD_sai0n_g2)
@@ -557,8 +557,8 @@ c     K-+
      &-delta_dtn_up*(1-dtt)*(-N(1,i)*PD_sai0t_u+0.5*PD_N_r(1,i)*PD_sai0t_g1+0.5*PD_N_s(1,i)*PD_sai0t_g2)
      &-(1-dtn)*delta_dtt_up*(-N(1,i)*PD_sai0t_u+0.5*PD_N_r(1,i)*PD_sai0t_g1+0.5*PD_N_s(1,i)*PD_sai0t_g2)
       AMATRX((j-1)*3+19:(j-1)*3+21,(i-1)*3+m)=K
-      write(7,*) '*** K-+, i',i,'j',j
-      write(7,*) K
+c      write(7,*) '*** K-+, i',i,'j',j
+c      write(7,*) K
 c     K++
       K=(1-dnn)*(1-dnt)*(N(1,i)*delta_PD_sai0n_u_up+0.5*PD_N_r(1,i)*delta_PD_sai0n_g1_up+0.5*PD_N_s(1,i)*delta_PD_sai0n_g2_up)
      &-delta_dnn_up*(1-dnt)*(N(1,i)*PD_sai0n_u+0.5*PD_N_r(1,i)*PD_sai0n_g1+0.5*PD_N_s(1,i)*PD_sai0n_g2)
@@ -567,8 +567,8 @@ c     K++
      &-delta_dtn_up*(1-dtt)*(N(1,i)*PD_sai0t_u+0.5*PD_N_r(1,i)*PD_sai0t_g1+0.5*PD_N_s(1,i)*PD_sai0t_g2)
      &-(1-dtn)*delta_dtt_up*(N(1,i)*PD_sai0t_u+0.5*PD_N_r(1,i)*PD_sai0t_g1+0.5*PD_N_s(1,i)*PD_sai0t_g2)
       AMATRX((j-1)*3+1:(j-1)*3+3,(i-1)*3+m)=K
-      write(7,*) '*** K++, i',i,'j',j
-      write(7,*) K
+c      write(7,*) '*** K++, i',i,'j',j
+c      write(7,*) K
 c==============================================================
             end do !m
             end do !j
