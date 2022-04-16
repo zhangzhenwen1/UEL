@@ -37,6 +37,14 @@ c
      4,R_up(3,LAYERNODE),R_low(3,LAYERNODE)
      4,J_up(3,3),J_low(3,3)
      4,detJ_up(1,LAYERNODE),detJ_low(1,LAYERNODE)
+
+      CHARACTER*80 FNAME     
+      DIMENSION  ARRAY(513),JRRAY(NPRECD,513),LRUNIT(2,1),S(6),E(6),DISP(6)     
+      EQUIVALENCE (ARRAY(1),JRRAY(1,1))
+      INTEGER*8 iVar1,iVar2
+      CHARACTER*8 cVar1,cVar2
+      Real*8 rVar1
+
 c ================== VAR of calculating points =============
 c all the data can be calculate at one 2D mid-surface
 ccccccccc    NOT using ccccccccccccccc
@@ -66,6 +74,50 @@ ccccccccccccccccccccccccccc
                   real(Kind=8) :: local_coordinate(2,1), Shape_poly_PD_s(3,6)
             end function
       end interface
+c =============================================
+      FNAME='c:\repo\UEL\RVE-test1'     
+      NRU=1     
+      LRUNIT(1,1)=8     
+      LRUNIT(2,1)=2     
+      LOUTF=0     
+      CALL INITPF(FNAME,NRU,LRUNIT,LOUTF)
+      JUNIT=8     
+      CALL DBRNU(JUNIT)
+C     
+      JRCD=0
+C     Open output file         
+      OPEN (unit = 15, file = 'c:\repo\UEL\U.txt', status='replace')     
+      OPEN (unit = 16, file = 'c:\repo\UEL\SE.txt', status='replace')     
+      OPEN (unit = 17, file = 'c:\repo\UEL\PE.txt', status='replace')
+C     
+      Open( unit=18 , File = 'c:\repo\UEL\RVE-test1.fil' , Access = 'Direct' , Form = 'Unformatted' , RecL = 23 )
+      Read( 18 , Rec = 3 ) iVar1 , cVar1, iVar2
+      Write( 15 , * ) iVar1 , cVar1, iVar2
+      Close( 18 )
+C     Loop on all records in results file
+      DO WHILE (JRCD .EQ. 0)
+C        
+          CALL DBFILE(0,ARRAY,JRCD)        
+          KEY=JRRAY(1,2)
+c          WRITE(15,"(1X,6ES26.16E3)") KEY
+C         RVE-test1
+          IF(KEY.EQ.101) THEN 
+C      displacement            
+              DISP = ARRAY(4:9)            
+              WRITE(15,"(1X,6ES26.16E3)") 'DISP'        
+          ELSE IF (KEY.EQ.19) THEN           
+              SE = ARRAY(4)           
+              WRITE(16,"(1X,ES26.16E3)") SE           
+              PD = ARRAY(5)           
+              WRITE(17,"(1X,ES26.16E3)") PD        
+          ELSE            
+              CONTINUE        
+          END IF
+C                
+      ENDDO     
+          CLOSE(15)     
+          CLOSE(16)      
+          CLOSE(17)     
 c ===========  K matrix output ================
 c ==== every step the K matrix is being overwrited
 c ==== expecting: every matrix should be stored in this file
@@ -102,13 +154,6 @@ c ========== define the unit matrix ==========
       Matrix_1(:,1)=(/1.0,0.0,0.0/);Matrix_1(:,2)=(/0.0,1.0,0.0/);Matrix_1(:,3)=(/0.0,0.0,1.0/);
 c ========== initialize parameters  ==========
       PD_I1_g1=0.0;PD_I1_g2=0.0
-c=========== define Material parameters  ===========================
-      cn=PROPS(1)
-      ct=PROPS(2)
-      Gn=PROPS(3)
-      Gt=PROPS(4)
-      Qn0=PROPS(5)
-      Qt0=PROPS(6)
 c=========== define element shape  =======================
 c====== WHEN triangle LAYERNODE=6 ======================
 c====== WHEN quadrilateral LAYERNODE=8 ======================
@@ -155,72 +200,100 @@ c      write (7,*) '*** Seperation at node is'
 c      write (7,*) Seperation_total_nodal
 c =============  ================
       do i=1,LAYERNODE
-c ------       kn0 and kt0     -------
-      kn0=0.5*Qn0*Qn0/cn
-      kt0=0.5*Qt0*Qt0/ct
-c --- damage parameter passin from last increasment ---
+c=========== calculate the geometric invariations =================
+      Seperation_nodal=Seperation_total_nodal(:,i)
+c   - Jacobian(local_coordinate,global_coord,output,detJ) ------
+      call Jacobian(Nodal_Local_coord(:,i),Coord_mid,J_mid,detJ(:,i))
+c            write (7,*) '*** Jacobian midsurface at point',i,'is'
+c            write (7,*) J_mid
+c   - g_beta at nodal point --------------------------
+      g1=J_mid(:,1)
+      g2=J_mid(:,2)
+      call Base_g3(g1,g2,g3)
+      call Base_gc(g1,g2,g3,gc1,gc2,gc3)
+c   - I(u,g)
+c   --- I1 (1,6) scaler
+      I1=DOT_PRODUCT(Seperation_nodal,Seperation_nodal)
+C   --- I2 (1,6) scaler
+      call Product_I(g1,gc1,Seperation_nodal,I2)
+C   --- I3 (1,6) scaler
+      call Product_I(g2,gc2,Seperation_nodal,I3)
+c===== damage parameter passin from last increasment =====
       kn_n0=SVARS(i)
       kt_n0=SVARS(6+i)
+c===== decide if the normal seperation is minus ===============
+      if (DOT_PRODUCT(Du_seperation(:,i),g3)<0.) then ! if the crack is closing
+c        --- jugde inject ---
+            if (DOT_PRODUCT(Seperation_nodal,g3)<0.) then ! inject
+                  write (7,*) 'WARN !! : OVERLAP! Seperation_nodal is MINUS: ', DOT_PRODUCT(Seperation_nodal,g3)
+                  cn=PROPS(1)
+                  Gn=PROPS(3)
+                  Qn0=0.0
+                  dnn=0.0
+                  dtn=dnn
+                  Sai0n=0.5*cn*(I1-I2-I3) ! ψ0(I1,I2,I3)~(u,g) (3,6) scaler
+            else ! not inject
+                  write (7,*) 'WARN !: THE CRACK IS CLOSING: ', DOT_PRODUCT(Du_seperation(:,i),g3)
+                  cn=PROPS(1)
+                  Gn=PROPS(3)
+                  Qn0=PROPS(5)
+                  Sai0n=0.5*cn*(I1-I2-I3) ! ψ0(I1,I2,I3)~(u,g) (3,6) scaler
+c              --- calculate the normal damage parameters (3,6) scaler
+                  kn0=0.5*Qn0*Qn0/cn
+                  dnn=1-EXP((kn0-kn_n0)*Qn0/Gn)
+                  if (dnn<0) then
+                        dnn=0.
+                  end if
+                  dtn=dnn
+            end if
+c         --- keep the normal damage parameter still ---
+      else ! if the crack is not closing
+            cn=PROPS(1)
+            Gn=PROPS(3)
+            Qn0=PROPS(5)
+            Sai0n=0.5*cn*(I1-I2-I3) ! ψ0(I1,I2,I3)~(u,g) (3,6) scaler
+c        --- calculate the normal damage parameters (3,6) scaler
+            kn0=0.5*Qn0*Qn0/cn
+            dnn=1-EXP((kn0-kn_n0)*Qn0/Gn)
+            if (dnn<0) then
+                  dnn=0.
+            end if
+            dtn=dnn
+c         --- update the normal damage parameter ---
+            SVARS(i)=MAX(kn_n0,Sai0n,kn0)
+      END if
+c===== get the shear material parameters =====
+      ct=PROPS(2)
+      Gt=PROPS(4)
+      Qt0=PROPS(6)
+      Sai0t=0.5*ct*(I2+I3) ! ψ0(I1,I2,I3)~(u,g) (3,6) scaler
+      kt0=0.5*Qt0*Qt0/ct
+      dtt=1-EXP((kt0-kt_n0)*Qt0/Gt)
+      if (dtt<0.) then
+            dtt=0.
+      end if
+      dnt=dtt
+      SVARS(i+6)=MAX(kt_n0,Sai0t,kt0)
+
 c      write (7,*) '3. (k0) kn0 and kt0 of',i,' is'
 c      write (7,*) kn0,kt0
 c      write (7,*) '*** k of',i,'at last step is'
 c      write (7,*) 'kn_n0', kn_n0
 c      write (7,*) 'kt_n0', kt_n0
-      Seperation_nodal=Seperation_total_nodal(:,i)
-c     ---------- Jacobian(local_coordinate,global_coord,output,detJ) ------
-            call Jacobian(Nodal_Local_coord(:,i),Coord_mid,J_mid,detJ(:,i))
-c            write (7,*) '*** Jacobian midsurface at point',i,'is'
-c            write (7,*) J_mid
-c     -------------- g_beta at nodal point --------------------------
-            g1=J_mid(:,1)
-            g2=J_mid(:,2)
-            call Base_g3(g1,g2,g3)
-            call Base_gc(g1,g2,g3,gc1,gc2,gc3)
-c     ---I(u,g)
-c     ---I1 (1,6) scaler
-            I1=DOT_PRODUCT(Seperation_nodal,Seperation_nodal)
-C     ---I2 (1,6) scaler
-            call Product_I(g1,gc1,Seperation_nodal,I2)
-C     ---I3 (1,6) scaler
-            call Product_I(g2,gc2,Seperation_nodal,I3)
-c     ψ0(I1,I2,I3)~(u,g) (3,6) scaler
-            Sai0n=0.5*cn*(I1-I2-I3)
-c            write (7,*) '*** Sai0n of',i, 'is',Sai0n
-            Sai0t=0.5*ct*(I2+I3)
-c ------      ∂ψ0/∂I     -------
+c      write (7,*) '*** Sai0n of',i, 'is',Sai0n
+
+c ==== ∂ψ0/∂I
       PD_sai0n_I1=0.5*cn
       PD_sai0n_I2=-0.5*cn
       PD_sai0n_I3=-0.5*cn
-      PD_sai0t_I1=0
+      PD_sai0t_I1=0.0
       PD_sai0t_I2=0.5*ct
       PD_sai0t_I3=0.5*ct
-c     damage parameters (3,6) scaler
-            dnn=1-EXP((kn0-kn_n0)*Qn0/Gn)
-            if (dnn<0) then
-                  dnn=0.
-            end if
-            dtt=1-EXP((kt0-kt_n0)*Qt0/Gt)
-            if (dtt<0) then
-                  dtt=0.
-            end if
-            dnt=dtt
-            dtn=dnn
+
 c     ψ=(1-d)ψ0 scaler
-            Sain=(1-dnn)*(1-dnt)*Sai0n
-            Sait=(1-dtn)*(1-dtt)*Sai0t
-c     update kn scaler
-            if (DOT_PRODUCT(Du_seperation(:,i),g3)<0.) then
-                  write (7,*) 'WARN !: MINUS DISPLACEMENT: ', DOT_PRODUCT(Du_seperation(:,i),g3)
-c                  !SVARS(i)=MAX(kn_n0,Sai0n,kn0)
-                  if (DOT_PRODUCT(Seperation_nodal,g3)<0.) then
-                        write (7,*) 'WARN !! : OVERLAP! Seperation_nodal is MINUS: ', DOT_PRODUCT(Seperation_nodal,g3)
-                              dnn=0.
-                              dtn=dnn
-                        end if
-            else
-                  SVARS(i)=MAX(kn_n0,Sai0n,kn0)
-            END if
-            SVARS(6+i)=MAX(kt_n0,Sai0t,kt0)
+      Sain=(1-dnn)*(1-dnt)*Sai0n
+      Sait=(1-dtn)*(1-dtt)*Sai0t
+
 c     [u].gc scaler
          Param_ugc1=DOT_PRODUCT(Seperation_nodal,gc1)
          Param_ugc2=DOT_PRODUCT(Seperation_nodal,gc2)
@@ -400,8 +473,8 @@ c      write (7,*) I3
 c================= K calculating =======================================
 c      write(7,*) '*** start calculate ∂(∂ψ0/∂u)∂u ∂(∂ψ0/∂u)∂g_β ∂(∂ψ0/∂g_β)∂g_β'
 c      ∂(∂ψ0/∂u)∂u (3,3)
-      PD_sai0n_u_u=PD_sai0n_I1*PD_I1_u_u+PD_sai0n_I2*PD_I2_u_u+PD_sai0n_I3*PD_I3_u_u
-      PD_sai0t_u_u=PD_sai0t_I1*PD_I1_u_u+PD_sai0t_I2*PD_I2_u_u+PD_sai0t_I3*PD_I3_u_u
+      PD_sai0n_u_u=PD_sai0n_I1*PD_I1_u_u+PD_sai0n_I2*PD_I2_u_u-PD_sai0n_I3*PD_I3_u_u
+      PD_sai0t_u_u=PD_sai0t_I1*PD_I1_u_u+PD_sai0t_I2*PD_I2_u_u-PD_sai0t_I3*PD_I3_u_u
 c      ∂(∂ψ0/∂u)∂g1 (3,3)
       PD_sai0n_g1_u=PD_sai0n_I2*PD_I2_u_g1+PD_sai0n_I3*PD_I3_u_g1
       PD_sai0t_g1_u=PD_sai0t_I2*PD_I2_u_g1+PD_sai0t_I3*PD_I3_u_g1
@@ -426,6 +499,11 @@ c      ∂(∂ψ0/∂g2)∂u
 c      ∂(∂ψ0/∂g2)∂g1
       PD_sai0n_g1_g2=TRANSPOSE(PD_sai0n_g2_g1)
       PD_sai0t_g1_g2=TRANSPOSE(PD_sai0n_g2_g1)
+c      write(7,*) '-------------------------'
+c      write(7,*) PD_I1_u_u
+c      write(7,*) PD_I2_u_u
+c      write(7,*) PD_I3_u_u
+c      write(7,*) '-------------------------'
 c      write(7,*) '∂(∂ψ0/∂u)∂u PD_sai0n_u_u'
 c      write(7,*) PD_sai0n_u_u
 c      write(7,*) '∂(∂ψ0/∂u)∂u PD_sai0t_u_u'
@@ -484,13 +562,13 @@ c      write(7,*) '*** start calculate Δ∂ψ0/∂u '
       delta_PD_sai0n_g2_low=Dot_3_1(PD_sai0n_g2_g1,delta_g1)-Dot_3_1(PD_sai0n_g2_u,delta_U)
       delta_PD_sai0t_g2_low=Dot_3_1(PD_sai0t_g2_g1,delta_g1)-Dot_3_1(PD_sai0t_g2_u,delta_U)
 c      write(7,*) '*** delta_PD_sai0n_u'
-c      write(7,*) delta_PD_sai0n_u_up
+c      write(7,*) delta_PD_sai0n_u_low
 c      write(7,*) '*** delta_PD_sai0n_g1'
-c      write(7,*) delta_PD_sai0n_g1_up
+c      write(7,*) delta_PD_sai0n_g1_low
 c      write(7,*) '*** delta_PD_sai0n_g2'
-c      write(7,*) delta_PD_sai0n_g2_up
+c      write(7,*) delta_PD_sai0n_g2_low
 c      write(7,*) '*** delta_PD_sai0y_u'
-c      write(7,*) delta_PD_sai0t_u_up
+c      write(7,*) delta_PD_sai0t_u_low
 c      write(7,*) '*** delta_PD_sai0t_g1'
 c      write(7,*) delta_PD_sai0t_g1_up
 c      write(7,*) '*** delta_PD_sai0t_g2'
@@ -522,13 +600,13 @@ c      write(7,*) delta_sai0t_up
       delta_dtt_low=(1-dtt)*Qt0/Gt*delta_sai0t_low !scaler
 c      write(7,*) '*** Δd'
 c      write(7,*) '      Δdnn'
-c      write(7,*) delta_dnn_up
+c      write(7,*) delta_dnn_low
 c      write(7,*) '      Δdnt'
-c      write(7,*) delta_dnt_up
+c      write(7,*) delta_dnt_low
 c      write(7,*) '      Δdtn'
-c      write(7,*) delta_dtn_up
+c      write(7,*) delta_dtn_low
 c      write(7,*) '      Δdtt'
-c      write(7,*) delta_dtt_up
+c      write(7,*) delta_dtt_low
 c     K--
       K=(1-dnn)*(1-dnt)*(-N(1,i)*delta_PD_sai0n_u_low+0.5*PD_N_r(1,i)*delta_PD_sai0n_g1_low+0.5*PD_N_s(1,i)*delta_PD_sai0n_g2_low)
      &-delta_dnn_low*(1-dnt)*(-N(1,i)*PD_sai0n_u+0.5*PD_N_r(1,i)*PD_sai0n_g1+0.5*PD_N_s(1,i)*PD_sai0n_g2)
@@ -568,7 +646,7 @@ c     K++
      &-(1-dtn)*delta_dtt_up*(N(1,i)*PD_sai0t_u+0.5*PD_N_r(1,i)*PD_sai0t_g1+0.5*PD_N_s(1,i)*PD_sai0t_g2)
       AMATRX((j-1)*3+1:(j-1)*3+3,(i-1)*3+m)=K
 c      write(7,*) '*** K++, i',i,'j',j
-c      write(7,*) K
+      
 c==============================================================
             end do !m
             end do !j
@@ -587,8 +665,8 @@ c      write(7,*) '*** R_g2_nodal'
 c      write(7,*) R_g2_nodal
 c ===========================================================================
       end do !i
-      write(110,*) '*** KK'
-      write(110,"(36f6.1)") AMATRX
+c      write(110,*) '*** KK'
+c      write(110,"(36f12.1)") AMATRX
 c ===============================================
 c      write(7,*) '************************'
 c      write(7,*) '***** RHS ASSEMBLE *****'
@@ -613,10 +691,12 @@ c      write(7,*) R_g2
       end do
 c      write(7,*) '*** RHS'
 c      write(7,*) RHS(:,1)
-c      write(7,*) '*** R_up'
-c      write(7,*) R_up
+      write(7,*) '*** R_up'
+      write(7,*) R_up
 c      write(7,*) '*** R_low'
 c      write(7,*) R_low
+c      write(110,*) '*** RHS'
+c      write(110,"(36f12.1)") RHS(:,1)
       write(7,*) '*************************'
       write(7,*) '***** END     CYCLE *****'
       write(7,*) '*************************'
