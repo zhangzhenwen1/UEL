@@ -7,33 +7,42 @@
 ** ----------------------------------------------------------------
 ** ----------------------------------------------------------------
 ** 
-** STEP: Step-0
+** STEP: Step-1
 ** 
-*Step, name=Step-0, nlgeom=NO, perturbation
+*Step, name=perturbation, nlgeom=NO, perturbation
 *Static
 ** 
 ** OUTPUT REQUESTS
 ** 
 ** 
-** FIELD OUTPUT: F-Output-2
+** FIELD OUTPUT: F-Output-0
 ** 
 *Output, field, variable=PRESELECT
 ** 
 ** LOAD CASES
 ** 
-*Load Case, name=LoadCase-xx
+*Load Case, name=LoadCase-XX
 ** Name: BC-xx Type: Displacement/Rotation   Scale factor: 1
-*Boundary, op=NEW
-Set-pre-xx, 1, 1, 1e-06
+*Boundary
+Set-x+, 1, 1, 1e-06
+Set-x-, 1, 1, -1e-06
 *End Load Case
 *Load Case, name=LoadCase-yy
 ** Name: BC-yy Type: Displacement/Rotation   Scale factor: 1
-*Boundary, op=NEW
-Set-pre-yy, 2, 2, 1e-06
+*Boundary
+Set-y+, 1, 1, 1e-06
+Set-y-, 1, 1, -1e-06
+*End Load Case
+*Load Case, name=LoadCase-zz
+** Name: BC-yy Type: Displacement/Rotation   Scale factor: 1
+*Boundary
+Set-z+, 1, 1, 1e-06
+Set-z-, 1, 1, -1e-06
 *End Load Case
 *End Step
+** ----------------------------------------------------------------
 ** 
-** STEP: Step-1
+** STEP: Step-2
 ** 
 *Step, name=Step-1, nlgeom=NO
 *Static
@@ -43,18 +52,17 @@ Set-pre-yy, 2, 2, 1e-06
 ** 
 ** Name: BC-1 Type: Displacement/Rotation
 *Boundary
-Set-727, 1, 1, 0.015
+Set-x+, 1, 1, 0.01
 ** Name: BC-2 Type: Displacement/Rotation
 *Boundary
-Set-666, 1, 1, -0.015
+Set-x-, 1, 1, -0.01
 ** 
 ** OUTPUT REQUESTS
 ** 
-
 *Restart, write, frequency=1
 ** 
 ** FIELD OUTPUT: F-Output-1
 ** 
 *Output, field, variable=PRESELECT
-*Output, history, frequency=0
+*Output, history, frequency=1
 *End Step

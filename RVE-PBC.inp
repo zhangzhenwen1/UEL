@@ -2400,21 +2400,6 @@ _Surf-z-s_S5, S5
 *Instance, name=PART-1-1, part=PART-1
 *End Instance
 **  
-*Nset, nset=Set-666, instance=PART-1-1, generate
- 1211,  1331,     1
-*Nset, nset=Set-727, instance=PART-1-1, generate
-   1,  121,    1
-*Nset, nset=Set-728, instance=PART-1-1
-    1,    2,    3,    4,    5,    6,    7,    8,    9,   10,   11,  122,  123,  124,  125,  126
-  127,  128,  129,  130,  131,  132,  243,  244,  245,  246,  247,  248,  249,  250,  251,  252
-  253,  364,  365,  366,  367,  368,  369,  370,  371,  372,  373,  374,  485,  486,  487,  488
-  489,  490,  491,  492,  493,  494,  495,  606,  607,  608,  609,  610,  611,  612,  613,  614
-  615,  616,  727,  728,  729,  730,  731,  732,  733,  734,  735,  736,  737,  848,  849,  850
-  851,  852,  853,  854,  855,  856,  857,  858,  969,  970,  971,  972,  973,  974,  975,  976
-  977,  978,  979, 1090, 1091, 1092, 1093, 1094, 1095, 1096, 1097, 1098, 1099, 1100, 1211, 1212
- 1213, 1214, 1215, 1216, 1217, 1218, 1219, 1220, 1221
-*Nset, nset=Set-729, instance=PART-1-1, generate
-    1,  1321,    11
 *Nset, nset=pbc_PBC-X_node_0_master, instance=PART-1-1
  1,
 *Nset, nset=pbc_PBC-X_node_0_slave, instance=PART-1-1
@@ -3739,6 +3724,32 @@ _Surf-z-s_S5, S5
  1221,
 *Nset, nset=pbc_PBC-Z_node_99_slave, instance=PART-1-1
  1331,
+*Nset, nset=Set-x+, instance=PART-1-1, generate
+   1,  121,    1
+*Nset, nset=Set-x-, instance=PART-1-1, generate
+ 1211,  1331,     1
+*Nset, nset=Set-y+, instance=PART-1-1, generate
+    1,  1321,    11
+*Nset, nset=Set-y-, instance=PART-1-1, generate
+   11,  1331,    11
+*Nset, nset=Set-z+, instance=PART-1-1
+    1,    2,    3,    4,    5,    6,    7,    8,    9,   10,   11,  122,  123,  124,  125,  126
+  127,  128,  129,  130,  131,  132,  243,  244,  245,  246,  247,  248,  249,  250,  251,  252
+  253,  364,  365,  366,  367,  368,  369,  370,  371,  372,  373,  374,  485,  486,  487,  488
+  489,  490,  491,  492,  493,  494,  495,  606,  607,  608,  609,  610,  611,  612,  613,  614
+  615,  616,  727,  728,  729,  730,  731,  732,  733,  734,  735,  736,  737,  848,  849,  850
+  851,  852,  853,  854,  855,  856,  857,  858,  969,  970,  971,  972,  973,  974,  975,  976
+  977,  978,  979, 1090, 1091, 1092, 1093, 1094, 1095, 1096, 1097, 1098, 1099, 1100, 1211, 1212
+ 1213, 1214, 1215, 1216, 1217, 1218, 1219, 1220, 1221
+*Nset, nset=Set-z-, instance=PART-1-1
+  111,  112,  113,  114,  115,  116,  117,  118,  119,  120,  121,  232,  233,  234,  235,  236
+  237,  238,  239,  240,  241,  242,  353,  354,  355,  356,  357,  358,  359,  360,  361,  362
+  363,  474,  475,  476,  477,  478,  479,  480,  481,  482,  483,  484,  595,  596,  597,  598
+  599,  600,  601,  602,  603,  604,  605,  716,  717,  718,  719,  720,  721,  722,  723,  724
+  725,  726,  837,  838,  839,  840,  841,  842,  843,  844,  845,  846,  847,  958,  959,  960
+  961,  962,  963,  964,  965,  966,  967,  968, 1079, 1080, 1081, 1082, 1083, 1084, 1085, 1086
+ 1087, 1088, 1089, 1200, 1201, 1202, 1203, 1204, 1205, 1206, 1207, 1208, 1209, 1210, 1321, 1322
+ 1323, 1324, 1325, 1326, 1327, 1328, 1329, 1330, 1331
 ** Constraint: eq_x_pbc_PBC-X_node_0
 *Equation
 4
@@ -10645,21 +10656,29 @@ pbc_PBC-Z_node_99_slave, 3, 1.
 ** OUTPUT REQUESTS
 ** 
 ** 
-** FIELD OUTPUT: F-Output-2
+** FIELD OUTPUT: F-Output-0
 ** 
 *Output, field, variable=PRESELECT
 ** 
 ** LOAD CASES
 ** 
-*Load Case, name=LoadCase-xx
+*Load Case, name=LoadCase-XX
 ** Name: BC-xx Type: Displacement/Rotation   Scale factor: 1
-*Boundary, op=NEW
-Set-pre-xx, 1, 1, 1e-06
+*Boundary
+Set-x+, 1, 1, 1e-06
+Set-x-, 1, 1, -1e-06
 *End Load Case
 *Load Case, name=LoadCase-yy
 ** Name: BC-yy Type: Displacement/Rotation   Scale factor: 1
-*Boundary, op=NEW
-Set-pre-yy, 2, 2, 1e-06
+*Boundary
+Set-y+, 1, 1, 1e-06
+Set-y-, 1, 1, -1e-06
+*End Load Case
+*Load Case, name=LoadCase-zz
+** Name: BC-yy Type: Displacement/Rotation   Scale factor: 1
+*Boundary
+Set-z+, 1, 1, 1e-06
+Set-z-, 1, 1, -1e-06
 *End Load Case
 *End Step
 ** ----------------------------------------------------------------
@@ -10674,10 +10693,10 @@ Set-pre-yy, 2, 2, 1e-06
 ** 
 ** Name: BC-1 Type: Displacement/Rotation
 *Boundary
-Set-727, 1, 1, 0.01
+Set-x+, 1, 1, 0.01
 ** Name: BC-2 Type: Displacement/Rotation
 *Boundary
-Set-666, 1, 1, -0.01
+Set-x-, 1, 1, -0.01
 ** 
 ** OUTPUT REQUESTS
 ** 
@@ -10686,5 +10705,5 @@ Set-666, 1, 1, -0.01
 ** FIELD OUTPUT: F-Output-1
 ** 
 *Output, field, variable=PRESELECT
-*Output, history, frequency=0
+*Output, history, frequency=1
 *End Step
