@@ -1,2 +1,2 @@
 cd c:\repo\uel
-abaqus job=RVE-PBC-res oldjob=RVE-PBC
+abaqus job=RVE_Restart oldjob=RVE-PBC

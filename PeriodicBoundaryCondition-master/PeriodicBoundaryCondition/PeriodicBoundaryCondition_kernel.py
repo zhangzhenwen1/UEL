@@ -657,6 +657,10 @@ class NodePair:
     def get_slave_set_name(self):
         return self.get_name() + '_slave'
 
+    # Creates the name for the set for node pair
+    def get_pair_set_name(self):
+        return self.get_name() + '_pair'
+
     # Creates the sets for the master and slave nodes
     def create_sets(self, model, part):
         # Set for the master node
@@ -669,6 +673,10 @@ class NodePair:
         slave_label = self.get_slave_label()
         nodes_slave = model.rootAssembly.instances[part.name + '-1'].nodes.sequenceFromLabels((slave_label,))
         model.rootAssembly.Set(name=set_slave, nodes=nodes_slave)
+        # Set for the node pairs
+        set_pair = self.get_pair_set_name()
+        nodes_pair = model.rootAssembly.instances[part.name + '-1'].nodes.sequenceFromLabels((master_label,slave_label,))
+        model.rootAssembly.Set(name=set_pair, nodes=nodes_pair)
 
     # Removes the sets for the master and slave nodes
     def remove_sets(self, model):

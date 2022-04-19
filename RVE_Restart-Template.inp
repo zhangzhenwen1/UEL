@@ -17,27 +17,69 @@
 ** 
 ** FIELD OUTPUT: F-Output-0
 ** 
-*Output, field, variable=PRESELECT
+*Output, field, variable=ALL
 ** 
 ** LOAD CASES
 ** 
-*Load Case, name=LoadCase-XX
-** Name: BC-xx Type: Displacement/Rotation   Scale factor: 1
-*Boundary
-Set-x+, 1, 1, 1e-06
-Set-x-, 1, 1, -1e-06
+*Load Case, name=LOADCASE-11
+** Name: Disp-BC-1 Type: Displacement/Rotation   Scale factor: 1
+*Boundary, op=NEW
+SET-X+, 1, 1, 1
+SET-X-, 1, 1, 0
+SET-Y+, 2, 2, 0
+SET-Y-, 2, 2, 0
+SET-Z+, 3, 3, 0
+SET-Z-, 3, 3, 0
 *End Load Case
-*Load Case, name=LoadCase-yy
-** Name: BC-yy Type: Displacement/Rotation   Scale factor: 1
-*Boundary
-Set-y+, 1, 1, 1e-06
-Set-y-, 1, 1, -1e-06
+*Load Case, name=LOADCASE-22
+** Name: Disp-BC-3 Type: Displacement/Rotation   Scale factor: 1
+*Boundary, op=NEW
+SET-X+, 1, 1, 0
+SET-X-, 1, 1, 0
+SET-Y+, 2, 2, 1
+SET-Y-, 2, 2, 0
+SET-Z+, 3, 3, 0
+SET-Z-, 3, 3, 0
 *End Load Case
-*Load Case, name=LoadCase-zz
-** Name: BC-yy Type: Displacement/Rotation   Scale factor: 1
-*Boundary
-Set-z+, 1, 1, 1e-06
-Set-z-, 1, 1, -1e-06
+*Load Case, name=LOADCASE-33
+** Name: Disp-BC-5 Type: Displacement/Rotation   Scale factor: 1
+*Boundary, op=NEW
+SET-X+, 1, 1, 0
+SET-X-, 1, 1, 0
+SET-Y+, 2, 2, 0
+SET-Y-, 2, 2, 0
+SET-Z+, 3, 3, 1
+SET-Z-, 3, 3, 0
+*End Load Case
+*Load Case, name=LOADCASE-12
+** Name: Disp-BC-5 Type: Displacement/Rotation   Scale factor: 1
+*Boundary, op=NEW
+SET-X+, 2, 2, 1
+SET-X-, 2, 2, 0
+SET-Y+, 1, 1, 1
+SET-Y-, 1, 1, 0
+SET-Z+, 3, 3, 0
+SET-Z-, 3, 3, 0
+*End Load Case
+*Load Case, name=LOADCASE-31
+** Name: Disp-BC-5 Type: Displacement/Rotation   Scale factor: 1
+*Boundary, op=NEW
+SET-X+, 3, 3, 1
+SET-X-, 3, 3, 0
+SET-Y+, 2, 2, 0
+SET-Y-, 2, 2, 0
+SET-Z+, 1, 1, 1
+SET-Z-, 1, 1, 0
+*End Load Case
+*Load Case, name=LOADCASE-23
+** Name: Disp-BC-5 Type: Displacement/Rotation   Scale factor: 1
+*Boundary, op=NEW
+SET-X+, 1, 1, 0
+SET-X-, 1, 1, 0
+SET-Y+, 3, 3, 1
+SET-Y-, 3, 3, 0
+SET-Z+, 2, 2, 1
+SET-Z-, 2, 2, 0
 *End Load Case
 *End Step
 ** ----------------------------------------------------------------
@@ -52,10 +94,7 @@ Set-z-, 1, 1, -1e-06
 ** 
 ** Name: BC-1 Type: Displacement/Rotation
 *Boundary
-Set-x+, 1, 1, 0.01
-** Name: BC-2 Type: Displacement/Rotation
-*Boundary
-Set-x-, 1, 1, -0.01
+BOUNDARY_XYZ
 ** 
 ** OUTPUT REQUESTS
 ** 
@@ -63,6 +102,6 @@ Set-x-, 1, 1, -0.01
 ** 
 ** FIELD OUTPUT: F-Output-1
 ** 
-*Output, field, variable=PRESELECT
+*Output, field, variable=ALL
 *Output, history, frequency=1
 *End Step
