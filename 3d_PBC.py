@@ -14,10 +14,14 @@ xmin=float(xmin);xmax=float(xmax);ymin=float(ymin);ymax=float(ymax);zmin=float(z
 
 tor=0.001
 
-m=mdb.models['RVE-test1']
+m=mdb.models['RVE-PBC-perturbation-pair']
 r=m.rootAssembly
 
 refpoints=r.referencePoints
+if len(refpoints)==0:
+    r.ReferencePoint(point=(0.5,0.5,1.0))
+    r.ReferencePoint(point=(0.5,1.0,0.5))
+    r.ReferencePoint(point=(1.0,0.5,0.5))
 for i in range(len(refpoints)):
     r.Set(name='Ref-'+str(i+1),referencePoints=(refpoints.values()[i],))
     
