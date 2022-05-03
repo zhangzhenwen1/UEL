@@ -3387,77 +3387,77 @@
 *Nset, nset=Set-Z-PLUS-81, instance=PART-1-1
  615,
 *Nset, nset=Set-parall_x-0-1, instance=PART-1-1
- 1089,
-*Nset, nset=Set-parall_x-0-2, instance=PART-1-1
- 484,
-*Nset, nset=Set-parall_x-0-3, instance=PART-1-1
- 968,
-*Nset, nset=Set-parall_x-0-4, instance=PART-1-1
  363,
-*Nset, nset=Set-parall_x-0-5, instance=PART-1-1
+*Nset, nset=Set-parall_x-0-2, instance=PART-1-1
  847,
-*Nset, nset=Set-parall_x-0-6, instance=PART-1-1
+*Nset, nset=Set-parall_x-0-3, instance=PART-1-1
  242,
-*Nset, nset=Set-parall_x-0-7, instance=PART-1-1
+*Nset, nset=Set-parall_x-0-4, instance=PART-1-1
  726,
-*Nset, nset=Set-parall_x-0-8, instance=PART-1-1
+*Nset, nset=Set-parall_x-0-5, instance=PART-1-1
  1210,
-*Nset, nset=Set-parall_x-0-9, instance=PART-1-1
+*Nset, nset=Set-parall_x-0-6, instance=PART-1-1
  605,
+*Nset, nset=Set-parall_x-0-7, instance=PART-1-1
+ 1089,
+*Nset, nset=Set-parall_x-0-8, instance=PART-1-1
+ 484,
+*Nset, nset=Set-parall_x-0-9, instance=PART-1-1
+ 968,
 *Nset, nset=Set-parall_x-01-1, instance=PART-1-1
- 374,
-*Nset, nset=Set-parall_x-01-2, instance=PART-1-1
- 858,
-*Nset, nset=Set-parall_x-01-3, instance=PART-1-1
  253,
-*Nset, nset=Set-parall_x-01-4, instance=PART-1-1
+*Nset, nset=Set-parall_x-01-2, instance=PART-1-1
  737,
-*Nset, nset=Set-parall_x-01-5, instance=PART-1-1
+*Nset, nset=Set-parall_x-01-3, instance=PART-1-1
  132,
-*Nset, nset=Set-parall_x-01-6, instance=PART-1-1
+*Nset, nset=Set-parall_x-01-4, instance=PART-1-1
  616,
-*Nset, nset=Set-parall_x-01-7, instance=PART-1-1
+*Nset, nset=Set-parall_x-01-5, instance=PART-1-1
  1100,
-*Nset, nset=Set-parall_x-01-8, instance=PART-1-1
+*Nset, nset=Set-parall_x-01-6, instance=PART-1-1
  495,
-*Nset, nset=Set-parall_x-01-9, instance=PART-1-1
+*Nset, nset=Set-parall_x-01-7, instance=PART-1-1
  979,
+*Nset, nset=Set-parall_x-01-8, instance=PART-1-1
+ 374,
+*Nset, nset=Set-parall_x-01-9, instance=PART-1-1
+ 858,
 *Nset, nset=Set-parall_x-10-1, instance=PART-1-1
- 1079,
-*Nset, nset=Set-parall_x-10-2, instance=PART-1-1
- 474,
-*Nset, nset=Set-parall_x-10-3, instance=PART-1-1
- 958,
-*Nset, nset=Set-parall_x-10-4, instance=PART-1-1
  353,
-*Nset, nset=Set-parall_x-10-5, instance=PART-1-1
+*Nset, nset=Set-parall_x-10-2, instance=PART-1-1
  837,
-*Nset, nset=Set-parall_x-10-6, instance=PART-1-1
+*Nset, nset=Set-parall_x-10-3, instance=PART-1-1
  232,
-*Nset, nset=Set-parall_x-10-7, instance=PART-1-1
+*Nset, nset=Set-parall_x-10-4, instance=PART-1-1
  716,
-*Nset, nset=Set-parall_x-10-8, instance=PART-1-1
+*Nset, nset=Set-parall_x-10-5, instance=PART-1-1
  1200,
-*Nset, nset=Set-parall_x-10-9, instance=PART-1-1
+*Nset, nset=Set-parall_x-10-6, instance=PART-1-1
  595,
+*Nset, nset=Set-parall_x-10-7, instance=PART-1-1
+ 1079,
+*Nset, nset=Set-parall_x-10-8, instance=PART-1-1
+ 474,
+*Nset, nset=Set-parall_x-10-9, instance=PART-1-1
+ 958,
 *Nset, nset=Set-parall_x-11-1, instance=PART-1-1
- 727,
-*Nset, nset=Set-parall_x-11-2, instance=PART-1-1
- 122,
-*Nset, nset=Set-parall_x-11-3, instance=PART-1-1
- 606,
-*Nset, nset=Set-parall_x-11-4, instance=PART-1-1
- 1090,
-*Nset, nset=Set-parall_x-11-5, instance=PART-1-1
- 485,
-*Nset, nset=Set-parall_x-11-6, instance=PART-1-1
- 969,
-*Nset, nset=Set-parall_x-11-7, instance=PART-1-1
- 364,
-*Nset, nset=Set-parall_x-11-8, instance=PART-1-1
- 848,
-*Nset, nset=Set-parall_x-11-9, instance=PART-1-1
  243,
+*Nset, nset=Set-parall_x-11-2, instance=PART-1-1
+ 727,
+*Nset, nset=Set-parall_x-11-3, instance=PART-1-1
+ 122,
+*Nset, nset=Set-parall_x-11-4, instance=PART-1-1
+ 606,
+*Nset, nset=Set-parall_x-11-5, instance=PART-1-1
+ 1090,
+*Nset, nset=Set-parall_x-11-6, instance=PART-1-1
+ 485,
+*Nset, nset=Set-parall_x-11-7, instance=PART-1-1
+ 969,
+*Nset, nset=Set-parall_x-11-8, instance=PART-1-1
+ 364,
+*Nset, nset=Set-parall_x-11-9, instance=PART-1-1
+ 848,
 *Nset, nset=Set-parall_y-0-1, instance=PART-1-1
  1322,
 *Nset, nset=Set-parall_y-0-2, instance=PART-1-1
@@ -3477,23 +3477,23 @@
 *Nset, nset=Set-parall_y-0-9, instance=PART-1-1
  1330,
 *Nset, nset=Set-parall_y-01-1, instance=PART-1-1
- 1216,
-*Nset, nset=Set-parall_y-01-2, instance=PART-1-1
- 1217,
-*Nset, nset=Set-parall_y-01-3, instance=PART-1-1
- 1218,
-*Nset, nset=Set-parall_y-01-4, instance=PART-1-1
- 1219,
-*Nset, nset=Set-parall_y-01-5, instance=PART-1-1
- 1220,
-*Nset, nset=Set-parall_y-01-6, instance=PART-1-1
  1212,
-*Nset, nset=Set-parall_y-01-7, instance=PART-1-1
+*Nset, nset=Set-parall_y-01-2, instance=PART-1-1
  1213,
-*Nset, nset=Set-parall_y-01-8, instance=PART-1-1
+*Nset, nset=Set-parall_y-01-3, instance=PART-1-1
  1214,
-*Nset, nset=Set-parall_y-01-9, instance=PART-1-1
+*Nset, nset=Set-parall_y-01-4, instance=PART-1-1
  1215,
+*Nset, nset=Set-parall_y-01-5, instance=PART-1-1
+ 1216,
+*Nset, nset=Set-parall_y-01-6, instance=PART-1-1
+ 1217,
+*Nset, nset=Set-parall_y-01-7, instance=PART-1-1
+ 1218,
+*Nset, nset=Set-parall_y-01-8, instance=PART-1-1
+ 1219,
+*Nset, nset=Set-parall_y-01-9, instance=PART-1-1
+ 1220,
 *Nset, nset=Set-parall_y-10-1, instance=PART-1-1
  112,
 *Nset, nset=Set-parall_y-10-2, instance=PART-1-1
@@ -3531,23 +3531,23 @@
 *Nset, nset=Set-parall_y-11-9, instance=PART-1-1
  10,
 *Nset, nset=Set-parall_z-0-1, instance=PART-1-1
- 1254,
-*Nset, nset=Set-parall_z-0-2, instance=PART-1-1
- 1287,
-*Nset, nset=Set-parall_z-0-3, instance=PART-1-1
- 1320,
-*Nset, nset=Set-parall_z-0-4, instance=PART-1-1
- 1232,
-*Nset, nset=Set-parall_z-0-5, instance=PART-1-1
- 1265,
-*Nset, nset=Set-parall_z-0-6, instance=PART-1-1
- 1298,
-*Nset, nset=Set-parall_z-0-7, instance=PART-1-1
  1243,
-*Nset, nset=Set-parall_z-0-8, instance=PART-1-1
+*Nset, nset=Set-parall_z-0-2, instance=PART-1-1
  1276,
-*Nset, nset=Set-parall_z-0-9, instance=PART-1-1
+*Nset, nset=Set-parall_z-0-3, instance=PART-1-1
  1309,
+*Nset, nset=Set-parall_z-0-4, instance=PART-1-1
+ 1254,
+*Nset, nset=Set-parall_z-0-5, instance=PART-1-1
+ 1287,
+*Nset, nset=Set-parall_z-0-6, instance=PART-1-1
+ 1320,
+*Nset, nset=Set-parall_z-0-7, instance=PART-1-1
+ 1232,
+*Nset, nset=Set-parall_z-0-8, instance=PART-1-1
+ 1265,
+*Nset, nset=Set-parall_z-0-9, instance=PART-1-1
+ 1298,
 *Nset, nset=Set-parall_z-01-1, instance=PART-1-1
  1233,
 *Nset, nset=Set-parall_z-01-2, instance=PART-1-1
@@ -3567,41 +3567,41 @@
 *Nset, nset=Set-parall_z-01-9, instance=PART-1-1
  1288,
 *Nset, nset=Set-parall_z-10-1, instance=PART-1-1
- 44,
-*Nset, nset=Set-parall_z-10-2, instance=PART-1-1
- 77,
-*Nset, nset=Set-parall_z-10-3, instance=PART-1-1
- 110,
-*Nset, nset=Set-parall_z-10-4, instance=PART-1-1
- 22,
-*Nset, nset=Set-parall_z-10-5, instance=PART-1-1
- 55,
-*Nset, nset=Set-parall_z-10-6, instance=PART-1-1
- 88,
-*Nset, nset=Set-parall_z-10-7, instance=PART-1-1
  33,
-*Nset, nset=Set-parall_z-10-8, instance=PART-1-1
+*Nset, nset=Set-parall_z-10-2, instance=PART-1-1
  66,
-*Nset, nset=Set-parall_z-10-9, instance=PART-1-1
+*Nset, nset=Set-parall_z-10-3, instance=PART-1-1
  99,
+*Nset, nset=Set-parall_z-10-4, instance=PART-1-1
+ 44,
+*Nset, nset=Set-parall_z-10-5, instance=PART-1-1
+ 77,
+*Nset, nset=Set-parall_z-10-6, instance=PART-1-1
+ 110,
+*Nset, nset=Set-parall_z-10-7, instance=PART-1-1
+ 22,
+*Nset, nset=Set-parall_z-10-8, instance=PART-1-1
+ 55,
+*Nset, nset=Set-parall_z-10-9, instance=PART-1-1
+ 88,
 *Nset, nset=Set-parall_z-11-1, instance=PART-1-1
- 12,
-*Nset, nset=Set-parall_z-11-2, instance=PART-1-1
- 45,
-*Nset, nset=Set-parall_z-11-3, instance=PART-1-1
- 78,
-*Nset, nset=Set-parall_z-11-4, instance=PART-1-1
  23,
-*Nset, nset=Set-parall_z-11-5, instance=PART-1-1
+*Nset, nset=Set-parall_z-11-2, instance=PART-1-1
  56,
-*Nset, nset=Set-parall_z-11-6, instance=PART-1-1
+*Nset, nset=Set-parall_z-11-3, instance=PART-1-1
  89,
-*Nset, nset=Set-parall_z-11-7, instance=PART-1-1
+*Nset, nset=Set-parall_z-11-4, instance=PART-1-1
  34,
-*Nset, nset=Set-parall_z-11-8, instance=PART-1-1
+*Nset, nset=Set-parall_z-11-5, instance=PART-1-1
  67,
-*Nset, nset=Set-parall_z-11-9, instance=PART-1-1
+*Nset, nset=Set-parall_z-11-6, instance=PART-1-1
  100,
+*Nset, nset=Set-parall_z-11-7, instance=PART-1-1
+ 12,
+*Nset, nset=Set-parall_z-11-8, instance=PART-1-1
+ 45,
+*Nset, nset=Set-parall_z-11-9, instance=PART-1-1
+ 78,
 *Nset, nset=Set-vertice_0-1, instance=PART-1-1
  1331,
 *Nset, nset=Set-vertice_001-1, instance=PART-1-1
@@ -3703,803 +3703,1992 @@
 ** Constraint: Eq-P_X_01-U-1
 *Equation
 3
-Set-parall_x-0-1, 1, 1.
-Ref-XZ, 1, -1.
-Set-parall_x-01-1, 1, -1.
+Set-parall_x-01-1, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_x-11-1, 1, -1.
 ** Constraint: Eq-P_X_01-U-2
 *Equation
 3
-Set-parall_x-0-2, 1, 1.
-Ref-XZ, 1, -1.
-Set-parall_x-01-2, 1, -1.
+Set-parall_x-01-2, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_x-11-2, 1, -1.
 ** Constraint: Eq-P_X_01-U-3
 *Equation
 3
-Set-parall_x-0-3, 1, 1.
-Ref-XZ, 1, -1.
-Set-parall_x-01-3, 1, -1.
+Set-parall_x-01-3, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_x-11-3, 1, -1.
 ** Constraint: Eq-P_X_01-U-4
 *Equation
 3
-Set-parall_x-0-4, 1, 1.
-Ref-XZ, 1, -1.
-Set-parall_x-01-4, 1, -1.
+Set-parall_x-01-4, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_x-11-4, 1, -1.
 ** Constraint: Eq-P_X_01-U-5
 *Equation
 3
-Set-parall_x-0-5, 1, 1.
-Ref-XZ, 1, -1.
-Set-parall_x-01-5, 1, -1.
+Set-parall_x-01-5, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_x-11-5, 1, -1.
 ** Constraint: Eq-P_X_01-U-6
 *Equation
 3
-Set-parall_x-0-6, 1, 1.
-Ref-XZ, 1, -1.
-Set-parall_x-01-6, 1, -1.
+Set-parall_x-01-6, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_x-11-6, 1, -1.
 ** Constraint: Eq-P_X_01-U-7
 *Equation
 3
-Set-parall_x-0-7, 1, 1.
-Ref-XZ, 1, -1.
-Set-parall_x-01-7, 1, -1.
+Set-parall_x-01-7, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_x-11-7, 1, -1.
 ** Constraint: Eq-P_X_01-U-8
 *Equation
 3
-Set-parall_x-0-8, 1, 1.
-Ref-XZ, 1, -1.
-Set-parall_x-01-8, 1, -1.
+Set-parall_x-01-8, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_x-11-8, 1, -1.
 ** Constraint: Eq-P_X_01-U-9
 *Equation
 3
-Set-parall_x-0-9, 1, 1.
-Ref-XZ, 1, -1.
-Set-parall_x-01-9, 1, -1.
+Set-parall_x-01-9, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_x-11-9, 1, -1.
 ** Constraint: Eq-P_X_01-V-1
 *Equation
 3
-Set-parall_x-0-1, 2, 1.
-Ref-YZ, 2, -1.
-Set-parall_x-01-1, 2, -1.
+Set-parall_x-01-1, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_x-11-1, 2, -1.
 ** Constraint: Eq-P_X_01-V-2
 *Equation
 3
-Set-parall_x-0-2, 2, 1.
-Ref-YZ, 2, -1.
-Set-parall_x-01-2, 2, -1.
+Set-parall_x-01-2, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_x-11-2, 2, -1.
 ** Constraint: Eq-P_X_01-V-3
 *Equation
 3
-Set-parall_x-0-3, 2, 1.
-Ref-YZ, 2, -1.
-Set-parall_x-01-3, 2, -1.
+Set-parall_x-01-3, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_x-11-3, 2, -1.
 ** Constraint: Eq-P_X_01-V-4
 *Equation
 3
-Set-parall_x-0-4, 2, 1.
-Ref-YZ, 2, -1.
-Set-parall_x-01-4, 2, -1.
+Set-parall_x-01-4, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_x-11-4, 2, -1.
 ** Constraint: Eq-P_X_01-V-5
 *Equation
 3
-Set-parall_x-0-5, 2, 1.
-Ref-YZ, 2, -1.
-Set-parall_x-01-5, 2, -1.
+Set-parall_x-01-5, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_x-11-5, 2, -1.
 ** Constraint: Eq-P_X_01-V-6
 *Equation
 3
-Set-parall_x-0-6, 2, 1.
-Ref-YZ, 2, -1.
-Set-parall_x-01-6, 2, -1.
+Set-parall_x-01-6, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_x-11-6, 2, -1.
 ** Constraint: Eq-P_X_01-V-7
 *Equation
 3
-Set-parall_x-0-7, 2, 1.
-Ref-YZ, 2, -1.
-Set-parall_x-01-7, 2, -1.
+Set-parall_x-01-7, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_x-11-7, 2, -1.
 ** Constraint: Eq-P_X_01-V-8
 *Equation
 3
-Set-parall_x-0-8, 2, 1.
-Ref-YZ, 2, -1.
-Set-parall_x-01-8, 2, -1.
+Set-parall_x-01-8, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_x-11-8, 2, -1.
 ** Constraint: Eq-P_X_01-V-9
 *Equation
 3
-Set-parall_x-0-9, 2, 1.
-Ref-YZ, 2, -1.
-Set-parall_x-01-9, 2, -1.
+Set-parall_x-01-9, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_x-11-9, 2, -1.
 ** Constraint: Eq-P_X_01-W-1
 *Equation
-3
-Set-parall_x-0-1, 3, 1.
-Ref-Z, 3, -1.
-Set-parall_x-01-1, 3, -1.
+2
+Set-parall_x-01-1, 3, 1.
+Set-parall_x-11-1, 3, 1.
 ** Constraint: Eq-P_X_01-W-2
 *Equation
-3
-Set-parall_x-0-2, 3, 1.
-Ref-Z, 3, -1.
-Set-parall_x-01-2, 3, -1.
+2
+Set-parall_x-01-2, 3, 1.
+Set-parall_x-11-2, 3, 1.
 ** Constraint: Eq-P_X_01-W-3
 *Equation
-3
-Set-parall_x-0-3, 3, 1.
-Ref-Z, 3, -1.
-Set-parall_x-01-3, 3, -1.
+2
+Set-parall_x-01-3, 3, 1.
+Set-parall_x-11-3, 3, 1.
 ** Constraint: Eq-P_X_01-W-4
 *Equation
-3
-Set-parall_x-0-4, 3, 1.
-Ref-Z, 3, -1.
-Set-parall_x-01-4, 3, -1.
+2
+Set-parall_x-01-4, 3, 1.
+Set-parall_x-11-4, 3, 1.
 ** Constraint: Eq-P_X_01-W-5
 *Equation
-3
-Set-parall_x-0-5, 3, 1.
-Ref-Z, 3, -1.
-Set-parall_x-01-5, 3, -1.
+2
+Set-parall_x-01-5, 3, 1.
+Set-parall_x-11-5, 3, 1.
 ** Constraint: Eq-P_X_01-W-6
 *Equation
-3
-Set-parall_x-0-6, 3, 1.
-Ref-Z, 3, -1.
-Set-parall_x-01-6, 3, -1.
+2
+Set-parall_x-01-6, 3, 1.
+Set-parall_x-11-6, 3, 1.
 ** Constraint: Eq-P_X_01-W-7
 *Equation
-3
-Set-parall_x-0-7, 3, 1.
-Ref-Z, 3, -1.
-Set-parall_x-01-7, 3, -1.
+2
+Set-parall_x-01-7, 3, 1.
+Set-parall_x-11-7, 3, 1.
 ** Constraint: Eq-P_X_01-W-8
 *Equation
-3
-Set-parall_x-0-8, 3, 1.
-Ref-Z, 3, -1.
-Set-parall_x-01-8, 3, -1.
+2
+Set-parall_x-01-8, 3, 1.
+Set-parall_x-11-8, 3, 1.
 ** Constraint: Eq-P_X_01-W-9
 *Equation
-3
-Set-parall_x-0-9, 3, 1.
-Ref-Z, 3, -1.
-Set-parall_x-01-9, 3, -1.
+2
+Set-parall_x-01-9, 3, 1.
+Set-parall_x-11-9, 3, 1.
 ** Constraint: Eq-P_X_10-U-1
 *Equation
 3
 Set-parall_x-0-1, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-parall_x-10-1, 1, -1.
 ** Constraint: Eq-P_X_10-U-2
 *Equation
 3
 Set-parall_x-0-2, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-parall_x-10-2, 1, -1.
 ** Constraint: Eq-P_X_10-U-3
 *Equation
 3
 Set-parall_x-0-3, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-parall_x-10-3, 1, -1.
 ** Constraint: Eq-P_X_10-U-4
 *Equation
 3
 Set-parall_x-0-4, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-parall_x-10-4, 1, -1.
 ** Constraint: Eq-P_X_10-U-5
 *Equation
 3
 Set-parall_x-0-5, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-parall_x-10-5, 1, -1.
 ** Constraint: Eq-P_X_10-U-6
 *Equation
 3
 Set-parall_x-0-6, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-parall_x-10-6, 1, -1.
 ** Constraint: Eq-P_X_10-U-7
 *Equation
 3
 Set-parall_x-0-7, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-parall_x-10-7, 1, -1.
 ** Constraint: Eq-P_X_10-U-8
 *Equation
 3
 Set-parall_x-0-8, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-parall_x-10-8, 1, -1.
 ** Constraint: Eq-P_X_10-U-9
 *Equation
 3
 Set-parall_x-0-9, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-parall_x-10-9, 1, -1.
 ** Constraint: Eq-P_X_10-V-1
 *Equation
 3
 Set-parall_x-0-1, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-parall_x-10-1, 2, -1.
 ** Constraint: Eq-P_X_10-V-2
 *Equation
 3
 Set-parall_x-0-2, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-parall_x-10-2, 2, -1.
 ** Constraint: Eq-P_X_10-V-3
 *Equation
 3
 Set-parall_x-0-3, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-parall_x-10-3, 2, -1.
 ** Constraint: Eq-P_X_10-V-4
 *Equation
 3
 Set-parall_x-0-4, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-parall_x-10-4, 2, -1.
 ** Constraint: Eq-P_X_10-V-5
 *Equation
 3
 Set-parall_x-0-5, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-parall_x-10-5, 2, -1.
 ** Constraint: Eq-P_X_10-V-6
 *Equation
 3
 Set-parall_x-0-6, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-parall_x-10-6, 2, -1.
 ** Constraint: Eq-P_X_10-V-7
 *Equation
 3
 Set-parall_x-0-7, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-parall_x-10-7, 2, -1.
 ** Constraint: Eq-P_X_10-V-8
 *Equation
 3
 Set-parall_x-0-8, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-parall_x-10-8, 2, -1.
 ** Constraint: Eq-P_X_10-V-9
 *Equation
 3
 Set-parall_x-0-9, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-parall_x-10-9, 2, -1.
 ** Constraint: Eq-P_X_10-W-1
 *Equation
 2
 Set-parall_x-0-1, 3, 1.
-Set-parall_x-10-1, 3, -1.
+Set-parall_x-10-1, 3, 1.
 ** Constraint: Eq-P_X_10-W-2
 *Equation
 2
 Set-parall_x-0-2, 3, 1.
-Set-parall_x-10-2, 3, -1.
+Set-parall_x-10-2, 3, 1.
 ** Constraint: Eq-P_X_10-W-3
 *Equation
 2
 Set-parall_x-0-3, 3, 1.
-Set-parall_x-10-3, 3, -1.
+Set-parall_x-10-3, 3, 1.
 ** Constraint: Eq-P_X_10-W-4
 *Equation
 2
 Set-parall_x-0-4, 3, 1.
-Set-parall_x-10-4, 3, -1.
+Set-parall_x-10-4, 3, 1.
 ** Constraint: Eq-P_X_10-W-5
 *Equation
 2
 Set-parall_x-0-5, 3, 1.
-Set-parall_x-10-5, 3, -1.
+Set-parall_x-10-5, 3, 1.
 ** Constraint: Eq-P_X_10-W-6
 *Equation
 2
 Set-parall_x-0-6, 3, 1.
-Set-parall_x-10-6, 3, -1.
+Set-parall_x-10-6, 3, 1.
 ** Constraint: Eq-P_X_10-W-7
 *Equation
 2
 Set-parall_x-0-7, 3, 1.
-Set-parall_x-10-7, 3, -1.
+Set-parall_x-10-7, 3, 1.
 ** Constraint: Eq-P_X_10-W-8
 *Equation
 2
 Set-parall_x-0-8, 3, 1.
-Set-parall_x-10-8, 3, -1.
+Set-parall_x-10-8, 3, 1.
 ** Constraint: Eq-P_X_10-W-9
 *Equation
 2
 Set-parall_x-0-9, 3, 1.
-Set-parall_x-10-9, 3, -1.
+Set-parall_x-10-9, 3, 1.
+** Constraint: Eq-P_X_11-U-1
+*Equation
+3
+Set-parall_x-10-1, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_x-11-1, 1, -1.
+** Constraint: Eq-P_X_11-U-2
+*Equation
+3
+Set-parall_x-10-2, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_x-11-2, 1, -1.
+** Constraint: Eq-P_X_11-U-3
+*Equation
+3
+Set-parall_x-10-3, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_x-11-3, 1, -1.
+** Constraint: Eq-P_X_11-U-4
+*Equation
+3
+Set-parall_x-10-4, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_x-11-4, 1, -1.
+** Constraint: Eq-P_X_11-U-5
+*Equation
+3
+Set-parall_x-10-5, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_x-11-5, 1, -1.
+** Constraint: Eq-P_X_11-U-6
+*Equation
+3
+Set-parall_x-10-6, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_x-11-6, 1, -1.
+** Constraint: Eq-P_X_11-U-7
+*Equation
+3
+Set-parall_x-10-7, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_x-11-7, 1, -1.
+** Constraint: Eq-P_X_11-U-8
+*Equation
+3
+Set-parall_x-10-8, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_x-11-8, 1, -1.
+** Constraint: Eq-P_X_11-U-9
+*Equation
+3
+Set-parall_x-10-9, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_x-11-9, 1, -1.
+** Constraint: Eq-P_X_11-V-1
+*Equation
+3
+Set-parall_x-10-1, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_x-11-1, 2, -1.
+** Constraint: Eq-P_X_11-V-2
+*Equation
+3
+Set-parall_x-10-2, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_x-11-2, 2, -1.
+** Constraint: Eq-P_X_11-V-3
+*Equation
+3
+Set-parall_x-10-3, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_x-11-3, 2, -1.
+** Constraint: Eq-P_X_11-V-4
+*Equation
+3
+Set-parall_x-10-4, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_x-11-4, 2, -1.
+** Constraint: Eq-P_X_11-V-5
+*Equation
+3
+Set-parall_x-10-5, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_x-11-5, 2, -1.
+** Constraint: Eq-P_X_11-V-6
+*Equation
+3
+Set-parall_x-10-6, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_x-11-6, 2, -1.
+** Constraint: Eq-P_X_11-V-7
+*Equation
+3
+Set-parall_x-10-7, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_x-11-7, 2, -1.
+** Constraint: Eq-P_X_11-V-8
+*Equation
+3
+Set-parall_x-10-8, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_x-11-8, 2, -1.
+** Constraint: Eq-P_X_11-V-9
+*Equation
+3
+Set-parall_x-10-9, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_x-11-9, 2, -1.
+** Constraint: Eq-P_X_11-W-1
+*Equation
+3
+Set-parall_x-10-1, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_x-11-1, 3, -1.
+** Constraint: Eq-P_X_11-W-2
+*Equation
+3
+Set-parall_x-10-2, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_x-11-2, 3, -1.
+** Constraint: Eq-P_X_11-W-3
+*Equation
+3
+Set-parall_x-10-3, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_x-11-3, 3, -1.
+** Constraint: Eq-P_X_11-W-4
+*Equation
+3
+Set-parall_x-10-4, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_x-11-4, 3, -1.
+** Constraint: Eq-P_X_11-W-5
+*Equation
+3
+Set-parall_x-10-5, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_x-11-5, 3, -1.
+** Constraint: Eq-P_X_11-W-6
+*Equation
+3
+Set-parall_x-10-6, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_x-11-6, 3, -1.
+** Constraint: Eq-P_X_11-W-7
+*Equation
+3
+Set-parall_x-10-7, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_x-11-7, 3, -1.
+** Constraint: Eq-P_X_11-W-8
+*Equation
+3
+Set-parall_x-10-8, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_x-11-8, 3, -1.
+** Constraint: Eq-P_X_11-W-9
+*Equation
+3
+Set-parall_x-10-9, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_x-11-9, 3, -1.
+** Constraint: Eq-P_y_01-U-1
+*Equation
+3
+Set-parall_y-01-1, 1, 1.
+Ref-XZ, 1, -1.
+Set-parall_y-0-1, 1, -1.
+** Constraint: Eq-P_y_01-U-2
+*Equation
+3
+Set-parall_y-01-2, 1, 1.
+Ref-XZ, 1, -1.
+Set-parall_y-0-2, 1, -1.
+** Constraint: Eq-P_y_01-U-3
+*Equation
+3
+Set-parall_y-01-3, 1, 1.
+Ref-XZ, 1, -1.
+Set-parall_y-0-3, 1, -1.
+** Constraint: Eq-P_y_01-U-4
+*Equation
+3
+Set-parall_y-01-4, 1, 1.
+Ref-XZ, 1, -1.
+Set-parall_y-0-4, 1, -1.
+** Constraint: Eq-P_y_01-U-5
+*Equation
+3
+Set-parall_y-01-5, 1, 1.
+Ref-XZ, 1, -1.
+Set-parall_y-0-5, 1, -1.
+** Constraint: Eq-P_y_01-U-6
+*Equation
+3
+Set-parall_y-01-6, 1, 1.
+Ref-XZ, 1, -1.
+Set-parall_y-0-6, 1, -1.
+** Constraint: Eq-P_y_01-U-7
+*Equation
+3
+Set-parall_y-01-7, 1, 1.
+Ref-XZ, 1, -1.
+Set-parall_y-0-7, 1, -1.
+** Constraint: Eq-P_y_01-U-8
+*Equation
+3
+Set-parall_y-01-8, 1, 1.
+Ref-XZ, 1, -1.
+Set-parall_y-0-8, 1, -1.
+** Constraint: Eq-P_y_01-U-9
+*Equation
+3
+Set-parall_y-01-9, 1, 1.
+Ref-XZ, 1, -1.
+Set-parall_y-0-9, 1, -1.
+** Constraint: Eq-P_y_01-V-1
+*Equation
+3
+Set-parall_y-01-1, 2, 1.
+Ref-YZ, 2, -1.
+Set-parall_y-0-1, 2, -1.
+** Constraint: Eq-P_y_01-V-2
+*Equation
+3
+Set-parall_y-01-2, 2, 1.
+Ref-YZ, 2, -1.
+Set-parall_y-0-2, 2, -1.
+** Constraint: Eq-P_y_01-V-3
+*Equation
+3
+Set-parall_y-01-3, 2, 1.
+Ref-YZ, 2, -1.
+Set-parall_y-0-3, 2, -1.
+** Constraint: Eq-P_y_01-V-4
+*Equation
+3
+Set-parall_y-01-4, 2, 1.
+Ref-YZ, 2, -1.
+Set-parall_y-0-4, 2, -1.
+** Constraint: Eq-P_y_01-V-5
+*Equation
+3
+Set-parall_y-01-5, 2, 1.
+Ref-YZ, 2, -1.
+Set-parall_y-0-5, 2, -1.
+** Constraint: Eq-P_y_01-V-6
+*Equation
+3
+Set-parall_y-01-6, 2, 1.
+Ref-YZ, 2, -1.
+Set-parall_y-0-6, 2, -1.
+** Constraint: Eq-P_y_01-V-7
+*Equation
+3
+Set-parall_y-01-7, 2, 1.
+Ref-YZ, 2, -1.
+Set-parall_y-0-7, 2, -1.
+** Constraint: Eq-P_y_01-V-8
+*Equation
+3
+Set-parall_y-01-8, 2, 1.
+Ref-YZ, 2, -1.
+Set-parall_y-0-8, 2, -1.
+** Constraint: Eq-P_y_01-V-9
+*Equation
+3
+Set-parall_y-01-9, 2, 1.
+Ref-YZ, 2, -1.
+Set-parall_y-0-9, 2, -1.
+** Constraint: Eq-P_y_01-W-1
+*Equation
+3
+Set-parall_y-01-1, 3, 1.
+Ref-Z, 3, -1.
+Set-parall_y-0-1, 3, -1.
+** Constraint: Eq-P_y_01-W-2
+*Equation
+3
+Set-parall_y-01-2, 3, 1.
+Ref-Z, 3, -1.
+Set-parall_y-0-2, 3, -1.
+** Constraint: Eq-P_y_01-W-3
+*Equation
+3
+Set-parall_y-01-3, 3, 1.
+Ref-Z, 3, -1.
+Set-parall_y-0-3, 3, -1.
+** Constraint: Eq-P_y_01-W-4
+*Equation
+3
+Set-parall_y-01-4, 3, 1.
+Ref-Z, 3, -1.
+Set-parall_y-0-4, 3, -1.
+** Constraint: Eq-P_y_01-W-5
+*Equation
+3
+Set-parall_y-01-5, 3, 1.
+Ref-Z, 3, -1.
+Set-parall_y-0-5, 3, -1.
+** Constraint: Eq-P_y_01-W-6
+*Equation
+3
+Set-parall_y-01-6, 3, 1.
+Ref-Z, 3, -1.
+Set-parall_y-0-6, 3, -1.
+** Constraint: Eq-P_y_01-W-7
+*Equation
+3
+Set-parall_y-01-7, 3, 1.
+Ref-Z, 3, -1.
+Set-parall_y-0-7, 3, -1.
+** Constraint: Eq-P_y_01-W-8
+*Equation
+3
+Set-parall_y-01-8, 3, 1.
+Ref-Z, 3, -1.
+Set-parall_y-0-8, 3, -1.
+** Constraint: Eq-P_y_01-W-9
+*Equation
+3
+Set-parall_y-01-9, 3, 1.
+Ref-Z, 3, -1.
+Set-parall_y-0-9, 3, -1.
+** Constraint: Eq-P_y_10-U-1
+*Equation
+3
+Set-parall_y-0-1, 1, 1.
+Ref-X, 1, 1.
+Set-parall_y-10-1, 1, -1.
+** Constraint: Eq-P_y_10-U-2
+*Equation
+3
+Set-parall_y-0-2, 1, 1.
+Ref-X, 1, 1.
+Set-parall_y-10-2, 1, -1.
+** Constraint: Eq-P_y_10-U-3
+*Equation
+3
+Set-parall_y-0-3, 1, 1.
+Ref-X, 1, 1.
+Set-parall_y-10-3, 1, -1.
+** Constraint: Eq-P_y_10-U-4
+*Equation
+3
+Set-parall_y-0-4, 1, 1.
+Ref-X, 1, 1.
+Set-parall_y-10-4, 1, -1.
+** Constraint: Eq-P_y_10-U-5
+*Equation
+3
+Set-parall_y-0-5, 1, 1.
+Ref-X, 1, 1.
+Set-parall_y-10-5, 1, -1.
+** Constraint: Eq-P_y_10-U-6
+*Equation
+3
+Set-parall_y-0-6, 1, 1.
+Ref-X, 1, 1.
+Set-parall_y-10-6, 1, -1.
+** Constraint: Eq-P_y_10-U-7
+*Equation
+3
+Set-parall_y-0-7, 1, 1.
+Ref-X, 1, 1.
+Set-parall_y-10-7, 1, -1.
+** Constraint: Eq-P_y_10-U-8
+*Equation
+3
+Set-parall_y-0-8, 1, 1.
+Ref-X, 1, 1.
+Set-parall_y-10-8, 1, -1.
+** Constraint: Eq-P_y_10-U-9
+*Equation
+3
+Set-parall_y-0-9, 1, 1.
+Ref-X, 1, 1.
+Set-parall_y-10-9, 1, -1.
+** Constraint: Eq-P_y_10-V-1
+*Equation
+2
+Set-parall_y-0-1, 2, 1.
+Set-parall_y-10-1, 2, -1.
+** Constraint: Eq-P_y_10-V-2
+*Equation
+2
+Set-parall_y-0-2, 2, 1.
+Set-parall_y-10-2, 2, -1.
+** Constraint: Eq-P_y_10-V-3
+*Equation
+2
+Set-parall_y-0-3, 2, 1.
+Set-parall_y-10-3, 2, -1.
+** Constraint: Eq-P_y_10-V-4
+*Equation
+2
+Set-parall_y-0-4, 2, 1.
+Set-parall_y-10-4, 2, -1.
+** Constraint: Eq-P_y_10-V-5
+*Equation
+2
+Set-parall_y-0-5, 2, 1.
+Set-parall_y-10-5, 2, -1.
+** Constraint: Eq-P_y_10-V-6
+*Equation
+2
+Set-parall_y-0-6, 2, 1.
+Set-parall_y-10-6, 2, -1.
+** Constraint: Eq-P_y_10-V-7
+*Equation
+2
+Set-parall_y-0-7, 2, 1.
+Set-parall_y-10-7, 2, -1.
+** Constraint: Eq-P_y_10-V-8
+*Equation
+2
+Set-parall_y-0-8, 2, 1.
+Set-parall_y-10-8, 2, -1.
+** Constraint: Eq-P_y_10-V-9
+*Equation
+2
+Set-parall_y-0-9, 2, 1.
+Set-parall_y-10-9, 2, -1.
+** Constraint: Eq-P_y_10-W-1
+*Equation
+2
+Set-parall_y-0-1, 3, 1.
+Set-parall_y-10-1, 3, -1.
+** Constraint: Eq-P_y_10-W-2
+*Equation
+2
+Set-parall_y-0-2, 3, 1.
+Set-parall_y-10-2, 3, -1.
+** Constraint: Eq-P_y_10-W-3
+*Equation
+2
+Set-parall_y-0-3, 3, 1.
+Set-parall_y-10-3, 3, -1.
+** Constraint: Eq-P_y_10-W-4
+*Equation
+2
+Set-parall_y-0-4, 3, 1.
+Set-parall_y-10-4, 3, -1.
+** Constraint: Eq-P_y_10-W-5
+*Equation
+2
+Set-parall_y-0-5, 3, 1.
+Set-parall_y-10-5, 3, -1.
+** Constraint: Eq-P_y_10-W-6
+*Equation
+2
+Set-parall_y-0-6, 3, 1.
+Set-parall_y-10-6, 3, -1.
+** Constraint: Eq-P_y_10-W-7
+*Equation
+2
+Set-parall_y-0-7, 3, 1.
+Set-parall_y-10-7, 3, -1.
+** Constraint: Eq-P_y_10-W-8
+*Equation
+2
+Set-parall_y-0-8, 3, 1.
+Set-parall_y-10-8, 3, -1.
+** Constraint: Eq-P_y_10-W-9
+*Equation
+2
+Set-parall_y-0-9, 3, 1.
+Set-parall_y-10-9, 3, -1.
+** Constraint: Eq-P_y_11-U-1
+*Equation
+3
+Set-parall_y-10-1, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_y-11-1, 1, -1.
+** Constraint: Eq-P_y_11-U-2
+*Equation
+3
+Set-parall_y-10-2, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_y-11-2, 1, -1.
+** Constraint: Eq-P_y_11-U-3
+*Equation
+3
+Set-parall_y-10-3, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_y-11-3, 1, -1.
+** Constraint: Eq-P_y_11-U-4
+*Equation
+3
+Set-parall_y-10-4, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_y-11-4, 1, -1.
+** Constraint: Eq-P_y_11-U-5
+*Equation
+3
+Set-parall_y-10-5, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_y-11-5, 1, -1.
+** Constraint: Eq-P_y_11-U-6
+*Equation
+3
+Set-parall_y-10-6, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_y-11-6, 1, -1.
+** Constraint: Eq-P_y_11-U-7
+*Equation
+3
+Set-parall_y-10-7, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_y-11-7, 1, -1.
+** Constraint: Eq-P_y_11-U-8
+*Equation
+3
+Set-parall_y-10-8, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_y-11-8, 1, -1.
+** Constraint: Eq-P_y_11-U-9
+*Equation
+3
+Set-parall_y-10-9, 1, 1.
+Ref-XZ, 1, 1.
+Set-parall_y-11-9, 1, -1.
+** Constraint: Eq-P_y_11-V-1
+*Equation
+3
+Set-parall_y-10-1, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_y-11-1, 2, -1.
+** Constraint: Eq-P_y_11-V-2
+*Equation
+3
+Set-parall_y-10-2, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_y-11-2, 2, -1.
+** Constraint: Eq-P_y_11-V-3
+*Equation
+3
+Set-parall_y-10-3, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_y-11-3, 2, -1.
+** Constraint: Eq-P_y_11-V-4
+*Equation
+3
+Set-parall_y-10-4, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_y-11-4, 2, -1.
+** Constraint: Eq-P_y_11-V-5
+*Equation
+3
+Set-parall_y-10-5, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_y-11-5, 2, -1.
+** Constraint: Eq-P_y_11-V-6
+*Equation
+3
+Set-parall_y-10-6, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_y-11-6, 2, -1.
+** Constraint: Eq-P_y_11-V-7
+*Equation
+3
+Set-parall_y-10-7, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_y-11-7, 2, -1.
+** Constraint: Eq-P_y_11-V-8
+*Equation
+3
+Set-parall_y-10-8, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_y-11-8, 2, -1.
+** Constraint: Eq-P_y_11-V-9
+*Equation
+3
+Set-parall_y-10-9, 2, 1.
+Ref-YZ, 2, 1.
+Set-parall_y-11-9, 2, -1.
+** Constraint: Eq-P_y_11-W-1
+*Equation
+3
+Set-parall_y-10-1, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_y-11-1, 3, -1.
+** Constraint: Eq-P_y_11-W-2
+*Equation
+3
+Set-parall_y-10-2, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_y-11-2, 3, -1.
+** Constraint: Eq-P_y_11-W-3
+*Equation
+3
+Set-parall_y-10-3, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_y-11-3, 3, -1.
+** Constraint: Eq-P_y_11-W-4
+*Equation
+3
+Set-parall_y-10-4, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_y-11-4, 3, -1.
+** Constraint: Eq-P_y_11-W-5
+*Equation
+3
+Set-parall_y-10-5, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_y-11-5, 3, -1.
+** Constraint: Eq-P_y_11-W-6
+*Equation
+3
+Set-parall_y-10-6, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_y-11-6, 3, -1.
+** Constraint: Eq-P_y_11-W-7
+*Equation
+3
+Set-parall_y-10-7, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_y-11-7, 3, -1.
+** Constraint: Eq-P_y_11-W-8
+*Equation
+3
+Set-parall_y-10-8, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_y-11-8, 3, -1.
+** Constraint: Eq-P_y_11-W-9
+*Equation
+3
+Set-parall_y-10-9, 3, 1.
+Ref-Z, 3, 1.
+Set-parall_y-11-9, 3, -1.
+** Constraint: Eq-P_z_01-U-1
+*Equation
+3
+Set-parall_z-01-1, 1, 1.
+Ref-XY, 1, -1.
+Set-parall_z-0-1, 1, -1.
+** Constraint: Eq-P_z_01-U-2
+*Equation
+3
+Set-parall_z-01-2, 1, 1.
+Ref-XY, 1, -1.
+Set-parall_z-0-2, 1, -1.
+** Constraint: Eq-P_z_01-U-3
+*Equation
+3
+Set-parall_z-01-3, 1, 1.
+Ref-XY, 1, -1.
+Set-parall_z-0-3, 1, -1.
+** Constraint: Eq-P_z_01-U-4
+*Equation
+3
+Set-parall_z-01-4, 1, 1.
+Ref-XY, 1, -1.
+Set-parall_z-0-4, 1, -1.
+** Constraint: Eq-P_z_01-U-5
+*Equation
+3
+Set-parall_z-01-5, 1, 1.
+Ref-XY, 1, -1.
+Set-parall_z-0-5, 1, -1.
+** Constraint: Eq-P_z_01-U-6
+*Equation
+3
+Set-parall_z-01-6, 1, 1.
+Ref-XY, 1, -1.
+Set-parall_z-0-6, 1, -1.
+** Constraint: Eq-P_z_01-U-7
+*Equation
+3
+Set-parall_z-01-7, 1, 1.
+Ref-XY, 1, -1.
+Set-parall_z-0-7, 1, -1.
+** Constraint: Eq-P_z_01-U-8
+*Equation
+3
+Set-parall_z-01-8, 1, 1.
+Ref-XY, 1, -1.
+Set-parall_z-0-8, 1, -1.
+** Constraint: Eq-P_z_01-U-9
+*Equation
+3
+Set-parall_z-01-9, 1, 1.
+Ref-XY, 1, -1.
+Set-parall_z-0-9, 1, -1.
+** Constraint: Eq-P_z_01-V-1
+*Equation
+3
+Set-parall_z-01-1, 2, 1.
+Ref-Y, 2, -1.
+Set-parall_z-0-1, 2, -1.
+** Constraint: Eq-P_z_01-V-2
+*Equation
+3
+Set-parall_z-01-2, 2, 1.
+Ref-Y, 2, -1.
+Set-parall_z-0-2, 2, -1.
+** Constraint: Eq-P_z_01-V-3
+*Equation
+3
+Set-parall_z-01-3, 2, 1.
+Ref-Y, 2, -1.
+Set-parall_z-0-3, 2, -1.
+** Constraint: Eq-P_z_01-V-4
+*Equation
+3
+Set-parall_z-01-4, 2, 1.
+Ref-Y, 2, -1.
+Set-parall_z-0-4, 2, -1.
+** Constraint: Eq-P_z_01-V-5
+*Equation
+3
+Set-parall_z-01-5, 2, 1.
+Ref-Y, 2, -1.
+Set-parall_z-0-5, 2, -1.
+** Constraint: Eq-P_z_01-V-6
+*Equation
+3
+Set-parall_z-01-6, 2, 1.
+Ref-Y, 2, -1.
+Set-parall_z-0-6, 2, -1.
+** Constraint: Eq-P_z_01-V-7
+*Equation
+3
+Set-parall_z-01-7, 2, 1.
+Ref-Y, 2, -1.
+Set-parall_z-0-7, 2, -1.
+** Constraint: Eq-P_z_01-V-8
+*Equation
+3
+Set-parall_z-01-8, 2, 1.
+Ref-Y, 2, -1.
+Set-parall_z-0-8, 2, -1.
+** Constraint: Eq-P_z_01-V-9
+*Equation
+3
+Set-parall_z-01-9, 2, 1.
+Ref-Y, 2, -1.
+Set-parall_z-0-9, 2, -1.
+** Constraint: Eq-P_z_01-W-1
+*Equation
+2
+Set-parall_z-01-1, 3, 1.
+Set-parall_z-0-1, 3, -1.
+** Constraint: Eq-P_z_01-W-2
+*Equation
+2
+Set-parall_z-01-2, 3, 1.
+Set-parall_z-0-2, 3, -1.
+** Constraint: Eq-P_z_01-W-3
+*Equation
+2
+Set-parall_z-01-3, 3, 1.
+Set-parall_z-0-3, 3, -1.
+** Constraint: Eq-P_z_01-W-4
+*Equation
+2
+Set-parall_z-01-4, 3, 1.
+Set-parall_z-0-4, 3, -1.
+** Constraint: Eq-P_z_01-W-5
+*Equation
+2
+Set-parall_z-01-5, 3, 1.
+Set-parall_z-0-5, 3, -1.
+** Constraint: Eq-P_z_01-W-6
+*Equation
+2
+Set-parall_z-01-6, 3, 1.
+Set-parall_z-0-6, 3, -1.
+** Constraint: Eq-P_z_01-W-7
+*Equation
+2
+Set-parall_z-01-7, 3, 1.
+Set-parall_z-0-7, 3, -1.
+** Constraint: Eq-P_z_01-W-8
+*Equation
+2
+Set-parall_z-01-8, 3, 1.
+Set-parall_z-0-8, 3, -1.
+** Constraint: Eq-P_z_01-W-9
+*Equation
+2
+Set-parall_z-01-9, 3, 1.
+Set-parall_z-0-9, 3, -1.
+** Constraint: Eq-P_z_10-U-1
+*Equation
+3
+Set-parall_z-0-1, 1, 1.
+Ref-X, 1, 1.
+Set-parall_z-10-1, 1, -1.
+** Constraint: Eq-P_z_10-U-2
+*Equation
+3
+Set-parall_z-0-2, 1, 1.
+Ref-X, 1, 1.
+Set-parall_z-10-2, 1, -1.
+** Constraint: Eq-P_z_10-U-3
+*Equation
+3
+Set-parall_z-0-3, 1, 1.
+Ref-X, 1, 1.
+Set-parall_z-10-3, 1, -1.
+** Constraint: Eq-P_z_10-U-4
+*Equation
+3
+Set-parall_z-0-4, 1, 1.
+Ref-X, 1, 1.
+Set-parall_z-10-4, 1, -1.
+** Constraint: Eq-P_z_10-U-5
+*Equation
+3
+Set-parall_z-0-5, 1, 1.
+Ref-X, 1, 1.
+Set-parall_z-10-5, 1, -1.
+** Constraint: Eq-P_z_10-U-6
+*Equation
+3
+Set-parall_z-0-6, 1, 1.
+Ref-X, 1, 1.
+Set-parall_z-10-6, 1, -1.
+** Constraint: Eq-P_z_10-U-7
+*Equation
+3
+Set-parall_z-0-7, 1, 1.
+Ref-X, 1, 1.
+Set-parall_z-10-7, 1, -1.
+** Constraint: Eq-P_z_10-U-8
+*Equation
+3
+Set-parall_z-0-8, 1, 1.
+Ref-X, 1, 1.
+Set-parall_z-10-8, 1, -1.
+** Constraint: Eq-P_z_10-U-9
+*Equation
+3
+Set-parall_z-0-9, 1, 1.
+Ref-X, 1, 1.
+Set-parall_z-10-9, 1, -1.
+** Constraint: Eq-P_z_10-V-1
+*Equation
+2
+Set-parall_z-0-1, 2, 1.
+Set-parall_z-10-1, 2, -1.
+** Constraint: Eq-P_z_10-V-2
+*Equation
+2
+Set-parall_z-0-2, 2, 1.
+Set-parall_z-10-2, 2, -1.
+** Constraint: Eq-P_z_10-V-3
+*Equation
+2
+Set-parall_z-0-3, 2, 1.
+Set-parall_z-10-3, 2, -1.
+** Constraint: Eq-P_z_10-V-4
+*Equation
+2
+Set-parall_z-0-4, 2, 1.
+Set-parall_z-10-4, 2, -1.
+** Constraint: Eq-P_z_10-V-5
+*Equation
+2
+Set-parall_z-0-5, 2, 1.
+Set-parall_z-10-5, 2, -1.
+** Constraint: Eq-P_z_10-V-6
+*Equation
+2
+Set-parall_z-0-6, 2, 1.
+Set-parall_z-10-6, 2, -1.
+** Constraint: Eq-P_z_10-V-7
+*Equation
+2
+Set-parall_z-0-7, 2, 1.
+Set-parall_z-10-7, 2, -1.
+** Constraint: Eq-P_z_10-V-8
+*Equation
+2
+Set-parall_z-0-8, 2, 1.
+Set-parall_z-10-8, 2, -1.
+** Constraint: Eq-P_z_10-V-9
+*Equation
+2
+Set-parall_z-0-9, 2, 1.
+Set-parall_z-10-9, 2, -1.
+** Constraint: Eq-P_z_10-W-1
+*Equation
+2
+Set-parall_z-0-1, 3, 1.
+Set-parall_z-10-1, 3, -1.
+** Constraint: Eq-P_z_10-W-2
+*Equation
+2
+Set-parall_z-0-2, 3, 1.
+Set-parall_z-10-2, 3, -1.
+** Constraint: Eq-P_z_10-W-3
+*Equation
+2
+Set-parall_z-0-3, 3, 1.
+Set-parall_z-10-3, 3, -1.
+** Constraint: Eq-P_z_10-W-4
+*Equation
+2
+Set-parall_z-0-4, 3, 1.
+Set-parall_z-10-4, 3, -1.
+** Constraint: Eq-P_z_10-W-5
+*Equation
+2
+Set-parall_z-0-5, 3, 1.
+Set-parall_z-10-5, 3, -1.
+** Constraint: Eq-P_z_10-W-6
+*Equation
+2
+Set-parall_z-0-6, 3, 1.
+Set-parall_z-10-6, 3, -1.
+** Constraint: Eq-P_z_10-W-7
+*Equation
+2
+Set-parall_z-0-7, 3, 1.
+Set-parall_z-10-7, 3, -1.
+** Constraint: Eq-P_z_10-W-8
+*Equation
+2
+Set-parall_z-0-8, 3, 1.
+Set-parall_z-10-8, 3, -1.
+** Constraint: Eq-P_z_10-W-9
+*Equation
+2
+Set-parall_z-0-9, 3, 1.
+Set-parall_z-10-9, 3, -1.
+** Constraint: Eq-P_z_11-U-1
+*Equation
+3
+Set-parall_z-10-1, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_z-11-1, 1, -1.
+** Constraint: Eq-P_z_11-U-2
+*Equation
+3
+Set-parall_z-10-2, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_z-11-2, 1, -1.
+** Constraint: Eq-P_z_11-U-3
+*Equation
+3
+Set-parall_z-10-3, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_z-11-3, 1, -1.
+** Constraint: Eq-P_z_11-U-4
+*Equation
+3
+Set-parall_z-10-4, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_z-11-4, 1, -1.
+** Constraint: Eq-P_z_11-U-5
+*Equation
+3
+Set-parall_z-10-5, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_z-11-5, 1, -1.
+** Constraint: Eq-P_z_11-U-6
+*Equation
+3
+Set-parall_z-10-6, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_z-11-6, 1, -1.
+** Constraint: Eq-P_z_11-U-7
+*Equation
+3
+Set-parall_z-10-7, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_z-11-7, 1, -1.
+** Constraint: Eq-P_z_11-U-8
+*Equation
+3
+Set-parall_z-10-8, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_z-11-8, 1, -1.
+** Constraint: Eq-P_z_11-U-9
+*Equation
+3
+Set-parall_z-10-9, 1, 1.
+Ref-XY, 1, 1.
+Set-parall_z-11-9, 1, -1.
+** Constraint: Eq-P_z_11-V-1
+*Equation
+3
+Set-parall_z-10-1, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_z-11-1, 2, -1.
+** Constraint: Eq-P_z_11-V-2
+*Equation
+3
+Set-parall_z-10-2, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_z-11-2, 2, -1.
+** Constraint: Eq-P_z_11-V-3
+*Equation
+3
+Set-parall_z-10-3, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_z-11-3, 2, -1.
+** Constraint: Eq-P_z_11-V-4
+*Equation
+3
+Set-parall_z-10-4, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_z-11-4, 2, -1.
+** Constraint: Eq-P_z_11-V-5
+*Equation
+3
+Set-parall_z-10-5, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_z-11-5, 2, -1.
+** Constraint: Eq-P_z_11-V-6
+*Equation
+3
+Set-parall_z-10-6, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_z-11-6, 2, -1.
+** Constraint: Eq-P_z_11-V-7
+*Equation
+3
+Set-parall_z-10-7, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_z-11-7, 2, -1.
+** Constraint: Eq-P_z_11-V-8
+*Equation
+3
+Set-parall_z-10-8, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_z-11-8, 2, -1.
+** Constraint: Eq-P_z_11-V-9
+*Equation
+3
+Set-parall_z-10-9, 2, 1.
+Ref-Y, 2, 1.
+Set-parall_z-11-9, 2, -1.
+** Constraint: Eq-P_z_11-W-1
+*Equation
+2
+Set-parall_z-10-1, 3, 1.
+Set-parall_z-11-1, 3, -1.
+** Constraint: Eq-P_z_11-W-2
+*Equation
+2
+Set-parall_z-10-2, 3, 1.
+Set-parall_z-11-2, 3, -1.
+** Constraint: Eq-P_z_11-W-3
+*Equation
+2
+Set-parall_z-10-3, 3, 1.
+Set-parall_z-11-3, 3, -1.
+** Constraint: Eq-P_z_11-W-4
+*Equation
+2
+Set-parall_z-10-4, 3, 1.
+Set-parall_z-11-4, 3, -1.
+** Constraint: Eq-P_z_11-W-5
+*Equation
+2
+Set-parall_z-10-5, 3, 1.
+Set-parall_z-11-5, 3, -1.
+** Constraint: Eq-P_z_11-W-6
+*Equation
+2
+Set-parall_z-10-6, 3, 1.
+Set-parall_z-11-6, 3, -1.
+** Constraint: Eq-P_z_11-W-7
+*Equation
+2
+Set-parall_z-10-7, 3, 1.
+Set-parall_z-11-7, 3, -1.
+** Constraint: Eq-P_z_11-W-8
+*Equation
+2
+Set-parall_z-10-8, 3, 1.
+Set-parall_z-11-8, 3, -1.
+** Constraint: Eq-P_z_11-W-9
+*Equation
+2
+Set-parall_z-10-9, 3, 1.
+Set-parall_z-11-9, 3, -1.
+** Constraint: Eq-V_001-U-1
+*Equation
+3
+Set-vertice_0-1, 1, 1.
+Ref-XZ, 1, 1.
+Set-vertice_001-1, 1, -1.
+** Constraint: Eq-V_001-V-1
+*Equation
+3
+Set-vertice_0-1, 2, 1.
+Ref-YZ, 2, 1.
+Set-vertice_001-1, 2, -1.
+** Constraint: Eq-V_001-W-1
+*Equation
+3
+Set-vertice_0-1, 3, 1.
+Ref-Z, 3, 1.
+Set-vertice_001-1, 3, -1.
+** Constraint: Eq-V_010-U-1
+*Equation
+3
+Set-vertice_010-1, 1, 1.
+Ref-XY, 1, -1.
+Set-vertice_0-1, 1, -1.
+** Constraint: Eq-V_010-V-1
+*Equation
+3
+Set-vertice_010-1, 2, 1.
+Ref-Y, 2, -1.
+Set-vertice_0-1, 2, -1.
+** Constraint: Eq-V_010-W-1
+*Equation
+2
+Set-vertice_010-1, 3, 1.
+Set-vertice_0-1, 3, -1.
+** Constraint: Eq-V_011-U-1
+*Equation
+3
+Set-vertice_011-1, 1, 1.
+Ref-X, 1, 1.
+Set-vertice_111-1, 1, -1.
+** Constraint: Eq-V_011-V-1
+*Equation
+2
+Set-vertice_011-1, 2, 1.
+Set-vertice_111-1, 2, -1.
+** Constraint: Eq-V_011-W-1
+*Equation
+2
+Set-vertice_011-1, 3, 1.
+Set-vertice_111-1, 3, -1.
+** Constraint: Eq-V_100-U-1
+*Equation
+3
+Set-vertice_100-1, 1, 1.
+Ref-X, 1, -1.
+Set-vertice_0-1, 1, -1.
+** Constraint: Eq-V_100-V-1
+*Equation
+2
+Set-vertice_100-1, 2, 1.
+Set-vertice_0-1, 2, -1.
+** Constraint: Eq-V_100-W-1
+*Equation
+2
+Set-vertice_100-1, 3, 1.
+Set-vertice_0-1, 3, -1.
+** Constraint: Eq-V_101-U-1
+*Equation
+3
+Set-vertice_101-1, 1, 1.
+Ref-XY, 1, 1.
+Set-vertice_111-1, 1, -1.
+** Constraint: Eq-V_101-V-1
+*Equation
+3
+Set-vertice_101-1, 2, 1.
+Ref-Y, 2, 1.
+Set-vertice_111-1, 2, -1.
+** Constraint: Eq-V_101-W-1
+*Equation
+2
+Set-vertice_101-1, 3, 1.
+Set-vertice_111-1, 3, -1.
+** Constraint: Eq-V_110-U-1
+*Equation
+3
+Set-vertice_110-1, 1, 1.
+Ref-X, 1, -1.
+Set-vertice_010-1, 1, -1.
+** Constraint: Eq-V_110-V-1
+*Equation
+2
+Set-vertice_110-1, 2, 1.
+Set-vertice_010-1, 2, -1.
+** Constraint: Eq-V_110-W-1
+*Equation
+2
+Set-vertice_110-1, 3, 1.
+Set-vertice_010-1, 3, -1.
+** Constraint: Eq-V_111-U-1
+*Equation
+3
+Set-vertice_111-1, 1, 1.
+Ref-XZ, 1, -1.
+Set-vertice_110-1, 1, -1.
+** Constraint: Eq-V_111-V-1
+*Equation
+3
+Set-vertice_111-1, 2, 1.
+Ref-YZ, 2, -1.
+Set-vertice_110-1, 2, -1.
+** Constraint: Eq-V_111-W-1
+*Equation
+3
+Set-vertice_111-1, 3, 1.
+Ref-Z, 3, -1.
+Set-vertice_110-1, 3, -1.
 ** Constraint: Eq-X-U-1
 *Equation
 3
 Set-X-MINUS-1, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-1, 1, -1.
 ** Constraint: Eq-X-U-2
 *Equation
 3
 Set-X-MINUS-2, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-2, 1, -1.
 ** Constraint: Eq-X-U-3
 *Equation
 3
 Set-X-MINUS-3, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-3, 1, -1.
 ** Constraint: Eq-X-U-4
 *Equation
 3
 Set-X-MINUS-4, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-4, 1, -1.
 ** Constraint: Eq-X-U-5
 *Equation
 3
 Set-X-MINUS-5, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-5, 1, -1.
 ** Constraint: Eq-X-U-6
 *Equation
 3
 Set-X-MINUS-6, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-6, 1, -1.
 ** Constraint: Eq-X-U-7
 *Equation
 3
 Set-X-MINUS-7, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-7, 1, -1.
 ** Constraint: Eq-X-U-8
 *Equation
 3
 Set-X-MINUS-8, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-8, 1, -1.
 ** Constraint: Eq-X-U-9
 *Equation
 3
 Set-X-MINUS-9, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-9, 1, -1.
 ** Constraint: Eq-X-U-10
 *Equation
 3
 Set-X-MINUS-10, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-10, 1, -1.
 ** Constraint: Eq-X-U-11
 *Equation
 3
 Set-X-MINUS-11, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-11, 1, -1.
 ** Constraint: Eq-X-U-12
 *Equation
 3
 Set-X-MINUS-12, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-12, 1, -1.
 ** Constraint: Eq-X-U-13
 *Equation
 3
 Set-X-MINUS-13, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-13, 1, -1.
 ** Constraint: Eq-X-U-14
 *Equation
 3
 Set-X-MINUS-14, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-14, 1, -1.
 ** Constraint: Eq-X-U-15
 *Equation
 3
 Set-X-MINUS-15, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-15, 1, -1.
 ** Constraint: Eq-X-U-16
 *Equation
 3
 Set-X-MINUS-16, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-16, 1, -1.
 ** Constraint: Eq-X-U-17
 *Equation
 3
 Set-X-MINUS-17, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-17, 1, -1.
 ** Constraint: Eq-X-U-18
 *Equation
 3
 Set-X-MINUS-18, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-18, 1, -1.
 ** Constraint: Eq-X-U-19
 *Equation
 3
 Set-X-MINUS-19, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-19, 1, -1.
 ** Constraint: Eq-X-U-20
 *Equation
 3
 Set-X-MINUS-20, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-20, 1, -1.
 ** Constraint: Eq-X-U-21
 *Equation
 3
 Set-X-MINUS-21, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-21, 1, -1.
 ** Constraint: Eq-X-U-22
 *Equation
 3
 Set-X-MINUS-22, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-22, 1, -1.
 ** Constraint: Eq-X-U-23
 *Equation
 3
 Set-X-MINUS-23, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-23, 1, -1.
 ** Constraint: Eq-X-U-24
 *Equation
 3
 Set-X-MINUS-24, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-24, 1, -1.
 ** Constraint: Eq-X-U-25
 *Equation
 3
 Set-X-MINUS-25, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-25, 1, -1.
 ** Constraint: Eq-X-U-26
 *Equation
 3
 Set-X-MINUS-26, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-26, 1, -1.
 ** Constraint: Eq-X-U-27
 *Equation
 3
 Set-X-MINUS-27, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-27, 1, -1.
 ** Constraint: Eq-X-U-28
 *Equation
 3
 Set-X-MINUS-28, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-28, 1, -1.
 ** Constraint: Eq-X-U-29
 *Equation
 3
 Set-X-MINUS-29, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-29, 1, -1.
 ** Constraint: Eq-X-U-30
 *Equation
 3
 Set-X-MINUS-30, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-30, 1, -1.
 ** Constraint: Eq-X-U-31
 *Equation
 3
 Set-X-MINUS-31, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-31, 1, -1.
 ** Constraint: Eq-X-U-32
 *Equation
 3
 Set-X-MINUS-32, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-32, 1, -1.
 ** Constraint: Eq-X-U-33
 *Equation
 3
 Set-X-MINUS-33, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-33, 1, -1.
 ** Constraint: Eq-X-U-34
 *Equation
 3
 Set-X-MINUS-34, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-34, 1, -1.
 ** Constraint: Eq-X-U-35
 *Equation
 3
 Set-X-MINUS-35, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-35, 1, -1.
 ** Constraint: Eq-X-U-36
 *Equation
 3
 Set-X-MINUS-36, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-36, 1, -1.
 ** Constraint: Eq-X-U-37
 *Equation
 3
 Set-X-MINUS-37, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-37, 1, -1.
 ** Constraint: Eq-X-U-38
 *Equation
 3
 Set-X-MINUS-38, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-38, 1, -1.
 ** Constraint: Eq-X-U-39
 *Equation
 3
 Set-X-MINUS-39, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-39, 1, -1.
 ** Constraint: Eq-X-U-40
 *Equation
 3
 Set-X-MINUS-40, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-40, 1, -1.
 ** Constraint: Eq-X-U-41
 *Equation
 3
 Set-X-MINUS-41, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-41, 1, -1.
 ** Constraint: Eq-X-U-42
 *Equation
 3
 Set-X-MINUS-42, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-42, 1, -1.
 ** Constraint: Eq-X-U-43
 *Equation
 3
 Set-X-MINUS-43, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-43, 1, -1.
 ** Constraint: Eq-X-U-44
 *Equation
 3
 Set-X-MINUS-44, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-44, 1, -1.
 ** Constraint: Eq-X-U-45
 *Equation
 3
 Set-X-MINUS-45, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-45, 1, -1.
 ** Constraint: Eq-X-U-46
 *Equation
 3
 Set-X-MINUS-46, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-46, 1, -1.
 ** Constraint: Eq-X-U-47
 *Equation
 3
 Set-X-MINUS-47, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-47, 1, -1.
 ** Constraint: Eq-X-U-48
 *Equation
 3
 Set-X-MINUS-48, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-48, 1, -1.
 ** Constraint: Eq-X-U-49
 *Equation
 3
 Set-X-MINUS-49, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-49, 1, -1.
 ** Constraint: Eq-X-U-50
 *Equation
 3
 Set-X-MINUS-50, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-50, 1, -1.
 ** Constraint: Eq-X-U-51
 *Equation
 3
 Set-X-MINUS-51, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-51, 1, -1.
 ** Constraint: Eq-X-U-52
 *Equation
 3
 Set-X-MINUS-52, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-52, 1, -1.
 ** Constraint: Eq-X-U-53
 *Equation
 3
 Set-X-MINUS-53, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-53, 1, -1.
 ** Constraint: Eq-X-U-54
 *Equation
 3
 Set-X-MINUS-54, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-54, 1, -1.
 ** Constraint: Eq-X-U-55
 *Equation
 3
 Set-X-MINUS-55, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-55, 1, -1.
 ** Constraint: Eq-X-U-56
 *Equation
 3
 Set-X-MINUS-56, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-56, 1, -1.
 ** Constraint: Eq-X-U-57
 *Equation
 3
 Set-X-MINUS-57, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-57, 1, -1.
 ** Constraint: Eq-X-U-58
 *Equation
 3
 Set-X-MINUS-58, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-58, 1, -1.
 ** Constraint: Eq-X-U-59
 *Equation
 3
 Set-X-MINUS-59, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-59, 1, -1.
 ** Constraint: Eq-X-U-60
 *Equation
 3
 Set-X-MINUS-60, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-60, 1, -1.
 ** Constraint: Eq-X-U-61
 *Equation
 3
 Set-X-MINUS-61, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-61, 1, -1.
 ** Constraint: Eq-X-U-62
 *Equation
 3
 Set-X-MINUS-62, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-62, 1, -1.
 ** Constraint: Eq-X-U-63
 *Equation
 3
 Set-X-MINUS-63, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-63, 1, -1.
 ** Constraint: Eq-X-U-64
 *Equation
 3
 Set-X-MINUS-64, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-64, 1, -1.
 ** Constraint: Eq-X-U-65
 *Equation
 3
 Set-X-MINUS-65, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-65, 1, -1.
 ** Constraint: Eq-X-U-66
 *Equation
 3
 Set-X-MINUS-66, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-66, 1, -1.
 ** Constraint: Eq-X-U-67
 *Equation
 3
 Set-X-MINUS-67, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-67, 1, -1.
 ** Constraint: Eq-X-U-68
 *Equation
 3
 Set-X-MINUS-68, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-68, 1, -1.
 ** Constraint: Eq-X-U-69
 *Equation
 3
 Set-X-MINUS-69, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-69, 1, -1.
 ** Constraint: Eq-X-U-70
 *Equation
 3
 Set-X-MINUS-70, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-70, 1, -1.
 ** Constraint: Eq-X-U-71
 *Equation
 3
 Set-X-MINUS-71, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-71, 1, -1.
 ** Constraint: Eq-X-U-72
 *Equation
 3
 Set-X-MINUS-72, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-72, 1, -1.
 ** Constraint: Eq-X-U-73
 *Equation
 3
 Set-X-MINUS-73, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-73, 1, -1.
 ** Constraint: Eq-X-U-74
 *Equation
 3
 Set-X-MINUS-74, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-74, 1, -1.
 ** Constraint: Eq-X-U-75
 *Equation
 3
 Set-X-MINUS-75, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-75, 1, -1.
 ** Constraint: Eq-X-U-76
 *Equation
 3
 Set-X-MINUS-76, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-76, 1, -1.
 ** Constraint: Eq-X-U-77
 *Equation
 3
 Set-X-MINUS-77, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-77, 1, -1.
 ** Constraint: Eq-X-U-78
 *Equation
 3
 Set-X-MINUS-78, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-78, 1, -1.
 ** Constraint: Eq-X-U-79
 *Equation
 3
 Set-X-MINUS-79, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-79, 1, -1.
 ** Constraint: Eq-X-U-80
 *Equation
 3
 Set-X-MINUS-80, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-80, 1, -1.
 ** Constraint: Eq-X-U-81
 *Equation
 3
 Set-X-MINUS-81, 1, 1.
-Ref-X, 1, -1.
+Ref-X, 1, 1.
 Set-X-PLUS-81, 1, -1.
 ** Constraint: Eq-X-V-1
 *Equation
@@ -5315,973 +6504,973 @@ Set-X-PLUS-81, 3, -1.
 *Equation
 3
 Set-Y-MINUS-1, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-1, 1, -1.
 ** Constraint: Eq-Y-U-2
 *Equation
 3
 Set-Y-MINUS-2, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-2, 1, -1.
 ** Constraint: Eq-Y-U-3
 *Equation
 3
 Set-Y-MINUS-3, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-3, 1, -1.
 ** Constraint: Eq-Y-U-4
 *Equation
 3
 Set-Y-MINUS-4, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-4, 1, -1.
 ** Constraint: Eq-Y-U-5
 *Equation
 3
 Set-Y-MINUS-5, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-5, 1, -1.
 ** Constraint: Eq-Y-U-6
 *Equation
 3
 Set-Y-MINUS-6, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-6, 1, -1.
 ** Constraint: Eq-Y-U-7
 *Equation
 3
 Set-Y-MINUS-7, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-7, 1, -1.
 ** Constraint: Eq-Y-U-8
 *Equation
 3
 Set-Y-MINUS-8, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-8, 1, -1.
 ** Constraint: Eq-Y-U-9
 *Equation
 3
 Set-Y-MINUS-9, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-9, 1, -1.
 ** Constraint: Eq-Y-U-10
 *Equation
 3
 Set-Y-MINUS-10, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-10, 1, -1.
 ** Constraint: Eq-Y-U-11
 *Equation
 3
 Set-Y-MINUS-11, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-11, 1, -1.
 ** Constraint: Eq-Y-U-12
 *Equation
 3
 Set-Y-MINUS-12, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-12, 1, -1.
 ** Constraint: Eq-Y-U-13
 *Equation
 3
 Set-Y-MINUS-13, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-13, 1, -1.
 ** Constraint: Eq-Y-U-14
 *Equation
 3
 Set-Y-MINUS-14, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-14, 1, -1.
 ** Constraint: Eq-Y-U-15
 *Equation
 3
 Set-Y-MINUS-15, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-15, 1, -1.
 ** Constraint: Eq-Y-U-16
 *Equation
 3
 Set-Y-MINUS-16, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-16, 1, -1.
 ** Constraint: Eq-Y-U-17
 *Equation
 3
 Set-Y-MINUS-17, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-17, 1, -1.
 ** Constraint: Eq-Y-U-18
 *Equation
 3
 Set-Y-MINUS-18, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-18, 1, -1.
 ** Constraint: Eq-Y-U-19
 *Equation
 3
 Set-Y-MINUS-19, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-19, 1, -1.
 ** Constraint: Eq-Y-U-20
 *Equation
 3
 Set-Y-MINUS-20, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-20, 1, -1.
 ** Constraint: Eq-Y-U-21
 *Equation
 3
 Set-Y-MINUS-21, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-21, 1, -1.
 ** Constraint: Eq-Y-U-22
 *Equation
 3
 Set-Y-MINUS-22, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-22, 1, -1.
 ** Constraint: Eq-Y-U-23
 *Equation
 3
 Set-Y-MINUS-23, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-23, 1, -1.
 ** Constraint: Eq-Y-U-24
 *Equation
 3
 Set-Y-MINUS-24, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-24, 1, -1.
 ** Constraint: Eq-Y-U-25
 *Equation
 3
 Set-Y-MINUS-25, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-25, 1, -1.
 ** Constraint: Eq-Y-U-26
 *Equation
 3
 Set-Y-MINUS-26, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-26, 1, -1.
 ** Constraint: Eq-Y-U-27
 *Equation
 3
 Set-Y-MINUS-27, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-27, 1, -1.
 ** Constraint: Eq-Y-U-28
 *Equation
 3
 Set-Y-MINUS-28, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-28, 1, -1.
 ** Constraint: Eq-Y-U-29
 *Equation
 3
 Set-Y-MINUS-29, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-29, 1, -1.
 ** Constraint: Eq-Y-U-30
 *Equation
 3
 Set-Y-MINUS-30, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-30, 1, -1.
 ** Constraint: Eq-Y-U-31
 *Equation
 3
 Set-Y-MINUS-31, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-31, 1, -1.
 ** Constraint: Eq-Y-U-32
 *Equation
 3
 Set-Y-MINUS-32, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-32, 1, -1.
 ** Constraint: Eq-Y-U-33
 *Equation
 3
 Set-Y-MINUS-33, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-33, 1, -1.
 ** Constraint: Eq-Y-U-34
 *Equation
 3
 Set-Y-MINUS-34, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-34, 1, -1.
 ** Constraint: Eq-Y-U-35
 *Equation
 3
 Set-Y-MINUS-35, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-35, 1, -1.
 ** Constraint: Eq-Y-U-36
 *Equation
 3
 Set-Y-MINUS-36, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-36, 1, -1.
 ** Constraint: Eq-Y-U-37
 *Equation
 3
 Set-Y-MINUS-37, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-37, 1, -1.
 ** Constraint: Eq-Y-U-38
 *Equation
 3
 Set-Y-MINUS-38, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-38, 1, -1.
 ** Constraint: Eq-Y-U-39
 *Equation
 3
 Set-Y-MINUS-39, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-39, 1, -1.
 ** Constraint: Eq-Y-U-40
 *Equation
 3
 Set-Y-MINUS-40, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-40, 1, -1.
 ** Constraint: Eq-Y-U-41
 *Equation
 3
 Set-Y-MINUS-41, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-41, 1, -1.
 ** Constraint: Eq-Y-U-42
 *Equation
 3
 Set-Y-MINUS-42, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-42, 1, -1.
 ** Constraint: Eq-Y-U-43
 *Equation
 3
 Set-Y-MINUS-43, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-43, 1, -1.
 ** Constraint: Eq-Y-U-44
 *Equation
 3
 Set-Y-MINUS-44, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-44, 1, -1.
 ** Constraint: Eq-Y-U-45
 *Equation
 3
 Set-Y-MINUS-45, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-45, 1, -1.
 ** Constraint: Eq-Y-U-46
 *Equation
 3
 Set-Y-MINUS-46, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-46, 1, -1.
 ** Constraint: Eq-Y-U-47
 *Equation
 3
 Set-Y-MINUS-47, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-47, 1, -1.
 ** Constraint: Eq-Y-U-48
 *Equation
 3
 Set-Y-MINUS-48, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-48, 1, -1.
 ** Constraint: Eq-Y-U-49
 *Equation
 3
 Set-Y-MINUS-49, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-49, 1, -1.
 ** Constraint: Eq-Y-U-50
 *Equation
 3
 Set-Y-MINUS-50, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-50, 1, -1.
 ** Constraint: Eq-Y-U-51
 *Equation
 3
 Set-Y-MINUS-51, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-51, 1, -1.
 ** Constraint: Eq-Y-U-52
 *Equation
 3
 Set-Y-MINUS-52, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-52, 1, -1.
 ** Constraint: Eq-Y-U-53
 *Equation
 3
 Set-Y-MINUS-53, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-53, 1, -1.
 ** Constraint: Eq-Y-U-54
 *Equation
 3
 Set-Y-MINUS-54, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-54, 1, -1.
 ** Constraint: Eq-Y-U-55
 *Equation
 3
 Set-Y-MINUS-55, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-55, 1, -1.
 ** Constraint: Eq-Y-U-56
 *Equation
 3
 Set-Y-MINUS-56, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-56, 1, -1.
 ** Constraint: Eq-Y-U-57
 *Equation
 3
 Set-Y-MINUS-57, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-57, 1, -1.
 ** Constraint: Eq-Y-U-58
 *Equation
 3
 Set-Y-MINUS-58, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-58, 1, -1.
 ** Constraint: Eq-Y-U-59
 *Equation
 3
 Set-Y-MINUS-59, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-59, 1, -1.
 ** Constraint: Eq-Y-U-60
 *Equation
 3
 Set-Y-MINUS-60, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-60, 1, -1.
 ** Constraint: Eq-Y-U-61
 *Equation
 3
 Set-Y-MINUS-61, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-61, 1, -1.
 ** Constraint: Eq-Y-U-62
 *Equation
 3
 Set-Y-MINUS-62, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-62, 1, -1.
 ** Constraint: Eq-Y-U-63
 *Equation
 3
 Set-Y-MINUS-63, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-63, 1, -1.
 ** Constraint: Eq-Y-U-64
 *Equation
 3
 Set-Y-MINUS-64, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-64, 1, -1.
 ** Constraint: Eq-Y-U-65
 *Equation
 3
 Set-Y-MINUS-65, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-65, 1, -1.
 ** Constraint: Eq-Y-U-66
 *Equation
 3
 Set-Y-MINUS-66, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-66, 1, -1.
 ** Constraint: Eq-Y-U-67
 *Equation
 3
 Set-Y-MINUS-67, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-67, 1, -1.
 ** Constraint: Eq-Y-U-68
 *Equation
 3
 Set-Y-MINUS-68, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-68, 1, -1.
 ** Constraint: Eq-Y-U-69
 *Equation
 3
 Set-Y-MINUS-69, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-69, 1, -1.
 ** Constraint: Eq-Y-U-70
 *Equation
 3
 Set-Y-MINUS-70, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-70, 1, -1.
 ** Constraint: Eq-Y-U-71
 *Equation
 3
 Set-Y-MINUS-71, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-71, 1, -1.
 ** Constraint: Eq-Y-U-72
 *Equation
 3
 Set-Y-MINUS-72, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-72, 1, -1.
 ** Constraint: Eq-Y-U-73
 *Equation
 3
 Set-Y-MINUS-73, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-73, 1, -1.
 ** Constraint: Eq-Y-U-74
 *Equation
 3
 Set-Y-MINUS-74, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-74, 1, -1.
 ** Constraint: Eq-Y-U-75
 *Equation
 3
 Set-Y-MINUS-75, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-75, 1, -1.
 ** Constraint: Eq-Y-U-76
 *Equation
 3
 Set-Y-MINUS-76, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-76, 1, -1.
 ** Constraint: Eq-Y-U-77
 *Equation
 3
 Set-Y-MINUS-77, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-77, 1, -1.
 ** Constraint: Eq-Y-U-78
 *Equation
 3
 Set-Y-MINUS-78, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-78, 1, -1.
 ** Constraint: Eq-Y-U-79
 *Equation
 3
 Set-Y-MINUS-79, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-79, 1, -1.
 ** Constraint: Eq-Y-U-80
 *Equation
 3
 Set-Y-MINUS-80, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-80, 1, -1.
 ** Constraint: Eq-Y-U-81
 *Equation
 3
 Set-Y-MINUS-81, 1, 1.
-Ref-XY, 1, -1.
+Ref-XY, 1, 1.
 Set-Y-PLUS-81, 1, -1.
 ** Constraint: Eq-Y-V-1
 *Equation
 3
 Set-Y-MINUS-1, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-1, 2, -1.
 ** Constraint: Eq-Y-V-2
 *Equation
 3
 Set-Y-MINUS-2, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-2, 2, -1.
 ** Constraint: Eq-Y-V-3
 *Equation
 3
 Set-Y-MINUS-3, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-3, 2, -1.
 ** Constraint: Eq-Y-V-4
 *Equation
 3
 Set-Y-MINUS-4, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-4, 2, -1.
 ** Constraint: Eq-Y-V-5
 *Equation
 3
 Set-Y-MINUS-5, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-5, 2, -1.
 ** Constraint: Eq-Y-V-6
 *Equation
 3
 Set-Y-MINUS-6, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-6, 2, -1.
 ** Constraint: Eq-Y-V-7
 *Equation
 3
 Set-Y-MINUS-7, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-7, 2, -1.
 ** Constraint: Eq-Y-V-8
 *Equation
 3
 Set-Y-MINUS-8, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-8, 2, -1.
 ** Constraint: Eq-Y-V-9
 *Equation
 3
 Set-Y-MINUS-9, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-9, 2, -1.
 ** Constraint: Eq-Y-V-10
 *Equation
 3
 Set-Y-MINUS-10, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-10, 2, -1.
 ** Constraint: Eq-Y-V-11
 *Equation
 3
 Set-Y-MINUS-11, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-11, 2, -1.
 ** Constraint: Eq-Y-V-12
 *Equation
 3
 Set-Y-MINUS-12, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-12, 2, -1.
 ** Constraint: Eq-Y-V-13
 *Equation
 3
 Set-Y-MINUS-13, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-13, 2, -1.
 ** Constraint: Eq-Y-V-14
 *Equation
 3
 Set-Y-MINUS-14, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-14, 2, -1.
 ** Constraint: Eq-Y-V-15
 *Equation
 3
 Set-Y-MINUS-15, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-15, 2, -1.
 ** Constraint: Eq-Y-V-16
 *Equation
 3
 Set-Y-MINUS-16, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-16, 2, -1.
 ** Constraint: Eq-Y-V-17
 *Equation
 3
 Set-Y-MINUS-17, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-17, 2, -1.
 ** Constraint: Eq-Y-V-18
 *Equation
 3
 Set-Y-MINUS-18, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-18, 2, -1.
 ** Constraint: Eq-Y-V-19
 *Equation
 3
 Set-Y-MINUS-19, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-19, 2, -1.
 ** Constraint: Eq-Y-V-20
 *Equation
 3
 Set-Y-MINUS-20, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-20, 2, -1.
 ** Constraint: Eq-Y-V-21
 *Equation
 3
 Set-Y-MINUS-21, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-21, 2, -1.
 ** Constraint: Eq-Y-V-22
 *Equation
 3
 Set-Y-MINUS-22, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-22, 2, -1.
 ** Constraint: Eq-Y-V-23
 *Equation
 3
 Set-Y-MINUS-23, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-23, 2, -1.
 ** Constraint: Eq-Y-V-24
 *Equation
 3
 Set-Y-MINUS-24, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-24, 2, -1.
 ** Constraint: Eq-Y-V-25
 *Equation
 3
 Set-Y-MINUS-25, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-25, 2, -1.
 ** Constraint: Eq-Y-V-26
 *Equation
 3
 Set-Y-MINUS-26, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-26, 2, -1.
 ** Constraint: Eq-Y-V-27
 *Equation
 3
 Set-Y-MINUS-27, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-27, 2, -1.
 ** Constraint: Eq-Y-V-28
 *Equation
 3
 Set-Y-MINUS-28, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-28, 2, -1.
 ** Constraint: Eq-Y-V-29
 *Equation
 3
 Set-Y-MINUS-29, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-29, 2, -1.
 ** Constraint: Eq-Y-V-30
 *Equation
 3
 Set-Y-MINUS-30, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-30, 2, -1.
 ** Constraint: Eq-Y-V-31
 *Equation
 3
 Set-Y-MINUS-31, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-31, 2, -1.
 ** Constraint: Eq-Y-V-32
 *Equation
 3
 Set-Y-MINUS-32, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-32, 2, -1.
 ** Constraint: Eq-Y-V-33
 *Equation
 3
 Set-Y-MINUS-33, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-33, 2, -1.
 ** Constraint: Eq-Y-V-34
 *Equation
 3
 Set-Y-MINUS-34, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-34, 2, -1.
 ** Constraint: Eq-Y-V-35
 *Equation
 3
 Set-Y-MINUS-35, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-35, 2, -1.
 ** Constraint: Eq-Y-V-36
 *Equation
 3
 Set-Y-MINUS-36, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-36, 2, -1.
 ** Constraint: Eq-Y-V-37
 *Equation
 3
 Set-Y-MINUS-37, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-37, 2, -1.
 ** Constraint: Eq-Y-V-38
 *Equation
 3
 Set-Y-MINUS-38, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-38, 2, -1.
 ** Constraint: Eq-Y-V-39
 *Equation
 3
 Set-Y-MINUS-39, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-39, 2, -1.
 ** Constraint: Eq-Y-V-40
 *Equation
 3
 Set-Y-MINUS-40, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-40, 2, -1.
 ** Constraint: Eq-Y-V-41
 *Equation
 3
 Set-Y-MINUS-41, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-41, 2, -1.
 ** Constraint: Eq-Y-V-42
 *Equation
 3
 Set-Y-MINUS-42, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-42, 2, -1.
 ** Constraint: Eq-Y-V-43
 *Equation
 3
 Set-Y-MINUS-43, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-43, 2, -1.
 ** Constraint: Eq-Y-V-44
 *Equation
 3
 Set-Y-MINUS-44, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-44, 2, -1.
 ** Constraint: Eq-Y-V-45
 *Equation
 3
 Set-Y-MINUS-45, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-45, 2, -1.
 ** Constraint: Eq-Y-V-46
 *Equation
 3
 Set-Y-MINUS-46, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-46, 2, -1.
 ** Constraint: Eq-Y-V-47
 *Equation
 3
 Set-Y-MINUS-47, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-47, 2, -1.
 ** Constraint: Eq-Y-V-48
 *Equation
 3
 Set-Y-MINUS-48, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-48, 2, -1.
 ** Constraint: Eq-Y-V-49
 *Equation
 3
 Set-Y-MINUS-49, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-49, 2, -1.
 ** Constraint: Eq-Y-V-50
 *Equation
 3
 Set-Y-MINUS-50, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-50, 2, -1.
 ** Constraint: Eq-Y-V-51
 *Equation
 3
 Set-Y-MINUS-51, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-51, 2, -1.
 ** Constraint: Eq-Y-V-52
 *Equation
 3
 Set-Y-MINUS-52, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-52, 2, -1.
 ** Constraint: Eq-Y-V-53
 *Equation
 3
 Set-Y-MINUS-53, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-53, 2, -1.
 ** Constraint: Eq-Y-V-54
 *Equation
 3
 Set-Y-MINUS-54, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-54, 2, -1.
 ** Constraint: Eq-Y-V-55
 *Equation
 3
 Set-Y-MINUS-55, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-55, 2, -1.
 ** Constraint: Eq-Y-V-56
 *Equation
 3
 Set-Y-MINUS-56, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-56, 2, -1.
 ** Constraint: Eq-Y-V-57
 *Equation
 3
 Set-Y-MINUS-57, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-57, 2, -1.
 ** Constraint: Eq-Y-V-58
 *Equation
 3
 Set-Y-MINUS-58, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-58, 2, -1.
 ** Constraint: Eq-Y-V-59
 *Equation
 3
 Set-Y-MINUS-59, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-59, 2, -1.
 ** Constraint: Eq-Y-V-60
 *Equation
 3
 Set-Y-MINUS-60, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-60, 2, -1.
 ** Constraint: Eq-Y-V-61
 *Equation
 3
 Set-Y-MINUS-61, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-61, 2, -1.
 ** Constraint: Eq-Y-V-62
 *Equation
 3
 Set-Y-MINUS-62, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-62, 2, -1.
 ** Constraint: Eq-Y-V-63
 *Equation
 3
 Set-Y-MINUS-63, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-63, 2, -1.
 ** Constraint: Eq-Y-V-64
 *Equation
 3
 Set-Y-MINUS-64, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-64, 2, -1.
 ** Constraint: Eq-Y-V-65
 *Equation
 3
 Set-Y-MINUS-65, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-65, 2, -1.
 ** Constraint: Eq-Y-V-66
 *Equation
 3
 Set-Y-MINUS-66, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-66, 2, -1.
 ** Constraint: Eq-Y-V-67
 *Equation
 3
 Set-Y-MINUS-67, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-67, 2, -1.
 ** Constraint: Eq-Y-V-68
 *Equation
 3
 Set-Y-MINUS-68, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-68, 2, -1.
 ** Constraint: Eq-Y-V-69
 *Equation
 3
 Set-Y-MINUS-69, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-69, 2, -1.
 ** Constraint: Eq-Y-V-70
 *Equation
 3
 Set-Y-MINUS-70, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-70, 2, -1.
 ** Constraint: Eq-Y-V-71
 *Equation
 3
 Set-Y-MINUS-71, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-71, 2, -1.
 ** Constraint: Eq-Y-V-72
 *Equation
 3
 Set-Y-MINUS-72, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-72, 2, -1.
 ** Constraint: Eq-Y-V-73
 *Equation
 3
 Set-Y-MINUS-73, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-73, 2, -1.
 ** Constraint: Eq-Y-V-74
 *Equation
 3
 Set-Y-MINUS-74, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-74, 2, -1.
 ** Constraint: Eq-Y-V-75
 *Equation
 3
 Set-Y-MINUS-75, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-75, 2, -1.
 ** Constraint: Eq-Y-V-76
 *Equation
 3
 Set-Y-MINUS-76, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-76, 2, -1.
 ** Constraint: Eq-Y-V-77
 *Equation
 3
 Set-Y-MINUS-77, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-77, 2, -1.
 ** Constraint: Eq-Y-V-78
 *Equation
 3
 Set-Y-MINUS-78, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-78, 2, -1.
 ** Constraint: Eq-Y-V-79
 *Equation
 3
 Set-Y-MINUS-79, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-79, 2, -1.
 ** Constraint: Eq-Y-V-80
 *Equation
 3
 Set-Y-MINUS-80, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-80, 2, -1.
 ** Constraint: Eq-Y-V-81
 *Equation
 3
 Set-Y-MINUS-81, 2, 1.
-Ref-Y, 2, -1.
+Ref-Y, 2, 1.
 Set-Y-PLUS-81, 2, -1.
 ** Constraint: Eq-Y-W-1
 *Equation
@@ -6692,1459 +7881,1459 @@ Set-Y-PLUS-81, 3, -1.
 *Equation
 3
 Set-Z-MINUS-1, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-1, 1, -1.
 ** Constraint: Eq-Z-U-2
 *Equation
 3
 Set-Z-MINUS-2, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-2, 1, -1.
 ** Constraint: Eq-Z-U-3
 *Equation
 3
 Set-Z-MINUS-3, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-3, 1, -1.
 ** Constraint: Eq-Z-U-4
 *Equation
 3
 Set-Z-MINUS-4, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-4, 1, -1.
 ** Constraint: Eq-Z-U-5
 *Equation
 3
 Set-Z-MINUS-5, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-5, 1, -1.
 ** Constraint: Eq-Z-U-6
 *Equation
 3
 Set-Z-MINUS-6, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-6, 1, -1.
 ** Constraint: Eq-Z-U-7
 *Equation
 3
 Set-Z-MINUS-7, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-7, 1, -1.
 ** Constraint: Eq-Z-U-8
 *Equation
 3
 Set-Z-MINUS-8, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-8, 1, -1.
 ** Constraint: Eq-Z-U-9
 *Equation
 3
 Set-Z-MINUS-9, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-9, 1, -1.
 ** Constraint: Eq-Z-U-10
 *Equation
 3
 Set-Z-MINUS-10, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-10, 1, -1.
 ** Constraint: Eq-Z-U-11
 *Equation
 3
 Set-Z-MINUS-11, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-11, 1, -1.
 ** Constraint: Eq-Z-U-12
 *Equation
 3
 Set-Z-MINUS-12, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-12, 1, -1.
 ** Constraint: Eq-Z-U-13
 *Equation
 3
 Set-Z-MINUS-13, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-13, 1, -1.
 ** Constraint: Eq-Z-U-14
 *Equation
 3
 Set-Z-MINUS-14, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-14, 1, -1.
 ** Constraint: Eq-Z-U-15
 *Equation
 3
 Set-Z-MINUS-15, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-15, 1, -1.
 ** Constraint: Eq-Z-U-16
 *Equation
 3
 Set-Z-MINUS-16, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-16, 1, -1.
 ** Constraint: Eq-Z-U-17
 *Equation
 3
 Set-Z-MINUS-17, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-17, 1, -1.
 ** Constraint: Eq-Z-U-18
 *Equation
 3
 Set-Z-MINUS-18, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-18, 1, -1.
 ** Constraint: Eq-Z-U-19
 *Equation
 3
 Set-Z-MINUS-19, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-19, 1, -1.
 ** Constraint: Eq-Z-U-20
 *Equation
 3
 Set-Z-MINUS-20, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-20, 1, -1.
 ** Constraint: Eq-Z-U-21
 *Equation
 3
 Set-Z-MINUS-21, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-21, 1, -1.
 ** Constraint: Eq-Z-U-22
 *Equation
 3
 Set-Z-MINUS-22, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-22, 1, -1.
 ** Constraint: Eq-Z-U-23
 *Equation
 3
 Set-Z-MINUS-23, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-23, 1, -1.
 ** Constraint: Eq-Z-U-24
 *Equation
 3
 Set-Z-MINUS-24, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-24, 1, -1.
 ** Constraint: Eq-Z-U-25
 *Equation
 3
 Set-Z-MINUS-25, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-25, 1, -1.
 ** Constraint: Eq-Z-U-26
 *Equation
 3
 Set-Z-MINUS-26, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-26, 1, -1.
 ** Constraint: Eq-Z-U-27
 *Equation
 3
 Set-Z-MINUS-27, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-27, 1, -1.
 ** Constraint: Eq-Z-U-28
 *Equation
 3
 Set-Z-MINUS-28, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-28, 1, -1.
 ** Constraint: Eq-Z-U-29
 *Equation
 3
 Set-Z-MINUS-29, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-29, 1, -1.
 ** Constraint: Eq-Z-U-30
 *Equation
 3
 Set-Z-MINUS-30, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-30, 1, -1.
 ** Constraint: Eq-Z-U-31
 *Equation
 3
 Set-Z-MINUS-31, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-31, 1, -1.
 ** Constraint: Eq-Z-U-32
 *Equation
 3
 Set-Z-MINUS-32, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-32, 1, -1.
 ** Constraint: Eq-Z-U-33
 *Equation
 3
 Set-Z-MINUS-33, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-33, 1, -1.
 ** Constraint: Eq-Z-U-34
 *Equation
 3
 Set-Z-MINUS-34, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-34, 1, -1.
 ** Constraint: Eq-Z-U-35
 *Equation
 3
 Set-Z-MINUS-35, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-35, 1, -1.
 ** Constraint: Eq-Z-U-36
 *Equation
 3
 Set-Z-MINUS-36, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-36, 1, -1.
 ** Constraint: Eq-Z-U-37
 *Equation
 3
 Set-Z-MINUS-37, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-37, 1, -1.
 ** Constraint: Eq-Z-U-38
 *Equation
 3
 Set-Z-MINUS-38, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-38, 1, -1.
 ** Constraint: Eq-Z-U-39
 *Equation
 3
 Set-Z-MINUS-39, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-39, 1, -1.
 ** Constraint: Eq-Z-U-40
 *Equation
 3
 Set-Z-MINUS-40, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-40, 1, -1.
 ** Constraint: Eq-Z-U-41
 *Equation
 3
 Set-Z-MINUS-41, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-41, 1, -1.
 ** Constraint: Eq-Z-U-42
 *Equation
 3
 Set-Z-MINUS-42, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-42, 1, -1.
 ** Constraint: Eq-Z-U-43
 *Equation
 3
 Set-Z-MINUS-43, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-43, 1, -1.
 ** Constraint: Eq-Z-U-44
 *Equation
 3
 Set-Z-MINUS-44, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-44, 1, -1.
 ** Constraint: Eq-Z-U-45
 *Equation
 3
 Set-Z-MINUS-45, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-45, 1, -1.
 ** Constraint: Eq-Z-U-46
 *Equation
 3
 Set-Z-MINUS-46, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-46, 1, -1.
 ** Constraint: Eq-Z-U-47
 *Equation
 3
 Set-Z-MINUS-47, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-47, 1, -1.
 ** Constraint: Eq-Z-U-48
 *Equation
 3
 Set-Z-MINUS-48, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-48, 1, -1.
 ** Constraint: Eq-Z-U-49
 *Equation
 3
 Set-Z-MINUS-49, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-49, 1, -1.
 ** Constraint: Eq-Z-U-50
 *Equation
 3
 Set-Z-MINUS-50, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-50, 1, -1.
 ** Constraint: Eq-Z-U-51
 *Equation
 3
 Set-Z-MINUS-51, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-51, 1, -1.
 ** Constraint: Eq-Z-U-52
 *Equation
 3
 Set-Z-MINUS-52, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-52, 1, -1.
 ** Constraint: Eq-Z-U-53
 *Equation
 3
 Set-Z-MINUS-53, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-53, 1, -1.
 ** Constraint: Eq-Z-U-54
 *Equation
 3
 Set-Z-MINUS-54, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-54, 1, -1.
 ** Constraint: Eq-Z-U-55
 *Equation
 3
 Set-Z-MINUS-55, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-55, 1, -1.
 ** Constraint: Eq-Z-U-56
 *Equation
 3
 Set-Z-MINUS-56, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-56, 1, -1.
 ** Constraint: Eq-Z-U-57
 *Equation
 3
 Set-Z-MINUS-57, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-57, 1, -1.
 ** Constraint: Eq-Z-U-58
 *Equation
 3
 Set-Z-MINUS-58, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-58, 1, -1.
 ** Constraint: Eq-Z-U-59
 *Equation
 3
 Set-Z-MINUS-59, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-59, 1, -1.
 ** Constraint: Eq-Z-U-60
 *Equation
 3
 Set-Z-MINUS-60, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-60, 1, -1.
 ** Constraint: Eq-Z-U-61
 *Equation
 3
 Set-Z-MINUS-61, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-61, 1, -1.
 ** Constraint: Eq-Z-U-62
 *Equation
 3
 Set-Z-MINUS-62, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-62, 1, -1.
 ** Constraint: Eq-Z-U-63
 *Equation
 3
 Set-Z-MINUS-63, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-63, 1, -1.
 ** Constraint: Eq-Z-U-64
 *Equation
 3
 Set-Z-MINUS-64, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-64, 1, -1.
 ** Constraint: Eq-Z-U-65
 *Equation
 3
 Set-Z-MINUS-65, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-65, 1, -1.
 ** Constraint: Eq-Z-U-66
 *Equation
 3
 Set-Z-MINUS-66, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-66, 1, -1.
 ** Constraint: Eq-Z-U-67
 *Equation
 3
 Set-Z-MINUS-67, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-67, 1, -1.
 ** Constraint: Eq-Z-U-68
 *Equation
 3
 Set-Z-MINUS-68, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-68, 1, -1.
 ** Constraint: Eq-Z-U-69
 *Equation
 3
 Set-Z-MINUS-69, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-69, 1, -1.
 ** Constraint: Eq-Z-U-70
 *Equation
 3
 Set-Z-MINUS-70, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-70, 1, -1.
 ** Constraint: Eq-Z-U-71
 *Equation
 3
 Set-Z-MINUS-71, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-71, 1, -1.
 ** Constraint: Eq-Z-U-72
 *Equation
 3
 Set-Z-MINUS-72, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-72, 1, -1.
 ** Constraint: Eq-Z-U-73
 *Equation
 3
 Set-Z-MINUS-73, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-73, 1, -1.
 ** Constraint: Eq-Z-U-74
 *Equation
 3
 Set-Z-MINUS-74, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-74, 1, -1.
 ** Constraint: Eq-Z-U-75
 *Equation
 3
 Set-Z-MINUS-75, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-75, 1, -1.
 ** Constraint: Eq-Z-U-76
 *Equation
 3
 Set-Z-MINUS-76, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-76, 1, -1.
 ** Constraint: Eq-Z-U-77
 *Equation
 3
 Set-Z-MINUS-77, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-77, 1, -1.
 ** Constraint: Eq-Z-U-78
 *Equation
 3
 Set-Z-MINUS-78, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-78, 1, -1.
 ** Constraint: Eq-Z-U-79
 *Equation
 3
 Set-Z-MINUS-79, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-79, 1, -1.
 ** Constraint: Eq-Z-U-80
 *Equation
 3
 Set-Z-MINUS-80, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-80, 1, -1.
 ** Constraint: Eq-Z-U-81
 *Equation
 3
 Set-Z-MINUS-81, 1, 1.
-Ref-XZ, 1, -1.
+Ref-XZ, 1, 1.
 Set-Z-PLUS-81, 1, -1.
 ** Constraint: Eq-Z-V-1
 *Equation
 3
 Set-Z-MINUS-1, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-1, 2, -1.
 ** Constraint: Eq-Z-V-2
 *Equation
 3
 Set-Z-MINUS-2, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-2, 2, -1.
 ** Constraint: Eq-Z-V-3
 *Equation
 3
 Set-Z-MINUS-3, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-3, 2, -1.
 ** Constraint: Eq-Z-V-4
 *Equation
 3
 Set-Z-MINUS-4, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-4, 2, -1.
 ** Constraint: Eq-Z-V-5
 *Equation
 3
 Set-Z-MINUS-5, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-5, 2, -1.
 ** Constraint: Eq-Z-V-6
 *Equation
 3
 Set-Z-MINUS-6, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-6, 2, -1.
 ** Constraint: Eq-Z-V-7
 *Equation
 3
 Set-Z-MINUS-7, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-7, 2, -1.
 ** Constraint: Eq-Z-V-8
 *Equation
 3
 Set-Z-MINUS-8, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-8, 2, -1.
 ** Constraint: Eq-Z-V-9
 *Equation
 3
 Set-Z-MINUS-9, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-9, 2, -1.
 ** Constraint: Eq-Z-V-10
 *Equation
 3
 Set-Z-MINUS-10, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-10, 2, -1.
 ** Constraint: Eq-Z-V-11
 *Equation
 3
 Set-Z-MINUS-11, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-11, 2, -1.
 ** Constraint: Eq-Z-V-12
 *Equation
 3
 Set-Z-MINUS-12, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-12, 2, -1.
 ** Constraint: Eq-Z-V-13
 *Equation
 3
 Set-Z-MINUS-13, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-13, 2, -1.
 ** Constraint: Eq-Z-V-14
 *Equation
 3
 Set-Z-MINUS-14, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-14, 2, -1.
 ** Constraint: Eq-Z-V-15
 *Equation
 3
 Set-Z-MINUS-15, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-15, 2, -1.
 ** Constraint: Eq-Z-V-16
 *Equation
 3
 Set-Z-MINUS-16, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-16, 2, -1.
 ** Constraint: Eq-Z-V-17
 *Equation
 3
 Set-Z-MINUS-17, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-17, 2, -1.
 ** Constraint: Eq-Z-V-18
 *Equation
 3
 Set-Z-MINUS-18, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-18, 2, -1.
 ** Constraint: Eq-Z-V-19
 *Equation
 3
 Set-Z-MINUS-19, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-19, 2, -1.
 ** Constraint: Eq-Z-V-20
 *Equation
 3
 Set-Z-MINUS-20, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-20, 2, -1.
 ** Constraint: Eq-Z-V-21
 *Equation
 3
 Set-Z-MINUS-21, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-21, 2, -1.
 ** Constraint: Eq-Z-V-22
 *Equation
 3
 Set-Z-MINUS-22, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-22, 2, -1.
 ** Constraint: Eq-Z-V-23
 *Equation
 3
 Set-Z-MINUS-23, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-23, 2, -1.
 ** Constraint: Eq-Z-V-24
 *Equation
 3
 Set-Z-MINUS-24, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-24, 2, -1.
 ** Constraint: Eq-Z-V-25
 *Equation
 3
 Set-Z-MINUS-25, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-25, 2, -1.
 ** Constraint: Eq-Z-V-26
 *Equation
 3
 Set-Z-MINUS-26, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-26, 2, -1.
 ** Constraint: Eq-Z-V-27
 *Equation
 3
 Set-Z-MINUS-27, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-27, 2, -1.
 ** Constraint: Eq-Z-V-28
 *Equation
 3
 Set-Z-MINUS-28, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-28, 2, -1.
 ** Constraint: Eq-Z-V-29
 *Equation
 3
 Set-Z-MINUS-29, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-29, 2, -1.
 ** Constraint: Eq-Z-V-30
 *Equation
 3
 Set-Z-MINUS-30, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-30, 2, -1.
 ** Constraint: Eq-Z-V-31
 *Equation
 3
 Set-Z-MINUS-31, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-31, 2, -1.
 ** Constraint: Eq-Z-V-32
 *Equation
 3
 Set-Z-MINUS-32, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-32, 2, -1.
 ** Constraint: Eq-Z-V-33
 *Equation
 3
 Set-Z-MINUS-33, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-33, 2, -1.
 ** Constraint: Eq-Z-V-34
 *Equation
 3
 Set-Z-MINUS-34, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-34, 2, -1.
 ** Constraint: Eq-Z-V-35
 *Equation
 3
 Set-Z-MINUS-35, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-35, 2, -1.
 ** Constraint: Eq-Z-V-36
 *Equation
 3
 Set-Z-MINUS-36, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-36, 2, -1.
 ** Constraint: Eq-Z-V-37
 *Equation
 3
 Set-Z-MINUS-37, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-37, 2, -1.
 ** Constraint: Eq-Z-V-38
 *Equation
 3
 Set-Z-MINUS-38, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-38, 2, -1.
 ** Constraint: Eq-Z-V-39
 *Equation
 3
 Set-Z-MINUS-39, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-39, 2, -1.
 ** Constraint: Eq-Z-V-40
 *Equation
 3
 Set-Z-MINUS-40, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-40, 2, -1.
 ** Constraint: Eq-Z-V-41
 *Equation
 3
 Set-Z-MINUS-41, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-41, 2, -1.
 ** Constraint: Eq-Z-V-42
 *Equation
 3
 Set-Z-MINUS-42, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-42, 2, -1.
 ** Constraint: Eq-Z-V-43
 *Equation
 3
 Set-Z-MINUS-43, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-43, 2, -1.
 ** Constraint: Eq-Z-V-44
 *Equation
 3
 Set-Z-MINUS-44, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-44, 2, -1.
 ** Constraint: Eq-Z-V-45
 *Equation
 3
 Set-Z-MINUS-45, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-45, 2, -1.
 ** Constraint: Eq-Z-V-46
 *Equation
 3
 Set-Z-MINUS-46, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-46, 2, -1.
 ** Constraint: Eq-Z-V-47
 *Equation
 3
 Set-Z-MINUS-47, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-47, 2, -1.
 ** Constraint: Eq-Z-V-48
 *Equation
 3
 Set-Z-MINUS-48, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-48, 2, -1.
 ** Constraint: Eq-Z-V-49
 *Equation
 3
 Set-Z-MINUS-49, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-49, 2, -1.
 ** Constraint: Eq-Z-V-50
 *Equation
 3
 Set-Z-MINUS-50, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-50, 2, -1.
 ** Constraint: Eq-Z-V-51
 *Equation
 3
 Set-Z-MINUS-51, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-51, 2, -1.
 ** Constraint: Eq-Z-V-52
 *Equation
 3
 Set-Z-MINUS-52, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-52, 2, -1.
 ** Constraint: Eq-Z-V-53
 *Equation
 3
 Set-Z-MINUS-53, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-53, 2, -1.
 ** Constraint: Eq-Z-V-54
 *Equation
 3
 Set-Z-MINUS-54, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-54, 2, -1.
 ** Constraint: Eq-Z-V-55
 *Equation
 3
 Set-Z-MINUS-55, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-55, 2, -1.
 ** Constraint: Eq-Z-V-56
 *Equation
 3
 Set-Z-MINUS-56, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-56, 2, -1.
 ** Constraint: Eq-Z-V-57
 *Equation
 3
 Set-Z-MINUS-57, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-57, 2, -1.
 ** Constraint: Eq-Z-V-58
 *Equation
 3
 Set-Z-MINUS-58, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-58, 2, -1.
 ** Constraint: Eq-Z-V-59
 *Equation
 3
 Set-Z-MINUS-59, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-59, 2, -1.
 ** Constraint: Eq-Z-V-60
 *Equation
 3
 Set-Z-MINUS-60, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-60, 2, -1.
 ** Constraint: Eq-Z-V-61
 *Equation
 3
 Set-Z-MINUS-61, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-61, 2, -1.
 ** Constraint: Eq-Z-V-62
 *Equation
 3
 Set-Z-MINUS-62, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-62, 2, -1.
 ** Constraint: Eq-Z-V-63
 *Equation
 3
 Set-Z-MINUS-63, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-63, 2, -1.
 ** Constraint: Eq-Z-V-64
 *Equation
 3
 Set-Z-MINUS-64, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-64, 2, -1.
 ** Constraint: Eq-Z-V-65
 *Equation
 3
 Set-Z-MINUS-65, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-65, 2, -1.
 ** Constraint: Eq-Z-V-66
 *Equation
 3
 Set-Z-MINUS-66, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-66, 2, -1.
 ** Constraint: Eq-Z-V-67
 *Equation
 3
 Set-Z-MINUS-67, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-67, 2, -1.
 ** Constraint: Eq-Z-V-68
 *Equation
 3
 Set-Z-MINUS-68, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-68, 2, -1.
 ** Constraint: Eq-Z-V-69
 *Equation
 3
 Set-Z-MINUS-69, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-69, 2, -1.
 ** Constraint: Eq-Z-V-70
 *Equation
 3
 Set-Z-MINUS-70, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-70, 2, -1.
 ** Constraint: Eq-Z-V-71
 *Equation
 3
 Set-Z-MINUS-71, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-71, 2, -1.
 ** Constraint: Eq-Z-V-72
 *Equation
 3
 Set-Z-MINUS-72, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-72, 2, -1.
 ** Constraint: Eq-Z-V-73
 *Equation
 3
 Set-Z-MINUS-73, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-73, 2, -1.
 ** Constraint: Eq-Z-V-74
 *Equation
 3
 Set-Z-MINUS-74, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-74, 2, -1.
 ** Constraint: Eq-Z-V-75
 *Equation
 3
 Set-Z-MINUS-75, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-75, 2, -1.
 ** Constraint: Eq-Z-V-76
 *Equation
 3
 Set-Z-MINUS-76, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-76, 2, -1.
 ** Constraint: Eq-Z-V-77
 *Equation
 3
 Set-Z-MINUS-77, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-77, 2, -1.
 ** Constraint: Eq-Z-V-78
 *Equation
 3
 Set-Z-MINUS-78, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-78, 2, -1.
 ** Constraint: Eq-Z-V-79
 *Equation
 3
 Set-Z-MINUS-79, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-79, 2, -1.
 ** Constraint: Eq-Z-V-80
 *Equation
 3
 Set-Z-MINUS-80, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-80, 2, -1.
 ** Constraint: Eq-Z-V-81
 *Equation
 3
 Set-Z-MINUS-81, 2, 1.
-Ref-YZ, 2, -1.
+Ref-YZ, 2, 1.
 Set-Z-PLUS-81, 2, -1.
 ** Constraint: Eq-Z-W-1
 *Equation
 3
 Set-Z-MINUS-1, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-1, 3, -1.
 ** Constraint: Eq-Z-W-2
 *Equation
 3
 Set-Z-MINUS-2, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-2, 3, -1.
 ** Constraint: Eq-Z-W-3
 *Equation
 3
 Set-Z-MINUS-3, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-3, 3, -1.
 ** Constraint: Eq-Z-W-4
 *Equation
 3
 Set-Z-MINUS-4, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-4, 3, -1.
 ** Constraint: Eq-Z-W-5
 *Equation
 3
 Set-Z-MINUS-5, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-5, 3, -1.
 ** Constraint: Eq-Z-W-6
 *Equation
 3
 Set-Z-MINUS-6, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-6, 3, -1.
 ** Constraint: Eq-Z-W-7
 *Equation
 3
 Set-Z-MINUS-7, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-7, 3, -1.
 ** Constraint: Eq-Z-W-8
 *Equation
 3
 Set-Z-MINUS-8, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-8, 3, -1.
 ** Constraint: Eq-Z-W-9
 *Equation
 3
 Set-Z-MINUS-9, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-9, 3, -1.
 ** Constraint: Eq-Z-W-10
 *Equation
 3
 Set-Z-MINUS-10, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-10, 3, -1.
 ** Constraint: Eq-Z-W-11
 *Equation
 3
 Set-Z-MINUS-11, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-11, 3, -1.
 ** Constraint: Eq-Z-W-12
 *Equation
 3
 Set-Z-MINUS-12, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-12, 3, -1.
 ** Constraint: Eq-Z-W-13
 *Equation
 3
 Set-Z-MINUS-13, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-13, 3, -1.
 ** Constraint: Eq-Z-W-14
 *Equation
 3
 Set-Z-MINUS-14, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-14, 3, -1.
 ** Constraint: Eq-Z-W-15
 *Equation
 3
 Set-Z-MINUS-15, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-15, 3, -1.
 ** Constraint: Eq-Z-W-16
 *Equation
 3
 Set-Z-MINUS-16, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-16, 3, -1.
 ** Constraint: Eq-Z-W-17
 *Equation
 3
 Set-Z-MINUS-17, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-17, 3, -1.
 ** Constraint: Eq-Z-W-18
 *Equation
 3
 Set-Z-MINUS-18, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-18, 3, -1.
 ** Constraint: Eq-Z-W-19
 *Equation
 3
 Set-Z-MINUS-19, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-19, 3, -1.
 ** Constraint: Eq-Z-W-20
 *Equation
 3
 Set-Z-MINUS-20, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-20, 3, -1.
 ** Constraint: Eq-Z-W-21
 *Equation
 3
 Set-Z-MINUS-21, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-21, 3, -1.
 ** Constraint: Eq-Z-W-22
 *Equation
 3
 Set-Z-MINUS-22, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-22, 3, -1.
 ** Constraint: Eq-Z-W-23
 *Equation
 3
 Set-Z-MINUS-23, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-23, 3, -1.
 ** Constraint: Eq-Z-W-24
 *Equation
 3
 Set-Z-MINUS-24, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-24, 3, -1.
 ** Constraint: Eq-Z-W-25
 *Equation
 3
 Set-Z-MINUS-25, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-25, 3, -1.
 ** Constraint: Eq-Z-W-26
 *Equation
 3
 Set-Z-MINUS-26, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-26, 3, -1.
 ** Constraint: Eq-Z-W-27
 *Equation
 3
 Set-Z-MINUS-27, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-27, 3, -1.
 ** Constraint: Eq-Z-W-28
 *Equation
 3
 Set-Z-MINUS-28, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-28, 3, -1.
 ** Constraint: Eq-Z-W-29
 *Equation
 3
 Set-Z-MINUS-29, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-29, 3, -1.
 ** Constraint: Eq-Z-W-30
 *Equation
 3
 Set-Z-MINUS-30, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-30, 3, -1.
 ** Constraint: Eq-Z-W-31
 *Equation
 3
 Set-Z-MINUS-31, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-31, 3, -1.
 ** Constraint: Eq-Z-W-32
 *Equation
 3
 Set-Z-MINUS-32, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-32, 3, -1.
 ** Constraint: Eq-Z-W-33
 *Equation
 3
 Set-Z-MINUS-33, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-33, 3, -1.
 ** Constraint: Eq-Z-W-34
 *Equation
 3
 Set-Z-MINUS-34, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-34, 3, -1.
 ** Constraint: Eq-Z-W-35
 *Equation
 3
 Set-Z-MINUS-35, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-35, 3, -1.
 ** Constraint: Eq-Z-W-36
 *Equation
 3
 Set-Z-MINUS-36, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-36, 3, -1.
 ** Constraint: Eq-Z-W-37
 *Equation
 3
 Set-Z-MINUS-37, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-37, 3, -1.
 ** Constraint: Eq-Z-W-38
 *Equation
 3
 Set-Z-MINUS-38, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-38, 3, -1.
 ** Constraint: Eq-Z-W-39
 *Equation
 3
 Set-Z-MINUS-39, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-39, 3, -1.
 ** Constraint: Eq-Z-W-40
 *Equation
 3
 Set-Z-MINUS-40, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-40, 3, -1.
 ** Constraint: Eq-Z-W-41
 *Equation
 3
 Set-Z-MINUS-41, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-41, 3, -1.
 ** Constraint: Eq-Z-W-42
 *Equation
 3
 Set-Z-MINUS-42, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-42, 3, -1.
 ** Constraint: Eq-Z-W-43
 *Equation
 3
 Set-Z-MINUS-43, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-43, 3, -1.
 ** Constraint: Eq-Z-W-44
 *Equation
 3
 Set-Z-MINUS-44, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-44, 3, -1.
 ** Constraint: Eq-Z-W-45
 *Equation
 3
 Set-Z-MINUS-45, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-45, 3, -1.
 ** Constraint: Eq-Z-W-46
 *Equation
 3
 Set-Z-MINUS-46, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-46, 3, -1.
 ** Constraint: Eq-Z-W-47
 *Equation
 3
 Set-Z-MINUS-47, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-47, 3, -1.
 ** Constraint: Eq-Z-W-48
 *Equation
 3
 Set-Z-MINUS-48, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-48, 3, -1.
 ** Constraint: Eq-Z-W-49
 *Equation
 3
 Set-Z-MINUS-49, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-49, 3, -1.
 ** Constraint: Eq-Z-W-50
 *Equation
 3
 Set-Z-MINUS-50, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-50, 3, -1.
 ** Constraint: Eq-Z-W-51
 *Equation
 3
 Set-Z-MINUS-51, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-51, 3, -1.
 ** Constraint: Eq-Z-W-52
 *Equation
 3
 Set-Z-MINUS-52, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-52, 3, -1.
 ** Constraint: Eq-Z-W-53
 *Equation
 3
 Set-Z-MINUS-53, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-53, 3, -1.
 ** Constraint: Eq-Z-W-54
 *Equation
 3
 Set-Z-MINUS-54, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-54, 3, -1.
 ** Constraint: Eq-Z-W-55
 *Equation
 3
 Set-Z-MINUS-55, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-55, 3, -1.
 ** Constraint: Eq-Z-W-56
 *Equation
 3
 Set-Z-MINUS-56, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-56, 3, -1.
 ** Constraint: Eq-Z-W-57
 *Equation
 3
 Set-Z-MINUS-57, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-57, 3, -1.
 ** Constraint: Eq-Z-W-58
 *Equation
 3
 Set-Z-MINUS-58, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-58, 3, -1.
 ** Constraint: Eq-Z-W-59
 *Equation
 3
 Set-Z-MINUS-59, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-59, 3, -1.
 ** Constraint: Eq-Z-W-60
 *Equation
 3
 Set-Z-MINUS-60, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-60, 3, -1.
 ** Constraint: Eq-Z-W-61
 *Equation
 3
 Set-Z-MINUS-61, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-61, 3, -1.
 ** Constraint: Eq-Z-W-62
 *Equation
 3
 Set-Z-MINUS-62, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-62, 3, -1.
 ** Constraint: Eq-Z-W-63
 *Equation
 3
 Set-Z-MINUS-63, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-63, 3, -1.
 ** Constraint: Eq-Z-W-64
 *Equation
 3
 Set-Z-MINUS-64, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-64, 3, -1.
 ** Constraint: Eq-Z-W-65
 *Equation
 3
 Set-Z-MINUS-65, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-65, 3, -1.
 ** Constraint: Eq-Z-W-66
 *Equation
 3
 Set-Z-MINUS-66, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-66, 3, -1.
 ** Constraint: Eq-Z-W-67
 *Equation
 3
 Set-Z-MINUS-67, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-67, 3, -1.
 ** Constraint: Eq-Z-W-68
 *Equation
 3
 Set-Z-MINUS-68, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-68, 3, -1.
 ** Constraint: Eq-Z-W-69
 *Equation
 3
 Set-Z-MINUS-69, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-69, 3, -1.
 ** Constraint: Eq-Z-W-70
 *Equation
 3
 Set-Z-MINUS-70, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-70, 3, -1.
 ** Constraint: Eq-Z-W-71
 *Equation
 3
 Set-Z-MINUS-71, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-71, 3, -1.
 ** Constraint: Eq-Z-W-72
 *Equation
 3
 Set-Z-MINUS-72, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-72, 3, -1.
 ** Constraint: Eq-Z-W-73
 *Equation
 3
 Set-Z-MINUS-73, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-73, 3, -1.
 ** Constraint: Eq-Z-W-74
 *Equation
 3
 Set-Z-MINUS-74, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-74, 3, -1.
 ** Constraint: Eq-Z-W-75
 *Equation
 3
 Set-Z-MINUS-75, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-75, 3, -1.
 ** Constraint: Eq-Z-W-76
 *Equation
 3
 Set-Z-MINUS-76, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-76, 3, -1.
 ** Constraint: Eq-Z-W-77
 *Equation
 3
 Set-Z-MINUS-77, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-77, 3, -1.
 ** Constraint: Eq-Z-W-78
 *Equation
 3
 Set-Z-MINUS-78, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-78, 3, -1.
 ** Constraint: Eq-Z-W-79
 *Equation
 3
 Set-Z-MINUS-79, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-79, 3, -1.
 ** Constraint: Eq-Z-W-80
 *Equation
 3
 Set-Z-MINUS-80, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-80, 3, -1.
 ** Constraint: Eq-Z-W-81
 *Equation
 3
 Set-Z-MINUS-81, 3, 1.
-Ref-Z, 3, -1.
+Ref-Z, 3, 1.
 Set-Z-PLUS-81, 3, -1.
 *End Assembly
 ** 
@@ -8165,22 +9354,25 @@ Set-Z-PLUS-81, 3, -1.
 ** 
 ** Name: X Type: Displacement/Rotation
 *Boundary
-Ref-X, 1, 1, 0.02
+Ref-X, 1, 1
 ** Name: XY Type: Displacement/Rotation
 *Boundary
+Ref-XY, 1, 1
 Ref-XY, 2, 2
 ** Name: XZ Type: Displacement/Rotation
 *Boundary
+Ref-XZ, 1, 1
 Ref-XZ, 3, 3
 ** Name: Y Type: Displacement/Rotation
 *Boundary
 Ref-Y, 2, 2
 ** Name: YZ Type: Displacement/Rotation
 *Boundary
+Ref-YZ, 2, 2
 Ref-YZ, 3, 3
 ** Name: Z Type: Displacement/Rotation
 *Boundary
-Ref-Z, 3, 3
+Ref-Z, 3, 3, 0.02
 ** 
 ** OUTPUT REQUESTS
 ** 
