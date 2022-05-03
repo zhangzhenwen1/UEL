@@ -205,7 +205,7 @@ for n in range(len(nodeSet_parall_x_y1_z0)):
             r.Set(nodes=node[nodeSet_parall_x_y0_z0[j]-1:nodeSet_parall_x_y0_z0[j]],name='Set-parall_x-0-'+str(n+1))
     m.Equation(name='Eq-P_X_10-U-'+str(n+1),terms=((1,'Set-parall_x-0-'+str(n+1),1),(1,'Ref-XY',1),(-1,'Set-parall_x-10-'+str(n+1),1)))
     m.Equation(name='Eq-P_X_10-V-'+str(n+1),terms=((1,'Set-parall_x-0-'+str(n+1),2),(1,'Ref-Y',2),(-1,'Set-parall_x-10-'+str(n+1),2)))
-    m.Equation(name='Eq-P_X_10-W-'+str(n+1),terms=((1,'Set-parall_x-0-'+str(n+1),3),(1,'Set-parall_x-10-'+str(n+1),3)))
+    m.Equation(name='Eq-P_X_10-W-'+str(n+1),terms=((1,'Set-parall_x-0-'+str(n+1),3),(-1,'Set-parall_x-10-'+str(n+1),3)))
     for j in range(len(nodeSet_parall_x_y1_z1)):
         x1=node[nodeSet_parall_x_y1_z1[j]-1].coordinates[0]
         y1=node[nodeSet_parall_x_y1_z1[j]-1].coordinates[1]
@@ -228,7 +228,7 @@ for n in range(len(nodeSet_parall_x_y1_z0)):
     r.Set(nodes=node[nodeSet_parall_x_y0_z1[index2]-1:nodeSet_parall_x_y0_z1[index2]],name='Set-parall_x-01-'+str(n+1))
     m.Equation(name='Eq-P_X_01-U-'+str(n+1),terms=((1,'Set-parall_x-01-'+str(n+1),1),(1,'Ref-XY',1),(-1,'Set-parall_x-11-'+str(n+1),1)))
     m.Equation(name='Eq-P_X_01-V-'+str(n+1),terms=((1,'Set-parall_x-01-'+str(n+1),2),(1,'Ref-Y',2),(-1,'Set-parall_x-11-'+str(n+1),2)))
-    m.Equation(name='Eq-P_X_01-W-'+str(n+1),terms=((1,'Set-parall_x-01-'+str(n+1),3),(1,'Set-parall_x-11-'+str(n+1),3)))
+    m.Equation(name='Eq-P_X_01-W-'+str(n+1),terms=((1,'Set-parall_x-01-'+str(n+1),3),(-1,'Set-parall_x-11-'+str(n+1),3)))
 
 # For edges parallel to the y-axis
 for n in range(len(nodeSet_parall_y_x1_z0)):
