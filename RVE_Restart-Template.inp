@@ -14,7 +14,8 @@
 ** 
 ** OUTPUT REQUESTS
 ** 
-** 
+*Restart, write, frequency=1
+**  
 ** FIELD OUTPUT: F-Output-0
 ** 
 *Output, field, variable=ALL
@@ -24,84 +25,84 @@
 *Load Case, name=LOADCASE-11
 ** Name: Disp-BC-1 Type: Displacement/Rotation   Scale factor: 1
 *Boundary, op=NEW
-SET-X+, 1, 1, 1
-SET-X-, 1, 1, 0
-SET-Y+, 2, 2, 0
-SET-Y-, 2, 2, 0
-SET-Z+, 3, 3, 0
-SET-Z-, 3, 3, 0
+Ref-X, 1, 1, 1
+Ref-XY, 1, 1
+Ref-XY, 2, 2
+Ref-XZ, 1, 1
+Ref-XZ, 3, 3
+Ref-Y, 2, 2
+Ref-YZ, 2, 2
+Ref-YZ, 3, 3
+Ref-Z, 3, 3
 *End Load Case
 *Load Case, name=LOADCASE-22
 ** Name: Disp-BC-3 Type: Displacement/Rotation   Scale factor: 1
 *Boundary, op=NEW
-SET-X+, 1, 1, 0
-SET-X-, 1, 1, 0
-SET-Y+, 2, 2, 1
-SET-Y-, 2, 2, 0
-SET-Z+, 3, 3, 0
-SET-Z-, 3, 3, 0
+Ref-X, 1, 1
+Ref-XY, 1, 1
+Ref-XY, 2, 2
+Ref-XZ, 1, 1
+Ref-XZ, 3, 3
+Ref-Y, 2, 2, 1
+Ref-YZ, 2, 2
+Ref-YZ, 3, 3
+Ref-Z, 3, 3
 *End Load Case
 *Load Case, name=LOADCASE-33
 ** Name: Disp-BC-5 Type: Displacement/Rotation   Scale factor: 1
 *Boundary, op=NEW
-SET-X+, 1, 1, 0
-SET-X-, 1, 1, 0
-SET-Y+, 2, 2, 0
-SET-Y-, 2, 2, 0
-SET-Z+, 3, 3, 1
-SET-Z-, 3, 3, 0
+Ref-X, 1, 1
+Ref-XY, 1, 1
+Ref-XY, 2, 2
+Ref-XZ, 1, 1
+Ref-XZ, 3, 3
+Ref-Y, 2, 2
+Ref-YZ, 2, 2
+Ref-YZ, 3, 3
+Ref-Z, 3, 3, 1
 *End Load Case
 *Load Case, name=LOADCASE-12
 ** Name: Disp-BC-5 Type: Displacement/Rotation   Scale factor: 1
 *Boundary, op=NEW
-SET-X+, 2, 2, 1
-SET-X-, 2, 2, 0
-SET-Y+, 1, 1, 1
-SET-Y-, 1, 1, 0
-SET-Z+, 3, 3, 0
-SET-Z-, 3, 3, 0
+Ref-X, 1, 1
+Ref-XY, 1, 1, 1
+Ref-XY, 2, 2, 1
+Ref-XZ, 1, 1
+Ref-XZ, 3, 3
+Ref-Y, 2, 2
+Ref-YZ, 2, 2
+Ref-YZ, 3, 3
+Ref-Z, 3, 3
 *End Load Case
 *Load Case, name=LOADCASE-31
 ** Name: Disp-BC-5 Type: Displacement/Rotation   Scale factor: 1
 *Boundary, op=NEW
-SET-X+, 3, 3, 1
-SET-X-, 3, 3, 0
-SET-Y+, 2, 2, 0
-SET-Y-, 2, 2, 0
-SET-Z+, 1, 1, 1
-SET-Z-, 1, 1, 0
+Ref-X, 1, 1
+Ref-XY, 1, 1
+Ref-XY, 2, 2
+Ref-XZ, 1, 1, 1
+Ref-XZ, 3, 3, 1
+Ref-Y, 2, 2
+Ref-YZ, 2, 2
+Ref-YZ, 3, 3
+Ref-Z, 3, 3
 *End Load Case
 *Load Case, name=LOADCASE-23
 ** Name: Disp-BC-5 Type: Displacement/Rotation   Scale factor: 1
 *Boundary, op=NEW
-SET-X+, 1, 1, 0
-SET-X-, 1, 1, 0
-SET-Y+, 3, 3, 1
-SET-Y-, 3, 3, 0
-SET-Z+, 2, 2, 1
-SET-Z-, 2, 2, 0
+Ref-X, 1, 1
+Ref-XY, 1, 1
+Ref-XY, 2, 2
+Ref-XZ, 1, 1
+Ref-XZ, 3, 3
+Ref-Y, 2, 2
+Ref-YZ, 2, 2, 1
+Ref-YZ, 3, 3, 1
+Ref-Z, 3, 3
 *End Load Case
 *End Step
 ** ----------------------------------------------------------------
 ** 
 ** STEP: Step-2
 ** 
-*Step, name=Step-1, nlgeom=NO
-*Static
-1., 1., 1e-05, 1.
-** 
-** BOUNDARY CONDITIONS
-** 
-** Name: BC-1 Type: Displacement/Rotation
-*Boundary
-BOUNDARY_XYZ
-** 
-** OUTPUT REQUESTS
-** 
-*Restart, write, frequency=1
-** 
-** FIELD OUTPUT: F-Output-1
-** 
-*Output, field, variable=ALL
-*Output, history, frequency=1
-*End Step
+**BOUNDARY_XYZ

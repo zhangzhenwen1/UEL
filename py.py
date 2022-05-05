@@ -20,7 +20,7 @@ def REPLACE(file, new_file, old_str, new_str):
                     i=i+1
             f2.write(line)
 
-def ReadODB(filepath,DSTRAN,BOUNDARY):
+def ReadODB(filepath):
     odb = openOdb(path=filepath)
     myAssembly = odb.rootAssembly
     # Part instance determine how many instances
@@ -74,9 +74,28 @@ def ReadODB(filepath,DSTRAN,BOUNDARY):
             sigmaMean=np.mean(data, axis=0)
             #print sigmaMean
             jacobi.append(np.mean(data, axis=0))
+    # obtain the RF of reference points
+    frame=odb.steps['Step-1'].frames[-1]
+    REF=[]
+    REF.append( myAssembly.nodeSets['REF-X'])
+    REF.append(myAssembly.nodeSets['REF-Y'])
+    REF.append(myAssembly.nodeSets['REF-Z'])
+    REF.append(myAssembly.nodeSets['REF-XY'])
+    REF.append(myAssembly.nodeSets['REF-XZ'])
+    REF.append(myAssembly.nodeSets['REF-YZ'])
+    field = frame.fieldOutputs['RF']
+    data=[]
+    for r in REF:
+        region=field.getSubset( region=r )
+        regionValue = region.values
+        for p in regionValue:
+            data.append(np.array(p.data))
+    data=np.array(data)
+    np.savetxt('C:/repo/UEL/DSTRESS.out', data) 
+
     volume=np.array(volume,dtype=np.float64)
     vol=np.copy(volume[0])
-    #np.savetxt('C:/repo/UEL/test.out', Vsum) 
+    #np.savetxt('C:/repo/UEL/DSTRESS.out', Vsum) 
     jacobi=np.array(jacobi)/vol
     jacobi=np.triu(jacobi.T)
     jacobi += jacobi.T - np.diag(jacobi.diagonal())
@@ -90,163 +109,86 @@ def load(DSTRAN,BOUNDARY):
     strainXY=np.copy(DSTRAN[3])
     strainXZ=np.copy(DSTRAN[4])
     strainYZ=np.copy(DSTRAN[5])
-    # For faces x=0 and x=a (excluding edges)
-    string='nodeSet_X_minus, 1,3'+'\n'
+    BOUNDARY.append('*Step, name=Step-1, nlgeom=NO\n')
+    BOUNDARY.append('*Static\n')
+    BOUNDARY.append('*Boundary\n')
+    string='Ref-X, 1, 1, '+str(strainX)+'\n'
+    string=string+'Ref-Y, 2, 2, '+str(strainY)+'\n'
+    string=string+'Ref-Z, 3, 3, '+str(strainZ)+'\n'
+    string=string+'Ref-XY, 1, 2, '+str(strainXY)+'\n'
+    string=string+'Ref-XZ, 1, 1, '+str(strainXZ)+'\n'
+    string=string+'Ref-XZ, 3, 3, '+str(strainXZ)+'\n'
+    string=string+'Ref-YZ, 2, 3, '+str(strainYZ)+'\n'
     BOUNDARY.append(string)
-    string='nodeSet_X_plus, 1,1,'+str(strainX)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_X_plus, 2,3'+'\n'
-    BOUNDARY.append(string)
-    # For faces y=0 and y=b (excluding edges)
-    string='nodeSet_Y_minus,1,3'+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_Y_plus,1,1, '+str(strainXY)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_Y_plus,2,2, '+str(strainY)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_Y_plus,3,3'+'\n'
-    BOUNDARY.append(string)
-    # For faces z=0 and z=c (excluding edges
-    string='nodeSet_Z_minus,1,3'+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_Z_plus,1,1, '+str(strainXZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_Z_plus,2,2, '+str(strainYZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_Z_plus,3,3,'+str(strainZ)+'\n'
-    BOUNDARY.append(string)
-    # For edges parallel to the x-axis (excluding vertices)
-    string='nodeSet_parall_x_y0_z0,1,3'+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_x_y0_z1,1,1,'+str(strainXY)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_x_y0_z1,2,2,'+str(strainY)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_x_y0_z1,3,3'+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_x_y1_z0,1,1,'+str(strainXZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_x_y1_z0,2,2,'+str(strainYZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_x_y1_z0,3,3,'+str(strainZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_x_y1_z1,1,1,'+str(strainXY+strainXZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_x_y1_z1,2,2,'+str(strainY+strainYZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_x_y1_z1,3,3,'+str(strainZ)+'\n'
-    BOUNDARY.append(string)
-    # For edges parallel to the y-axis (excluding vertices)
-    string='nodeSet_parall_y_x0_z0,1,3'+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_y_x1_z0,1,1,'+str(strainX)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_y_x1_z0,2,3'+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_y_x0_z1,1,1,'+str(strainXZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_y_x0_z1,2,2,'+str(strainYZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_y_x0_z1,3,3,'+str(strainZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_y_x1_z1,1,1,'+str(strainX+strainXZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_y_x1_z1,2,2,'+str(strainYZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_y_x1_z1,3,3,'+str(strainZ)+'\n'
-    BOUNDARY.append(string)
-    # For edges parallel to the z-axis (excluding vertices)
-    string='nodeSet_parall_z_x0_y0,1,3'+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_z_x1_y0,1,1,'+str(strainX)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_z_x1_y0,2,3'+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_z_x0_y1,1,1,'+str(strainXY)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_z_x0_y1,2,2,'+str(strainY)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_z_x0_y1,3,3'+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_z_x1_y1,1,1,'+str(strainX+strainXY)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_z_x1_y1,2,2,'+str(strainY)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_parall_z_x1_y1,3,3'+'\n'
-    BOUNDARY.append(string)
-    # For the vertices
-    string='nodeSet_vertice_x0_y0_z0,1,3'+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x1_y0_z0,1,1,'+str(strainX)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x1_y0_z0,2,3'+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x0_y1_z0,1,1,'+str(strainXY)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x0_y1_z0,2,2,'+str(strainY)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x0_y1_z0,3,3'+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x1_y1_z0,1,1,'+str(strainX+strainXY)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x1_y1_z0,2,2,'+str(strainY)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x1_y1_z0,3,3'+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x0_y0_z1,1,1,'+str(strainXZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x0_y0_z1,2,2,'+str(strainYZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x0_y0_z1,3,3,'+str(strainZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x1_y0_z1,1,1,'+str(strainX+strainXZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x1_y0_z1,2,2,'+str(strainYZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x1_y0_z1,3,3,'+str(strainZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x0_y1_z1,1,1,'+str(strainXY+strainXZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x0_y1_z1,2,2,'+str(strainY+strainYZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x0_y1_z1,3,3,'+str(strainZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x1_y1_z1,1,1,'+str(strainX+strainXY+strainXZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x1_y1_z1,2,2,'+str(strainY+strainYZ)+'\n'
-    BOUNDARY.append(string)
-    string='nodeSet_vertice_x1_y1_z1,3,3,'+str(strainZ)+'\n'
-    BOUNDARY.append(string)
+    BOUNDARY.append('** OUTPUT REQUESTS\n')
+    BOUNDARY.append('*Restart, write, frequency=1\n')
+    BOUNDARY.append('*Output, field, variable=ALL\n')
+    BOUNDARY.append('*Output, history, frequency=1\n')
+    BOUNDARY.append('*End Step')
+
+def MonitorLogFile(JobName):
+    logpath='C:/repo/UEL/'+JobName+'.log'
+    while 1:
+        try:
+            file=open(logpath,'r')
+        except:
+            time.sleep(1)
+            continue
+        try:
+            lastline=file.readlines()[-1]
+        except:
+            time.sleep(1)
+            continue
+        if 'COMPLETED'in lastline:
+            print (' python INFO: Abaqus/Analysis '+JobName+' COMPLETED')
+            ReadODB(r'C:/repo/UEL/'+JobName+'.odb')
+            break
+        elif 'errors'in lastline:
+            print ('!!! python ERROR: Abaqus/Analysis '+JobName+' exited with errors')
+            break
+        time.sleep(1)
+    file.close()
  
 
 print ('------------------------------------------------------------------------')
 print ('----------------------   RVE COMPUTAION PROCESS   ----------------------')
 print ('------------------------------------------------------------------------')
-JSTEP = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt',dtype=int,skip_footer=10)
-print ('JSTEP is  '), JSTEP
-KINC = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt',dtype=int,skip_header=4,skip_footer=6)
-print ('KINC is  '), KINC 
-DSTRAN = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt', delimiter=28,dtype=np.float64,skip_header=5)
-print ('DSTRAN is  '), DSTRAN
 
+JobName='RVE'
+JobName_res='RVE'+'_restart'
 BOUNDARY=[]
 
-filepath='C:/repo/UEL/RVE-PBC.log'
-while 1:
-    time.sleep(1)
-    file=open(filepath,'r')
-    lastline=file.readlines()[-1]
-    if 'COMPLETED'in lastline:
-        print ('Abaqus/Analysis COMPLETED')
-        ReadODB(r'C:/repo/UEL/RVE-PBC-perturbation-pair.odb',DSTRAN,BOUNDARY)
-        break
-    elif 'errors'in lastline:
-        print ('Abaqus/Analysis exited with errors')
-        break
-    file.close()
-load(DSTRAN,BOUNDARY)
-REPLACE('C:/repo/UEL/RVE_Restart-Template.inp','C:/repo/UEL/RVE_Restart.inp', ['STEP_REPLACE','INC_REPLACE','BOUNDARY_XYZ'], [JSTEP,KINC,''.join(BOUNDARY)])
-job_submit='C:/repo/UEL/RVE-restart.bat'
-os.system(job_submit)
+try:
+    JSTEP = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt',dtype=int,skip_footer=10)
+except:
+    print (' !!! python ERROR: no data of DSTRAN')
+    exit(1)
 
-print ("Hello, world!")
+print ('python INFO: JSTEP is  '), JSTEP
+KINC = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt',dtype=int,skip_header=4,skip_footer=6)
+print ('python INFO: KINC is  '), KINC 
+DSTRAN = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt', delimiter=28,dtype=np.float64,skip_header=5)
+print ('python INFO: DSTRAN is  '), DSTRAN
+
+load(DSTRAN,BOUNDARY)
+
+if ( KINC == 1 ):
+    print('python INFO:  Initial Computation')
+    REPLACE('C:/repo/UEL/RVE_template.inp','C:/repo/UEL/RVE.inp', ['**BOUNDARY_XYZ'], [''.join(BOUNDARY)])
+    REPLACE('C:/repo/UEL/RVE_submit_job_template.bat','C:/repo/UEL/RVE_submit_job.bat', ['JobName'], [JobName])
+    job_submit='C:/repo/UEL/RVE_submit_job.bat'
+    os.remove('C:/repo/UEL/'+JobName+'.log')
+    os.system(job_submit)
+    MonitorLogFile(JobName)
+else:
+    job_submit=JobName_res+' oldjob='+JobName
+    REPLACE('C:/repo/UEL/RVE_Restart-Template.inp','C:/repo/UEL/RVE_Restart.inp', ['STEP_REPLACE','INC_REPLACE','BOUNDARY_XYZ'], [JSTEP,KINC,''.join(BOUNDARY)])
+    REPLACE('C:/repo/UEL/RVE_submit_job_template.bat','C:/repo/UEL/RVE_submit_job.bat', ['JobName'], [job_submit])
+    job_submit='C:/repo/UEL/RVE_submit_job.bat'
+    os.remove('C:/repo/UEL/'+JobName_res+'.log')
+    os.system(job_submit)
+    MonitorLogFile(JobName_res)
+
+
+print ('----------------------   KINC '+ str(KINC) +' COMPUTATION DONE   ----------------------')
+exit(0)
