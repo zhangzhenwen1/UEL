@@ -17,19 +17,19 @@ C
         CHARACTER*8 msg
         INTEGER*4 status,stat
           
-        print *,'JSETP     ', JSTEP
+c        print *,'JSETP     ', JSTEP
         print *,'KINC      ', KINC
         print *,'NOEL, NPT ', NOEL, NPT
         
         OPEN (unit = 15, file = 'c:\repo\UEL\DSTRAIN.txt', status='replace')
-        write(15,'(I0)') JSTEP,KINC
+        write(15,'(I0)') JSTEP,KINC, NOEL, NPT
         write(15,'(4X,ES24.16)') DSTRAN
         CLOSE(15)
         
         CALL EXECUTE_COMMAND_LINE('python c:\repo\UEL\py.py',wait=.true.
      &, exitstat=status, CMDSTAT=stat)
         if (status==0) then 
-            print *, 'UMAT INFO: RVE script COMPLETED'
+c            print *, 'UMAT INFO: RVE script COMPLETED'
             OPEN (unit = 15, file = 'c:\repo\UEL\DDSDDE.OUT', status='OLD', ACTION='READ')
             OPEN (unit = 16, file = 'c:\repo\UEL\DSTRESS.OUT', status='OLD', ACTION='READ')
             DO  i=1,NTENS

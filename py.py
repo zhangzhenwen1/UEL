@@ -109,9 +109,6 @@ def load(DSTRAN,BOUNDARY):
     strainXY=np.copy(DSTRAN[3])
     strainXZ=np.copy(DSTRAN[4])
     strainYZ=np.copy(DSTRAN[5])
-    BOUNDARY.append('*Step, name=Step-1, nlgeom=NO\n')
-    BOUNDARY.append('*Static\n')
-    BOUNDARY.append('*Boundary\n')
     string='Ref-X, 1, 1, '+str(strainX)+'\n'
     string=string+'Ref-Y, 2, 2, '+str(strainY)+'\n'
     string=string+'Ref-Z, 3, 3, '+str(strainZ)+'\n'
@@ -119,11 +116,14 @@ def load(DSTRAN,BOUNDARY):
     string=string+'Ref-XZ, 1, 1, '+str(strainXZ)+'\n'
     string=string+'Ref-XZ, 3, 3, '+str(strainXZ)+'\n'
     string=string+'Ref-YZ, 2, 3, '+str(strainYZ)+'\n'
-    BOUNDARY.append(string)
+    BOUNDARY.append('\n*Step, name=Step-1, nlgeom=NO\n')
+    BOUNDARY.append('*Static\n')
     BOUNDARY.append('** OUTPUT REQUESTS\n')
     BOUNDARY.append('*Restart, write, frequency=1\n')
     BOUNDARY.append('*Output, field, variable=ALL\n')
     BOUNDARY.append('*Output, history, frequency=1\n')
+    BOUNDARY.append('*Boundary\n')
+    BOUNDARY.append(string)
     BOUNDARY.append('*End Step')
 
 def MonitorLogFile(JobName):
@@ -155,40 +155,72 @@ print ('----------------------   RVE COMPUTAION PROCESS   ----------------------
 print ('------------------------------------------------------------------------')
 
 JobName='RVE'
-JobName_res='RVE'+'_restart'
+
 BOUNDARY=[]
 
 try:
-    JSTEP = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt',dtype=int,skip_footer=10)
+    JSTEP = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt',dtype=int,skip_footer=9)
 except:
     print (' !!! python ERROR: no data of DSTRAN')
     exit(1)
 
-print ('python INFO: JSTEP is  '), JSTEP
-KINC = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt',dtype=int,skip_header=4,skip_footer=6)
-print ('python INFO: KINC is  '), KINC 
-DSTRAN = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt', delimiter=28,dtype=np.float64,skip_header=5)
+#print ('python INFO: JSTEP is  '), JSTEP[0]
+KINC = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt',dtype=int,skip_header=4,skip_footer=8)
+#print ('python INFO: KINC is  '), KINC
+NOEL = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt',dtype=int,skip_header=5,skip_footer=7)
+#print ('python INFO: NOEL is  '), NOEL
+NPT = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt',dtype=int,skip_header=6,skip_footer=6)
+#print ('python INFO: NPT is  '), NPT
+DSTRAN = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt', delimiter=28,dtype=np.float64,skip_header=7)
 print ('python INFO: DSTRAN is  '), DSTRAN
 
 load(DSTRAN,BOUNDARY)
 
-if ( KINC == 1 ):
-    print('python INFO:  Initial Computation')
-    REPLACE('C:/repo/UEL/RVE_template.inp','C:/repo/UEL/RVE.inp', ['**BOUNDARY_XYZ'], [''.join(BOUNDARY)])
-    REPLACE('C:/repo/UEL/RVE_submit_job_template.bat','C:/repo/UEL/RVE_submit_job.bat', ['JobName'], [JobName])
-    job_submit='C:/repo/UEL/RVE_submit_job.bat'
-    os.remove('C:/repo/UEL/'+JobName+'.log')
-    os.system(job_submit)
-    MonitorLogFile(JobName)
-else:
-    job_submit=JobName_res+' oldjob='+JobName
-    REPLACE('C:/repo/UEL/RVE_Restart-Template.inp','C:/repo/UEL/RVE_Restart.inp', ['STEP_REPLACE','INC_REPLACE','BOUNDARY_XYZ'], [JSTEP,KINC,''.join(BOUNDARY)])
+JobName_init=JobName+'_'+str(NOEL)+'_'+str(NPT)
+JobName_res=JobName_init+'_restart'+'_'+str(KINC)
+if ( KINC == 0 ):
+    filepath='C:/repo/UEL/'+JobName_init+'.inp'
+    
+    REPLACE('C:/repo/UEL/RVE_template.inp',filepath, ['**BOUNDARY_XYZ'], [''.join(BOUNDARY)])
+    REPLACE('C:/repo/UEL/RVE_submit_job_template.bat','C:/repo/UEL/RVE_submit_job.bat', ['JobName'], [JobName_init])
+    
+    submit_file='C:/repo/UEL/RVE_submit_job.bat'
+    try:
+        os.remove('C:/repo/UEL/'+JobName_init+'.log')
+    except:
+        print ('LOG file does not exist')
+    os.system(submit_file)
+    MonitorLogFile(JobName_init)
+
+elif ( KINC == 1 ):
+    filepath='C:/repo/UEL/'+JobName_res+'.inp'
+    job_submit=JobName_res+' oldjob='+JobName_init
+
+    REPLACE('C:/repo/UEL/RVE_Restart-Template.inp',filepath, ['STEP_REPLACE','INC_REPLACE','BOUNDARY_XYZ'], [KINC*2,1,''.join(BOUNDARY)])
     REPLACE('C:/repo/UEL/RVE_submit_job_template.bat','C:/repo/UEL/RVE_submit_job.bat', ['JobName'], [job_submit])
-    job_submit='C:/repo/UEL/RVE_submit_job.bat'
-    os.remove('C:/repo/UEL/'+JobName_res+'.log')
-    os.system(job_submit)
+    
+    submit_file='C:/repo/UEL/RVE_submit_job.bat'
+    try:
+        os.remove('C:/repo/UEL/'+JobName_res+'.log')
+    except:
+        print ('LOG file does not exist')
+    os.system(submit_file)
     MonitorLogFile(JobName_res)
 
+else:
+    JobName_init=JobName_init+'_restart'+'_'+str(KINC-1)
+    filepath='C:/repo/UEL/'+JobName_res+'.inp'
+    job_submit=JobName_res+' oldjob='+JobName_init
 
-print ('----------------------   KINC '+ str(KINC) +' COMPUTATION DONE   ----------------------')
+    REPLACE('C:/repo/UEL/RVE_Restart-Template.inp',filepath, ['STEP_REPLACE','INC_REPLACE','BOUNDARY_XYZ'], [KINC*2,1,''.join(BOUNDARY)])
+    REPLACE('C:/repo/UEL/RVE_submit_job_template.bat','C:/repo/UEL/RVE_submit_job.bat', ['JobName'], [job_submit])
+    
+    submit_file='C:/repo/UEL/RVE_submit_job.bat'
+    try:
+        os.remove('C:/repo/UEL/'+JobName_res+'.log')
+    except:
+        print ('LOG file does not exist')
+    os.system(submit_file)
+    MonitorLogFile(JobName_res)
+
 exit(0)

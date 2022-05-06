@@ -9349,10 +9349,6 @@ Set-Z-PLUS-81, 3, -1.
 *Step, name=perturbation, nlgeom=NO, perturbation
 *Static
 ** 
-** OUTPUT REQUESTS
-** 
-*Restart, write, frequency=1
-** 
 ** FIELD OUTPUT: F-Output-1
 ** 
 *Output, field, variable=ALL
