@@ -1,12 +1,13 @@
 # -* - coding:UTF-8 -*-
-from distutils import core
-from abaqusConstants import*
-from odbAccess import*
-from copy import deepcopy
-import numpy as np
 import os
-import time
 import re
+import time
+from copy import deepcopy
+from distutils import core
+
+import numpy as np
+from abaqusConstants import *
+from odbAccess import *
 
 np.set_printoptions(precision=16)
 
@@ -20,8 +21,8 @@ def REPLACE(file, new_file, old_str, new_str):
                     i=i+1
             f2.write(line)
 
-def ReadODB(filepath):
-    odb = openOdb(path=filepath)
+def ReadODB(filepath,lastINC):
+    odb = openOdb(path=filepath, readOnly=True)
     myAssembly = odb.rootAssembly
     # Part instance determine how many instances
     # for instanceName in odb.rootAssembly.instances.keys():
@@ -34,72 +35,79 @@ def ReadODB(filepath):
     nodeLable=[]
     jacobi=[]
     volume=[]
-    for frame in odb.steps['perturbation'].frames:
-        if frame.frameId == 0 :
-            # Reading field output data
-            field=frame.fieldOutputs['EVOL'].values
-            vol=[]
-            for v in field:
-                vol.append (v.data)
-            vol=np.array(vol)
-            vsum=np.sum(vol)
-            volume.append(vsum)
+    if (lastINC>0):
+        for frame in odb.steps['perturbation'].frames:
+            if frame.frameId == 0 :
+                # Reading field output data
+                field=frame.fieldOutputs['EVOL'].values
+                vol=[]
+                for v in field:
+                    vol.append (v.data)
+                vol=np.array(vol)
+                vsum=np.sum(vol)
+                volume.append(vsum)
 
-            for p in myAssembly.nodeSets.keys():
-                if re.search(r'X+\w+PAIR', p,re.I):
-                    nodesets=myAssembly.nodeSets[p]
-                    # Reading field output data
-                    field=frame.fieldOutputs['COORD']
-                    region = field.getSubset(region=nodesets)
-                    regionValue=region.values
-                    data_lable=[]
-                    data_coord=[]
-                    for q in regionValue:
-                        data_lable.append (q.nodeLabel)
-                        data_coord.append(q.data)
-                    nodeLable.append(data_lable)
-                    coord.append(data_coord)
-            nodeLable=np.array(nodeLable)
-            coord=np.array(coord,dtype=np.float64)                                        
+                for p in myAssembly.nodeSets.keys():
+                    if re.search(r'X+\w+PAIR', p,re.I):
+                        nodesets=myAssembly.nodeSets[p]
+                        # Reading field output data
+                        field=frame.fieldOutputs['COORD']
+                        region = field.getSubset(region=nodesets)
+                        regionValue=region.values
+                        data_lable=[]
+                        data_coord=[]
+                        for q in regionValue:
+                            data_lable.append (q.nodeLabel)
+                            data_coord.append(q.data)
+                        nodeLable.append(data_lable)
+                        coord.append(data_coord)
+                nodeLable=np.array(nodeLable)
+                coord=np.array(coord,dtype=np.float64)                                        
 
-        elif frame.frameId == 1 :
-            # Reading field output data
-            field = frame.fieldOutputs['S']
-            region=field.getSubset( position=INTEGRATION_POINT )
+            elif frame.frameId == 1 :
+                # Reading field output data
+                field = frame.fieldOutputs['S']
+                region=field.getSubset( position=INTEGRATION_POINT )
+                regionValue = region.values
+                data=[]
+                for p in regionValue:
+                    data.append(p.data)
+                data=np.array(data)
+                #sigmaMean=np.mean(data, axis=0)
+                #print sigmaMean
+                jacobi.append(np.mean(data, axis=0))
+        # obtain the RF of reference points
+        frame=odb.steps['Step-1'].frames[-1]
+        REF=[]
+        REF.append( myAssembly.nodeSets['REF-X'])
+        REF.append(myAssembly.nodeSets['REF-Y'])
+        REF.append(myAssembly.nodeSets['REF-Z'])
+        REF.append(myAssembly.nodeSets['REF-XY'])
+        REF.append(myAssembly.nodeSets['REF-XZ'])
+        REF.append(myAssembly.nodeSets['REF-YZ'])
+        field = frame.fieldOutputs['RF']
+        data=[]
+        for r in REF:
+            region=field.getSubset( region=r )
             regionValue = region.values
-            data=[]
             for p in regionValue:
-                data.append(p.data)
-            data=np.array(data)
-            sigmaMean=np.mean(data, axis=0)
-            #print sigmaMean
-            jacobi.append(np.mean(data, axis=0))
-    # obtain the RF of reference points
-    frame=odb.steps['Step-1'].frames[-1]
-    REF=[]
-    REF.append( myAssembly.nodeSets['REF-X'])
-    REF.append(myAssembly.nodeSets['REF-Y'])
-    REF.append(myAssembly.nodeSets['REF-Z'])
-    REF.append(myAssembly.nodeSets['REF-XY'])
-    REF.append(myAssembly.nodeSets['REF-XZ'])
-    REF.append(myAssembly.nodeSets['REF-YZ'])
-    field = frame.fieldOutputs['RF']
-    data=[]
-    for r in REF:
-        region=field.getSubset( region=r )
-        regionValue = region.values
-        for p in regionValue:
-            data.append(np.array(p.data))
-    data=np.array(data)
-    np.savetxt('C:/repo/UEL/DSTRESS.out', data) 
+                data.append(np.array(p.data))
+        data=np.array(data)
+        np.savetxt('C:/repo/UEL/DSTRESS.out', data) 
 
-    volume=np.array(volume,dtype=np.float64)
-    vol=np.copy(volume[0])
-    #np.savetxt('C:/repo/UEL/DSTRESS.out', Vsum) 
-    jacobi=np.array(jacobi)/vol
-    jacobi=np.triu(jacobi.T)
-    jacobi += jacobi.T - np.diag(jacobi.diagonal())
-    np.savetxt('C:/repo/UEL/DDSDDE.out', jacobi)
+        volume=np.array(volume,dtype=np.float64)
+        vol=np.copy(volume[0])
+        #np.savetxt('C:/repo/UEL/DSTRESS.out', Vsum) 
+        jacobi=np.array(jacobi)/vol
+        jacobi=np.triu(jacobi.T)
+        jacobi += jacobi.T - np.diag(jacobi.diagonal())
+        np.savetxt('C:/repo/UEL/DDSDDE.out', jacobi)
+        odb.close()
+    elif (lastINC==0):
+        frame=odb.steps['Step-1'].frames[-1]
+        lastINC = frame.frameId
+        odb.close()
+        return lastINC
 
 def load(DSTRAN,BOUNDARY):
     DSTRAN=np.array(DSTRAN,dtype=np.float64)
@@ -141,22 +149,19 @@ def MonitorLogFile(JobName):
             continue
         if 'COMPLETED'in lastline:
             print (' python INFO: Abaqus/Analysis '+JobName+' COMPLETED')
-            ReadODB(r'C:/repo/UEL/'+JobName+'.odb')
+            ReadODB(r'C:/repo/UEL/'+JobName+'.odb',1)
             break
         elif 'errors'in lastline:
             print ('!!! python ERROR: Abaqus/Analysis '+JobName+' exited with errors')
             break
-        time.sleep(1)
+        else:
+            time.sleep(5)
+            continue
     file.close()
  
 
 print ('------------------------------------------------------------------------')
 print ('----------------------   RVE COMPUTAION PROCESS   ----------------------')
-print ('------------------------------------------------------------------------')
-
-JobName='RVE'
-
-BOUNDARY=[]
 
 try:
     JSTEP = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt',dtype=int,skip_footer=9)
@@ -173,6 +178,11 @@ NPT = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt',dtype=int,skip_header=6,skip_foote
 #print ('python INFO: NPT is  '), NPT
 DSTRAN = np.genfromtxt('C:/repo/UEL/DSTRAIN.txt', delimiter=28,dtype=np.float64,skip_header=7)
 print ('python INFO: DSTRAN is  '), DSTRAN
+
+JobName='RVE'
+lastINC=0
+Step_RVE=KINC*2
+BOUNDARY=[]
 
 load(DSTRAN,BOUNDARY)
 
@@ -193,10 +203,13 @@ if ( KINC == 0 ):
     MonitorLogFile(JobName_init)
 
 elif ( KINC == 1 ):
+    lastINC=ReadODB('C:/repo/UEL/'+JobName_init+'.odb',lastINC)
+    print('** last INC is '+str(lastINC))
+
     filepath='C:/repo/UEL/'+JobName_res+'.inp'
     job_submit=JobName_res+' oldjob='+JobName_init
 
-    REPLACE('C:/repo/UEL/RVE_Restart-Template.inp',filepath, ['STEP_REPLACE','INC_REPLACE','BOUNDARY_XYZ'], [KINC*2,1,''.join(BOUNDARY)])
+    REPLACE('C:/repo/UEL/RVE_Restart-Template.inp',filepath, ['STEP_REPLACE','INC_REPLACE','BOUNDARY_XYZ'], [Step_RVE,lastINC,''.join(BOUNDARY)])
     REPLACE('C:/repo/UEL/RVE_submit_job_template.bat','C:/repo/UEL/RVE_submit_job.bat', ['JobName'], [job_submit])
     
     submit_file='C:/repo/UEL/RVE_submit_job.bat'
@@ -209,10 +222,13 @@ elif ( KINC == 1 ):
 
 else:
     JobName_init=JobName_init+'_restart'+'_'+str(KINC-1)
+    lastINC=ReadODB('C:/repo/UEL/'+JobName_init+'.odb',lastINC)
+    print('** last INC is '+str(lastINC))
+
     filepath='C:/repo/UEL/'+JobName_res+'.inp'
     job_submit=JobName_res+' oldjob='+JobName_init
 
-    REPLACE('C:/repo/UEL/RVE_Restart-Template.inp',filepath, ['STEP_REPLACE','INC_REPLACE','BOUNDARY_XYZ'], [KINC*2,1,''.join(BOUNDARY)])
+    REPLACE('C:/repo/UEL/RVE_Restart-Template.inp',filepath, ['STEP_REPLACE','INC_REPLACE','BOUNDARY_XYZ'], [Step_RVE,lastINC,''.join(BOUNDARY)])
     REPLACE('C:/repo/UEL/RVE_submit_job_template.bat','C:/repo/UEL/RVE_submit_job.bat', ['JobName'], [job_submit])
     
     submit_file='C:/repo/UEL/RVE_submit_job.bat'
