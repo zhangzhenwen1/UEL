@@ -1,5 +1,13 @@
 !DEC$ ATTRIBUTES ALIAS:"uel"::UEL
 c
+c     ** MATERIALS
+c     **      cn=PROPS(1)
+c     **      ct=PROPS(2)
+c     **      Gn=PROPS(3)
+c     **      Gt=PROPS(4)
+c     **      Qn0=PROPS(5)
+c     **      Qt0=PROPS(6)
+c             tempK=PROPS(6) : adjust the cohesive constitution
       SUBROUTINE UEL (RHS, AMATRX, SVARS, ENERGY, NDOFEL, NRHS, NSVARS,
      1 PROPS, NPROPS, COORDS, MCRD, NNODE, U, DU, V, A, JTYPE, TIME,
      2 DTIME, KSTEP, KINC, JELEM, PARAMS, NDLOAD, JDLTYP, ADLMAG,
@@ -73,51 +81,7 @@ ccccccccccccccccccccccccccc
             function Shape_poly_PD_s(local_coordinate)
                   real(Kind=8) :: local_coordinate(2,1), Shape_poly_PD_s(3,6)
             end function
-      end interface
-c =============================================
-      FNAME='c:\repo\UEL\RVE-test1'     
-      NRU=1     
-      LRUNIT(1,1)=8     
-      LRUNIT(2,1)=2     
-      LOUTF=0     
-      CALL INITPF(FNAME,NRU,LRUNIT,LOUTF)
-      JUNIT=8     
-      CALL DBRNU(JUNIT)
-C     
-      JRCD=0
-C     Open output file         
-      OPEN (unit = 15, file = 'c:\repo\UEL\U.txt', status='replace')     
-      OPEN (unit = 16, file = 'c:\repo\UEL\SE.txt', status='replace')     
-      OPEN (unit = 17, file = 'c:\repo\UEL\PE.txt', status='replace')
-C     
-      Open( unit=18 , File = 'c:\repo\UEL\RVE-test1.fil' , Access = 'Direct' , Form = 'Unformatted' , RecL = 23 )
-      Read( 18 , Rec = 3 ) iVar1 , cVar1, iVar2
-      Write( 15 , * ) iVar1 , cVar1, iVar2
-      Close( 18 )
-C     Loop on all records in results file
-      DO WHILE (JRCD .EQ. 0)
-C        
-          CALL DBFILE(0,ARRAY,JRCD)        
-          KEY=JRRAY(1,2)
-c          WRITE(15,"(1X,6ES26.16E3)") KEY
-C         RVE-test1
-          IF(KEY.EQ.101) THEN 
-C      displacement            
-              DISP = ARRAY(4:9)            
-              WRITE(15,"(1X,6ES26.16E3)") 'DISP'        
-          ELSE IF (KEY.EQ.19) THEN           
-              SE = ARRAY(4)           
-              WRITE(16,"(1X,ES26.16E3)") SE           
-              PD = ARRAY(5)           
-              WRITE(17,"(1X,ES26.16E3)") PD        
-          ELSE            
-              CONTINUE        
-          END IF
-C                
-      ENDDO     
-          CLOSE(15)     
-          CLOSE(16)      
-          CLOSE(17)     
+      end interface 
 c ===========  K matrix output ================
 c ==== every step the K matrix is being overwrited
 c ==== expecting: every matrix should be stored in this file
@@ -221,6 +185,7 @@ C   --- I3 (1,6) scaler
 c===== damage parameter passin from last increasment =====
       kn_n0=SVARS(i)
       kt_n0=SVARS(6+i)
+      tempK=PROPS(7)
 c===== decide if the normal seperation is minus ===============
       if (DOT_PRODUCT(Du_seperation(:,i),g3)<0.) then ! if the crack is closing
 c        --- jugde inject ---
@@ -240,7 +205,7 @@ c        --- jugde inject ---
                   Sai0n=0.5*cn*(I1-I2-I3) ! ψ0(I1,I2,I3)~(u,g) (3,6) scaler
 c              --- calculate the normal damage parameters (3,6) scaler
                   kn0=0.5*Qn0*Qn0/cn
-                  dnn=1-EXP((kn0-kn_n0)*Qn0/Gn)
+                  dnn=1-EXP(tempK*(kn0-kn_n0)*Qn0/Gn)
                   if (dnn<0) then
                         dnn=0.
                   end if
@@ -254,7 +219,7 @@ c         --- keep the normal damage parameter still ---
             Sai0n=0.5*cn*(I1-I2-I3) ! ψ0(I1,I2,I3)~(u,g) (3,6) scaler
 c        --- calculate the normal damage parameters (3,6) scaler
             kn0=0.5*Qn0*Qn0/cn
-            dnn=1-EXP((kn0-kn_n0)*Qn0/Gn)
+            dnn=1-EXP(tempK*(kn0-kn_n0)*Qn0/Gn)
             if (dnn<0) then
                   dnn=0.
             end if
@@ -268,7 +233,7 @@ c===== get the shear material parameters =====
       Qt0=PROPS(6)
       Sai0t=0.5*ct*(I2+I3) ! ψ0(I1,I2,I3)~(u,g) (3,6) scaler
       kt0=0.5*Qt0*Qt0/ct
-      dtt=1-EXP((kt0-kt_n0)*Qt0/Gt)
+      dtt=1-EXP(tempK*(kt0-kt_n0)*Qt0/Gt)
       if (dtt<0.) then
             dtt=0.
       end if

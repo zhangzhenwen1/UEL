@@ -21,8 +21,12 @@ if len(refpoints)<6:
     r.ReferencePoint(point=(0.6,0.6,1.0))
     r.ReferencePoint(point=(0.6,1.0,0.6))
     r.ReferencePoint(point=(1.0,0.6,0.6))
-for i in range(len(refpoints)):
-    r.Set(name='Ref-'+str(i+1),referencePoints=(refpoints.values()[i],))
+r.Set(name='Ref-XZ',referencePoints=(refpoints.values()[0],))
+r.Set(name='Ref-YZ',referencePoints=(refpoints.values()[1],))
+r.Set(name='Ref-XY',referencePoints=(refpoints.values()[2],))
+r.Set(name='Ref-Z',referencePoints=(refpoints.values()[0],))
+r.Set(name='Ref-Y',referencePoints=(refpoints.values()[1],))
+r.Set(name='Ref-X',referencePoints=(refpoints.values()[2],))
 
 node=r.instances[insName].nodes
 nodeSet_X_minus=[]

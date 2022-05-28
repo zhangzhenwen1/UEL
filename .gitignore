@@ -29,8 +29,6 @@ KK.dat
 
 *.rec
 
-fort.7
-
 *.SMABulk
 
 *.023
@@ -52,4 +50,7 @@ UMAT.simdir/
 *.inp
 
 *.out
+
 RVE_1_1_restart_1.inp
+
+fort.7
