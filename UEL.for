@@ -177,7 +177,7 @@ c   - g_beta at nodal point --------------------------
       call Base_gc(g1,g2,g3,gc1,gc2,gc3)
 c   - I(u,g)
 c   --- I1 (1,6) scaler
-      I1=DOT_PRODUCT(Seperation_nodal,Seperation_nodal)
+      I1=0.5*DOT_PRODUCT(Seperation_nodal,Seperation_nodal)
 C   --- I2 (1,6) scaler
       call Product_I(g1,gc1,Seperation_nodal,I2)
 C   --- I3 (1,6) scaler
@@ -186,6 +186,7 @@ c===== damage parameter passin from last increasment =====
       kn_n0=SVARS(i)
       kt_n0=SVARS(6+i)
       tempK=PROPS(7)
+      tempK2=PROPS(8)
 c===== decide if the normal seperation is minus ===============
       if (DOT_PRODUCT(Du_seperation(:,i),g3)<0.) then ! if the crack is closing
 c        --- jugde inject ---
@@ -233,7 +234,7 @@ c===== get the shear material parameters =====
       Qt0=PROPS(6)
       Sai0t=0.5*ct*(I2+I3) ! ψ0(I1,I2,I3)~(u,g) (3,6) scaler
       kt0=0.5*Qt0*Qt0/ct
-      dtt=1-EXP(tempK*(kt0-kt_n0)*Qt0/Gt)
+      dtt=1-EXP(tempK2*(kt0-kt_n0)*Qt0/Gt)
       if (dtt<0.) then
             dtt=0.
       end if
@@ -801,7 +802,8 @@ c          write(7,*) gc
 c          write(7,*) 'seperation'
 c          write(7,*) u
 c          write(7,*) 'I'
-c          write(7,*) output 
+c          write(7,*) output
+      output=0.5*output
       return
       end
 c================= Jacobian caculate at one point ===================================
