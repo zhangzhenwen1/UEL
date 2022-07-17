@@ -177,16 +177,22 @@ c   - g_beta at nodal point --------------------------
       call Base_gc(g1,g2,g3,gc1,gc2,gc3)
 c   - I(u,g)
 c   --- I1 (1,6) scaler
-      I1=0.5*DOT_PRODUCT(Seperation_nodal,Seperation_nodal)
+      I1=DOT_PRODUCT(Seperation_nodal,Seperation_nodal)
 C   --- I2 (1,6) scaler
       call Product_I(g1,gc1,Seperation_nodal,I2)
 C   --- I3 (1,6) scaler
       call Product_I(g2,gc2,Seperation_nodal,I3)
+C   --- I4 (1,6) scaler
+      call Product_I(g3,gc3,Seperation_nodal,I4)
+      if ( (I1-I2-I3-I4)*Qn0 > 1e-5) then
+            write (7,*) 'Seperation_nodal is: ',Seperation_nodal
+            write (7,*) '!!!!!! I1I2I3I4 DISequal '
+      end if
 c===== damage parameter passin from last increasment =====
       kn_n0=SVARS(i)
       kt_n0=SVARS(6+i)
-      tempK=PROPS(7)
-      tempK2=PROPS(8)
+c      tempK=PROPS(7)
+c      tempK2=PROPS(8)
 c===== decide if the normal seperation is minus ===============
       if (DOT_PRODUCT(Du_seperation(:,i),g3)<0.) then ! if the crack is closing
 c        --- jugde inject ---
@@ -206,7 +212,7 @@ c        --- jugde inject ---
                   Sai0n=0.5*cn*(I1-I2-I3) ! ψ0(I1,I2,I3)~(u,g) (3,6) scaler
 c              --- calculate the normal damage parameters (3,6) scaler
                   kn0=0.5*Qn0*Qn0/cn
-                  dnn=1-EXP(tempK*(kn0-kn_n0)*Qn0/Gn)
+                  dnn=1-EXP((kn0-kn_n0)*Qn0/Gn)
                   if (dnn<0) then
                         dnn=0.
                   end if
@@ -220,7 +226,7 @@ c         --- keep the normal damage parameter still ---
             Sai0n=0.5*cn*(I1-I2-I3) ! ψ0(I1,I2,I3)~(u,g) (3,6) scaler
 c        --- calculate the normal damage parameters (3,6) scaler
             kn0=0.5*Qn0*Qn0/cn
-            dnn=1-EXP(tempK*(kn0-kn_n0)*Qn0/Gn)
+            dnn=1-EXP((kn0-kn_n0)*Qn0/Gn)
             if (dnn<0) then
                   dnn=0.
             end if
@@ -234,7 +240,7 @@ c===== get the shear material parameters =====
       Qt0=PROPS(6)
       Sai0t=0.5*ct*(I2+I3) ! ψ0(I1,I2,I3)~(u,g) (3,6) scaler
       kt0=0.5*Qt0*Qt0/ct
-      dtt=1-EXP(tempK2*(kt0-kt_n0)*Qt0/Gt)
+      dtt=1-EXP((kt0-kt_n0)*Qt0/Gt)
       if (dtt<0.) then
             dtt=0.
       end if
@@ -377,7 +383,7 @@ c            write (7,*) 'kn', SVARS(i)
 c            write (7,*) 'kt', SVARS(6+i)
       write(7,*) '*** damage parameters'
       write(7,*) '      dnn',dnn
-      write(7,*) '      dnt',dnt
+      write(7,*) '      dtt',dtt
 c      write(7,*) '      dtn',dtn
 c      write(7,*) '      dtt',dtt
 c      write(7,*)'***  ∂I1/∂u'
@@ -386,14 +392,12 @@ c      write(7,*)'***  ∂I2/∂u'
 c      write(7,*) PD_I2_u
 c      write(7,*) '*** ∂I2/∂g1'
 c      write(7,*) PD_I2_g1
-c      write(7,*) '*** ∂I2/∂g2'
-c      write(7,*) PD_I2_g2
+c      write(7,*) '*** ∂I3/∂g1'
+c      write(7,*) PD_I3_g1
 c      write(7,*)'***  ∂I3/∂u'
 c      write(7,*) PD_I3_u
 c      write(7,*) '*** ∂I3/∂g1'
 c      write(7,*) PD_I3_g1
-c      write(7,*) '*** ∂I3/∂g2'
-c      write(7,*) PD_I3_g2
 c      write(7,*) '*** ∂I2/∂u/∂u'
 c      write(7,*) PD_I2_u_u
 c      write(7,*) '*** ∂I2/∂u/∂g1'
@@ -422,10 +426,6 @@ c      write(7,*) '*** PD_sai0n_u'
 c      write(7,*) PD_sai0n_u
 c      write(7,*) '*** PD_sai0t_u'
 c      write(7,*) PD_sai0t_u
-c      write(7,*) '*** PD_sai0n_g1      '
-c      write(7,*) PD_sai0n_g1
-c      write(7,*) '*** PD_sai0n_g2      '
-c      write(7,*) PD_sai0n_g2
 c      write(7,*) '*** PD_sai0t_g1      '
 c      write(7,*) PD_sai0t_g1
 c      write(7,*) '*** PD_sai0t_g2      '
@@ -625,10 +625,6 @@ c     ∂ψ/∂g (3,6)
       R_g2_nodal(:,i)=(1-dnn)*(1-dnt)*PD_sai0n_g2+(1-dtn)*(1-dtt)*PD_sai0t_g2
 c      write(7,*) '*** R_u_low_nodal'
 c      write(7,*) R_u_low_nodal
-c      write(7,*) '*** R_g1_nodal'
-c      write(7,*) R_g1_nodal
-c      write(7,*) '*** R_g2_nodal'
-c      write(7,*) R_g2_nodal
 c ===========================================================================
       end do !i
 c      write(110,*) '*** KK'
@@ -657,8 +653,11 @@ c      write(7,*) R_g2
       end do
 c      write(7,*) '*** RHS'
 c      write(7,*) RHS(:,1)
-      write(7,*) '*** R_up'
-      write(7,*) R_up
+      write(7,*) '*** T_bar'
+      write(7,*) R_u_up
+      write(7,*) '*** DIV P_bar'
+      write(7,*) R_g1
+      write(7,*) R_g2
 c      write(7,*) '*** R_low'
 c      write(7,*) R_low
 c      write(110,*) '*** RHS'
@@ -803,7 +802,6 @@ c          write(7,*) 'seperation'
 c          write(7,*) u
 c          write(7,*) 'I'
 c          write(7,*) output
-      output=0.5*output
       return
       end
 c================= Jacobian caculate at one point ===================================
@@ -876,11 +874,12 @@ c------------------------
             end function
       end interface
 c     ---------------------------------
-      real(Kind=8) :: Shape_fun(3,6),weight,Var_nodal(3,6)
+      real(Kind=8) :: Shape_fun(3,6),weight,Var_nodal(3,6),shape_p(3,6)
      & ,output(3,6),Guass_coordinate(2,3),detJ(3,6)
       Shape_fun=0.0
       do i=1,3
-            Shape_fun=Shape_fun+Shape_poly_PD_r(Guass_coordinate(:,i))
+            shape_p=Shape_poly_PD_r(Guass_coordinate(:,i))
+            Shape_fun=Shape_fun+shape_poly_PD_r(Guass_coordinate(:,i))
       end do
       output=Shape_fun*Var_nodal*weight*detJ*0.5
       return

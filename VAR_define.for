@@ -8,7 +8,7 @@ c
      &,J_mid(3,2),detJ(3,LAYERNODE)
      &,g1(3),g2(3),g3(3) !mid-plane base
      &,gc1(3),gc2(3),gc3(3) !mid-plane contra-base
-     &,I1,I2,I3
+     &,I1,I2,I3,I4
      &,Sai0n,Sai0t,Sain,Sait
      &,dnn,dnt,dtn,dtt
      &,kn_n0,kt_n0
