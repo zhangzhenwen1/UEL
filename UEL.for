@@ -200,8 +200,9 @@ c        --- jugde inject ---
                   write (7,*) 'WARN !! : OVERLAP! Seperation_nodal is MINUS: ', DOT_PRODUCT(Seperation_nodal,g3)
                   cn=PROPS(1)
                   Gn=PROPS(3)
-                  Qn0=0.0
-                  dnn=0.0
+                  Qn0=PROPS(5)
+                  kn0=0.5*PROPS(5)*PROPS(5)/PROPS(1)
+                  dnn=1-EXP((kn0-kn_n0)*PROPS(5)/PROPS(3))
                   dtn=dnn
                   Sai0n=0.5*cn*(I1-I2-I3) ! ψ0(I1,I2,I3)~(u,g) (3,6) scaler
             else ! not inject
@@ -211,8 +212,8 @@ c        --- jugde inject ---
                   Qn0=PROPS(5)
                   Sai0n=0.5*cn*(I1-I2-I3) ! ψ0(I1,I2,I3)~(u,g) (3,6) scaler
 c              --- calculate the normal damage parameters (3,6) scaler
-                  kn0=0.5*Qn0*Qn0/cn
-                  dnn=1-EXP((kn0-kn_n0)*Qn0/Gn)
+                  kn0=0.5*PROPS(5)*PROPS(5)/PROPS(1)
+                  dnn=1-EXP((kn0-kn_n0)*PROPS(5)/PROPS(3))
                   if (dnn<0) then
                         dnn=0.
                   end if
